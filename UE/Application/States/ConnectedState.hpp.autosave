@@ -1,0 +1,24 @@
+#pragma once
+
+#include "BaseState.hpp"
+
+namespace ue
+{
+
+class ConnectedState : public BaseState
+{
+public:
+    ConnectedState(Context& context);
+
+    // IBtsEventsHandler interface
+public:
+    void handleDisconnected() final;
+    void handleCallRequest() final;
+    
+    // IUserEventsHandler interface
+public:
+    void handleCallAccepted() final;
+    void handleCallRejected() final;
+};
+
+}
