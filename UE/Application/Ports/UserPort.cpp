@@ -39,4 +39,27 @@ void UserPort::showConnected()
     menu.addSelectionListItem("View SMS", "");
 }
 
+void UserPort::showCallRequest()
+{
+    gui.setCallMode();
+}
+
+void UserPort::talk()
+{
+    gui.setDialMode();
+}
+
+void UserPort::showPartnerNotAvailable(common::PhoneNumber receiverPhoneNumber)
+{
+    gui.showPeerUserNotAvailable(receiverPhoneNumber);
+}
+
+void UserPort::showStartMenu()
+{
+    IUeGui::IListViewMode& menu = gui.setListViewMode();
+    menu.clearSelectionList();
+    menu.addSelectionListItem("Compose SMS", "");
+    menu.addSelectionListItem("View SMS", "");
+}
+
 }

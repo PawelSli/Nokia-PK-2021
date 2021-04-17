@@ -29,6 +29,7 @@ public:
     void handleSib(common::BtsId btsId) override;
     void handleAttachAccept() override;
     void handleAttachReject() override;
+    //void handleCallRequest() override;
 
 private:
     Context context;
