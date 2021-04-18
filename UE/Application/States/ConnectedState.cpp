@@ -14,5 +14,20 @@ void ConnectedState::handleDisconnected()
 {
     context.setState<NotConnectedState>();
 }
+//TODO:
+void ConnectedState::handleCallRequest()
+{
+
+}
+//TODO:
+void ConnectedState::handleCallAccepted()
+{
+
+}
+//TODO:
+void ConnectedState::handleCallRejected()
+{
+
+}
 
 }

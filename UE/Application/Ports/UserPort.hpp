@@ -19,8 +19,8 @@ public:
     void showConnecting() override;
     void showConnected() override;
 
-    void showCallRequest() override;
-    void talk() override;
+    void showCallRequest(common::PhoneNumber) override;
+    void talk(common::PhoneNumber) override;
     void showPartnerNotAvailable(common::PhoneNumber) override;
     void showStartMenu() override;
 

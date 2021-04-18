@@ -1,5 +1,7 @@
 #include "UserPort.hpp"
 #include "UeGui/IListViewMode.hpp"
+#include "UeGui/ICallMode.hpp"
+#include <string>
 
 namespace ue
 {
@@ -39,14 +41,25 @@ void UserPort::showConnected()
     menu.addSelectionListItem("View SMS", "");
 }
 
-void UserPort::showCallRequest()
+void UserPort::showCallRequest(common::PhoneNumber senderPhoneNumber)
 {
-    gui.setCallMode();
+    IUeGui::ICallMode& callMode=gui.setCallMode();
+    callMode.appendIncomingText("Call from: " + to_string(senderPhoneNumber));
+    auto accept=[&](){
+        handler->handleCallAccepted();
+    };
+    auto reject=[&](){
+        handler->handleCallRejected();
+    };
+    gui.setAcceptCallback(accept);
+    gui.setRejectCallback(reject);
+
 }
 
-void UserPort::talk()
+void UserPort::talk(common::PhoneNumber senderPhoneNumber)
 {
-    gui.setDialMode();
+    logger.logDebug("Talking mode with: ",senderPhoneNumber);
+    //TO IMPLEMENT
 }
 
 void UserPort::showPartnerNotAvailable(common::PhoneNumber receiverPhoneNumber)

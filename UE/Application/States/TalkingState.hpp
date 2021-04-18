@@ -3,10 +3,14 @@
 
 namespace ue
 {
+class TalkingState: public BaseState
+{
+public:
+    TalkingState(Context& context, common::PhoneNumber phoneNumber);
 
-    class TalkingState: public BaseState
-    {
-        public:
-            TalkingState(Context& context);
-    };
+// IBtsEventsHandler interface
+public:
+    void handleUknownRecipient(common::PhoneNumber) final;
+};
+
 }

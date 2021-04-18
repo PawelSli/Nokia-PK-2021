@@ -10,8 +10,8 @@ class IUserEventsHandler
 public:
     virtual ~IUserEventsHandler() = default;
 
-    virtual void callAccept()=0;
-    virtual void callReject()=0;
+    virtual void handleCallAccepted()=0;
+    virtual void handleCallRejected()=0;
 
 
 };
@@ -24,8 +24,8 @@ public:
     virtual void showNotConnected() = 0;
     virtual void showConnecting() = 0;
     virtual void showConnected() = 0;
-    virtual void showCallRequest()=0;
-    virtual void talk()=0;
+    virtual void showCallRequest(common::PhoneNumber)=0;
+    virtual void talk(common::PhoneNumber)=0;
     virtual void showPartnerNotAvailable(common::PhoneNumber)=0;
     virtual void showStartMenu()=0;
 };
