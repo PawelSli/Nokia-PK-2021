@@ -46,9 +46,9 @@ void Application::handleAttachReject()
     context.state->handleAttachReject();
 }
 
-void Application::handleCallRequest()
+void Application::handleCallRequest(common::PhoneNumber phoneNumber)
 {
-    context.state->handleCallRequest();
+    context.state->handleCallRequest(phoneNumber);
 }
 
 void Application::handleCallAccepted()

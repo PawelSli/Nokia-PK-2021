@@ -17,7 +17,7 @@ public:
     // IBtsEventsHandler interface
 public:
     void handleDisconnected() final;
-    void handleCallRequest() final;
+    void handleCallRequest(common::PhoneNumber) final;
 
      // IUserEventsHandler interface
 public:

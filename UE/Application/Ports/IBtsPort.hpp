@@ -15,8 +15,8 @@ public:
     virtual void handleSib(common::BtsId) = 0;
     virtual void handleAttachAccept() = 0;
     virtual void handleAttachReject() = 0;
-    virtual void handleCallRequest()=0;
-    virtual void handleUknownRecipient(common::PhoneNumber)=0;
+    virtual void handleCallRequest(common::PhoneNumber phoneNumber)=0;
+    virtual void handleUknownRecipient(common::PhoneNumber phoneNumber)=0;
 
 };
 
