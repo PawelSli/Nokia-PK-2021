@@ -26,6 +26,11 @@ void Application::handleTimeout()
     context.state->handleTimeout();
 }
 
+void Application::handleDisconnected()
+{
+    context.state->handleDisconnected();
+}
+
 void Application::handleSib(common::BtsId btsId)
 {
     context.state->handleSib(btsId);
@@ -41,4 +46,23 @@ void Application::handleAttachReject()
     context.state->handleAttachReject();
 }
 
+void Application::handleCallRequest(common::PhoneNumber phoneNumber)
+{
+    context.state->handleCallRequest(phoneNumber);
+}
+
+void Application::handleCallAccepted()
+{
+    context.state->handleCallAccepted();
+}
+
+void Application::handleCallRejected()
+{
+    context.state->handleCallRejected();
+}
+
+void Application::handleUknownRecipient(common::PhoneNumber recipientPhoneNumber)
+{
+    context.state->handleUknownRecipient(recipientPhoneNumber);
+}
 }

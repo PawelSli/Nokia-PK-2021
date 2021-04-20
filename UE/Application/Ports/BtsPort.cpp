@@ -14,13 +14,20 @@ BtsPort::BtsPort(common::ILogger &logger, common::ITransport &transport, common:
 void BtsPort::start(IBtsEventsHandler &handler)
 {
     transport.registerMessageCallback([this](BinaryMessage msg) {handleMessage(msg);});
+    transport.registerDisconnectedCallback([this]() {handleDisconnected();});
     this->handler = &handler;
 }
 
 void BtsPort::stop()
 {
     transport.registerMessageCallback(nullptr);
+    transport.registerDisconnectedCallback(nullptr);
     handler = nullptr;
+}
+
+void BtsPort::handleDisconnected()
+{
+    handler->handleDisconnected();
 }
 
 void BtsPort::handleMessage(BinaryMessage msg)
@@ -71,6 +78,23 @@ void BtsPort::sendAttachRequest(common::BtsId btsId)
     transport.sendMessage(msg.getMessage());
 
 
+}
+
+void BtsPort::sendCallAccept(common::PhoneNumber receiverPhoneNumber)
+{
+    logger.logDebug("sendCallAccept: ",receiverPhoneNumber);
+    common::OutgoingMessage msg{common::MessageId::CallAccepted,
+                               phoneNumber,
+                               receiverPhoneNumber};
+    transport.sendMessage(msg.getMessage());
+}
+
+void BtsPort::sendCallDrop(common::PhoneNumber receiverPhoneNumber){
+    logger.logDebug("sendCallDrop: ",receiverPhoneNumber);
+    common::OutgoingMessage msg{common::MessageId::CallDropped,
+                               phoneNumber,
+                               receiverPhoneNumber};
+    transport.sendMessage(msg.getMessage());
 }
 
 }
