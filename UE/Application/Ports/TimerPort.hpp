@@ -2,6 +2,7 @@
 
 #include "ITimerPort.hpp"
 #include "Logger/PrefixedLogger.hpp"
+#include <chrono>
 
 namespace ue
 {
@@ -21,6 +22,8 @@ public:
 private:
     common::PrefixedLogger logger;
     ITimerEventsHandler* handler = nullptr;
+    std::chrono::steady_clock::time_point beggining;
+    std::chrono::steady_clock::time_point ending;
 };
 
 }

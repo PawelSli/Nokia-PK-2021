@@ -1,16 +1,19 @@
 #pragma once
 #include "BaseState.hpp"
+#include "Messages/PhoneNumber.hpp"
 
 namespace ue
 {
 class TalkingState: public BaseState
 {
+private:
+    common::PhoneNumber caller;
 public:
-    TalkingState(Context& context, common::PhoneNumber phoneNumber);
-
+    TalkingState(Context& context, common::PhoneNumber caller);
 // IBtsEventsHandler interface
-public:
     void handleUknownRecipient(common::PhoneNumber) final;
+
+
 };
 
 }

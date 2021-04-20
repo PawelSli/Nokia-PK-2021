@@ -23,7 +23,6 @@ public:
     virtual void startTimer(Duration) = 0;
     virtual void stopTimer() = 0;
 
-
 };
 
 }

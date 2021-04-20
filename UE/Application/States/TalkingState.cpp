@@ -6,11 +6,9 @@ namespace ue {
 
 
 TalkingState::TalkingState(Context &context,common::PhoneNumber phoneNumber)
-: BaseState(context, "TalkingState")
+    : BaseState(context, "TalkingState"), caller{phoneNumber}
 {
     context.user.talk(phoneNumber);
-    using namespace std::chrono_literals;
-    context.timer.startTimer();
 }
 
 void TalkingState::handleUknownRecipient(common::PhoneNumber recipientPhoneNumber)
