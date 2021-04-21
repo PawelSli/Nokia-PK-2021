@@ -16,7 +16,7 @@ void TalkingState::handleUknownRecipient(common::PhoneNumber recipientPhoneNumbe
     context.timer.stopTimer();
     context.user.showPartnerNotAvailable(recipientPhoneNumber);
     using namespace std::chrono_literals;
-    std::this_thread::sleep_for(1s);
+    std::this_thread::sleep_for(1000ms);
     context.user.showStartMenu();
     context.setState<ConnectedState>();
 }

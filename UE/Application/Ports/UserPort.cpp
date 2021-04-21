@@ -43,8 +43,8 @@ void UserPort::showConnected()
 
 void UserPort::showCallRequest(common::PhoneNumber senderPhoneNumber)
 {
-    IUeGui::ICallMode& callMode=gui.setCallMode();
-    callMode.appendIncomingText("Call from: " + to_string(senderPhoneNumber));
+    IUeGui::IDialMode& dialMode=gui.setDialMode();
+    logger.logDebug("Call from : ",senderPhoneNumber);
     auto accept=[&](){
         handler->handleCallAccepted();
     };
@@ -59,6 +59,7 @@ void UserPort::showCallRequest(common::PhoneNumber senderPhoneNumber)
 void UserPort::talk(common::PhoneNumber senderPhoneNumber)
 {
     logger.logDebug("Talking mode with: ",senderPhoneNumber);
+    IUeGui::ICallMode& callMode = gui.setCallMode();
     //TO IMPLEMENT
 }
 
