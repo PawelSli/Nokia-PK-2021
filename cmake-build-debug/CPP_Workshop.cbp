@@ -1,0 +1,2312 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CodeBlocks_project_file>
+	<FileVersion major="1" minor="6"/>
+	<Project>
+		<Option title="CPP_Workshop"/>
+		<Option makefile_is_custom="1"/>
+		<Option compiler="gcc"/>
+		<Option virtualFolders="CMake Files\;CMake Files\BTS\;CMake Files\BTS\Application\;CMake Files\BTS\ApplicationEnvironment\;CMake Files\BTS\QtApplicationEnvironment\;CMake Files\BTS\QtApplicationEnvironment\Console\;CMake Files\BTS\QtApplicationEnvironment\Transport\;CMake Files\BTS\Tests\;CMake Files\BTS\Tests\Application\;CMake Files\..\;CMake Files\..\..\;CMake Files\..\..\..\;CMake Files\..\..\..\..\;CMake Files\..\..\..\..\usr\;CMake Files\..\..\..\..\usr\lib\;CMake Files\..\..\..\..\usr\lib\x86_64-linux-gnu\;CMake Files\..\..\..\..\usr\lib\x86_64-linux-gnu\cmake\;CMake Files\..\..\..\..\usr\lib\x86_64-linux-gnu\cmake\Qt5Widgets\;CMake Files\..\..\..\..\usr\lib\x86_64-linux-gnu\cmake\Qt5Gui\;CMake Files\..\..\..\..\usr\lib\x86_64-linux-gnu\cmake\Qt5Core\;CMake Files\..\..\..\..\usr\lib\x86_64-linux-gnu\cmake\Qt5Network\;CMake Files\COMMON\;CMake Files\COMMON\Tests\;CMake Files\COMMON\Tests\Mocks\;CMake Files\googletest\;CMake Files\googletest\googlemock\;CMake Files\googletest\googlemock\cmake\;CMake Files\googletest\googletest\;CMake Files\googletest\googletest\cmake\;CMake Files\UE\;CMake Files\UE\Application\;CMake Files\UE\ApplicationEnvironment\;CMake Files\UE\QtApplicationEnvironment\;CMake Files\UE\QtApplicationEnvironment\GUI\;CMake Files\UE\QtApplicationEnvironment\Transport\;CMake Files\UE\Tests\;CMake Files\UE\Tests\Application\;"/>
+		<Build>
+			<Target title="all">
+				<Option working_dir="/home/shocik/Pulpit/NOKIA/cmake-build-debug"/>
+				<Option type="4"/>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j2 -f &quot;/home/shocik/Pulpit/NOKIA/cmake-build-debug/Makefile&quot;  VERBOSE=1 all"/>
+					<CompileFile command="/usr/bin/make -j2 -f &quot;/home/shocik/Pulpit/NOKIA/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j2 -f &quot;/home/shocik/Pulpit/NOKIA/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j2 -f &quot;/home/shocik/Pulpit/NOKIA/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="install/strip">
+				<Option working_dir="/home/shocik/Pulpit/NOKIA/cmake-build-debug"/>
+				<Option type="4"/>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j2 -f &quot;/home/shocik/Pulpit/NOKIA/cmake-build-debug/Makefile&quot;  VERBOSE=1 install/strip"/>
+					<CompileFile command="/usr/bin/make -j2 -f &quot;/home/shocik/Pulpit/NOKIA/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j2 -f &quot;/home/shocik/Pulpit/NOKIA/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j2 -f &quot;/home/shocik/Pulpit/NOKIA/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="install/local">
+				<Option working_dir="/home/shocik/Pulpit/NOKIA/cmake-build-debug"/>
+				<Option type="4"/>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j2 -f &quot;/home/shocik/Pulpit/NOKIA/cmake-build-debug/Makefile&quot;  VERBOSE=1 install/local"/>
+					<CompileFile command="/usr/bin/make -j2 -f &quot;/home/shocik/Pulpit/NOKIA/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j2 -f &quot;/home/shocik/Pulpit/NOKIA/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j2 -f &quot;/home/shocik/Pulpit/NOKIA/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="edit_cache">
+				<Option working_dir="/home/shocik/Pulpit/NOKIA/cmake-build-debug"/>
+				<Option type="4"/>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j2 -f &quot;/home/shocik/Pulpit/NOKIA/cmake-build-debug/Makefile&quot;  VERBOSE=1 edit_cache"/>
+					<CompileFile command="/usr/bin/make -j2 -f &quot;/home/shocik/Pulpit/NOKIA/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j2 -f &quot;/home/shocik/Pulpit/NOKIA/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j2 -f &quot;/home/shocik/Pulpit/NOKIA/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="rebuild_cache">
+				<Option working_dir="/home/shocik/Pulpit/NOKIA/cmake-build-debug"/>
+				<Option type="4"/>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j2 -f &quot;/home/shocik/Pulpit/NOKIA/cmake-build-debug/Makefile&quot;  VERBOSE=1 rebuild_cache"/>
+					<CompileFile command="/usr/bin/make -j2 -f &quot;/home/shocik/Pulpit/NOKIA/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j2 -f &quot;/home/shocik/Pulpit/NOKIA/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j2 -f &quot;/home/shocik/Pulpit/NOKIA/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="list_install_components">
+				<Option working_dir="/home/shocik/Pulpit/NOKIA/cmake-build-debug"/>
+				<Option type="4"/>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j2 -f &quot;/home/shocik/Pulpit/NOKIA/cmake-build-debug/Makefile&quot;  VERBOSE=1 list_install_components"/>
+					<CompileFile command="/usr/bin/make -j2 -f &quot;/home/shocik/Pulpit/NOKIA/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j2 -f &quot;/home/shocik/Pulpit/NOKIA/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j2 -f &quot;/home/shocik/Pulpit/NOKIA/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="install">
+				<Option working_dir="/home/shocik/Pulpit/NOKIA/cmake-build-debug"/>
+				<Option type="4"/>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j2 -f &quot;/home/shocik/Pulpit/NOKIA/cmake-build-debug/Makefile&quot;  VERBOSE=1 install"/>
+					<CompileFile command="/usr/bin/make -j2 -f &quot;/home/shocik/Pulpit/NOKIA/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j2 -f &quot;/home/shocik/Pulpit/NOKIA/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j2 -f &quot;/home/shocik/Pulpit/NOKIA/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="gmock_main">
+				<Option output="/home/shocik/Pulpit/NOKIA/cmake-build-debug/lib/libgmock_maind.a" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/home/shocik/Pulpit/NOKIA/cmake-build-debug/googletest/googlemock"/>
+				<Option object_output="./"/>
+				<Option type="2"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add directory="/home/shocik/Pulpit/NOKIA/googletest/googlemock/include"/>
+					<Add directory="/home/shocik/Pulpit/NOKIA/googletest/googlemock"/>
+					<Add directory="/home/shocik/Pulpit/NOKIA/googletest/googletest/include"/>
+					<Add directory="/home/shocik/Pulpit/NOKIA/googletest/googletest"/>
+					<Add directory="/usr/include/c++/9"/>
+					<Add directory="/usr/include/x86_64-linux-gnu/c++/9"/>
+					<Add directory="/usr/include/c++/9/backward"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/9/include"/>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/usr/include/x86_64-linux-gnu"/>
+					<Add directory="/usr/include"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j2 -f &quot;/home/shocik/Pulpit/NOKIA/cmake-build-debug/googletest/googlemock/Makefile&quot;  VERBOSE=1 gmock_main"/>
+					<CompileFile command="/usr/bin/make -j2 -f &quot;/home/shocik/Pulpit/NOKIA/cmake-build-debug/googletest/googlemock/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j2 -f &quot;/home/shocik/Pulpit/NOKIA/cmake-build-debug/googletest/googlemock/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j2 -f &quot;/home/shocik/Pulpit/NOKIA/cmake-build-debug/googletest/googlemock/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="gmock_main/fast">
+				<Option output="/home/shocik/Pulpit/NOKIA/cmake-build-debug/lib/libgmock_maind.a" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/home/shocik/Pulpit/NOKIA/cmake-build-debug/googletest/googlemock"/>
+				<Option object_output="./"/>
+				<Option type="2"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add directory="/home/shocik/Pulpit/NOKIA/googletest/googlemock/include"/>
+					<Add directory="/home/shocik/Pulpit/NOKIA/googletest/googlemock"/>
+					<Add directory="/home/shocik/Pulpit/NOKIA/googletest/googletest/include"/>
+					<Add directory="/home/shocik/Pulpit/NOKIA/googletest/googletest"/>
+					<Add directory="/usr/include/c++/9"/>
+					<Add directory="/usr/include/x86_64-linux-gnu/c++/9"/>
+					<Add directory="/usr/include/c++/9/backward"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/9/include"/>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/usr/include/x86_64-linux-gnu"/>
+					<Add directory="/usr/include"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j2 -f &quot;/home/shocik/Pulpit/NOKIA/cmake-build-debug/googletest/googlemock/Makefile&quot;  VERBOSE=1 gmock_main/fast"/>
+					<CompileFile command="/usr/bin/make -j2 -f &quot;/home/shocik/Pulpit/NOKIA/cmake-build-debug/googletest/googlemock/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j2 -f &quot;/home/shocik/Pulpit/NOKIA/cmake-build-debug/googletest/googlemock/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j2 -f &quot;/home/shocik/Pulpit/NOKIA/cmake-build-debug/googletest/googlemock/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="gmock">
+				<Option output="/home/shocik/Pulpit/NOKIA/cmake-build-debug/lib/libgmockd.a" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/home/shocik/Pulpit/NOKIA/cmake-build-debug/googletest/googlemock"/>
+				<Option object_output="./"/>
+				<Option type="2"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add directory="/home/shocik/Pulpit/NOKIA/googletest/googlemock/include"/>
+					<Add directory="/home/shocik/Pulpit/NOKIA/googletest/googlemock"/>
+					<Add directory="/home/shocik/Pulpit/NOKIA/googletest/googletest/include"/>
+					<Add directory="/home/shocik/Pulpit/NOKIA/googletest/googletest"/>
+					<Add directory="/usr/include/c++/9"/>
+					<Add directory="/usr/include/x86_64-linux-gnu/c++/9"/>
+					<Add directory="/usr/include/c++/9/backward"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/9/include"/>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/usr/include/x86_64-linux-gnu"/>
+					<Add directory="/usr/include"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j2 -f &quot;/home/shocik/Pulpit/NOKIA/cmake-build-debug/googletest/googlemock/Makefile&quot;  VERBOSE=1 gmock"/>
+					<CompileFile command="/usr/bin/make -j2 -f &quot;/home/shocik/Pulpit/NOKIA/cmake-build-debug/googletest/googlemock/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j2 -f &quot;/home/shocik/Pulpit/NOKIA/cmake-build-debug/googletest/googlemock/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j2 -f &quot;/home/shocik/Pulpit/NOKIA/cmake-build-debug/googletest/googlemock/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="gmock/fast">
+				<Option output="/home/shocik/Pulpit/NOKIA/cmake-build-debug/lib/libgmockd.a" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/home/shocik/Pulpit/NOKIA/cmake-build-debug/googletest/googlemock"/>
+				<Option object_output="./"/>
+				<Option type="2"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add directory="/home/shocik/Pulpit/NOKIA/googletest/googlemock/include"/>
+					<Add directory="/home/shocik/Pulpit/NOKIA/googletest/googlemock"/>
+					<Add directory="/home/shocik/Pulpit/NOKIA/googletest/googletest/include"/>
+					<Add directory="/home/shocik/Pulpit/NOKIA/googletest/googletest"/>
+					<Add directory="/usr/include/c++/9"/>
+					<Add directory="/usr/include/x86_64-linux-gnu/c++/9"/>
+					<Add directory="/usr/include/c++/9/backward"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/9/include"/>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/usr/include/x86_64-linux-gnu"/>
+					<Add directory="/usr/include"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j2 -f &quot;/home/shocik/Pulpit/NOKIA/cmake-build-debug/googletest/googlemock/Makefile&quot;  VERBOSE=1 gmock/fast"/>
+					<CompileFile command="/usr/bin/make -j2 -f &quot;/home/shocik/Pulpit/NOKIA/cmake-build-debug/googletest/googlemock/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j2 -f &quot;/home/shocik/Pulpit/NOKIA/cmake-build-debug/googletest/googlemock/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j2 -f &quot;/home/shocik/Pulpit/NOKIA/cmake-build-debug/googletest/googlemock/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="gtest_main">
+				<Option output="/home/shocik/Pulpit/NOKIA/cmake-build-debug/lib/libgtest_maind.a" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/home/shocik/Pulpit/NOKIA/cmake-build-debug/googletest/googletest"/>
+				<Option object_output="./"/>
+				<Option type="2"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add directory="/home/shocik/Pulpit/NOKIA/googletest/googletest/include"/>
+					<Add directory="/home/shocik/Pulpit/NOKIA/googletest/googletest"/>
+					<Add directory="/usr/include/c++/9"/>
+					<Add directory="/usr/include/x86_64-linux-gnu/c++/9"/>
+					<Add directory="/usr/include/c++/9/backward"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/9/include"/>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/usr/include/x86_64-linux-gnu"/>
+					<Add directory="/usr/include"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j2 -f &quot;/home/shocik/Pulpit/NOKIA/cmake-build-debug/googletest/googletest/Makefile&quot;  VERBOSE=1 gtest_main"/>
+					<CompileFile command="/usr/bin/make -j2 -f &quot;/home/shocik/Pulpit/NOKIA/cmake-build-debug/googletest/googletest/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j2 -f &quot;/home/shocik/Pulpit/NOKIA/cmake-build-debug/googletest/googletest/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j2 -f &quot;/home/shocik/Pulpit/NOKIA/cmake-build-debug/googletest/googletest/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="gtest_main/fast">
+				<Option output="/home/shocik/Pulpit/NOKIA/cmake-build-debug/lib/libgtest_maind.a" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/home/shocik/Pulpit/NOKIA/cmake-build-debug/googletest/googletest"/>
+				<Option object_output="./"/>
+				<Option type="2"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add directory="/home/shocik/Pulpit/NOKIA/googletest/googletest/include"/>
+					<Add directory="/home/shocik/Pulpit/NOKIA/googletest/googletest"/>
+					<Add directory="/usr/include/c++/9"/>
+					<Add directory="/usr/include/x86_64-linux-gnu/c++/9"/>
+					<Add directory="/usr/include/c++/9/backward"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/9/include"/>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/usr/include/x86_64-linux-gnu"/>
+					<Add directory="/usr/include"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j2 -f &quot;/home/shocik/Pulpit/NOKIA/cmake-build-debug/googletest/googletest/Makefile&quot;  VERBOSE=1 gtest_main/fast"/>
+					<CompileFile command="/usr/bin/make -j2 -f &quot;/home/shocik/Pulpit/NOKIA/cmake-build-debug/googletest/googletest/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j2 -f &quot;/home/shocik/Pulpit/NOKIA/cmake-build-debug/googletest/googletest/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j2 -f &quot;/home/shocik/Pulpit/NOKIA/cmake-build-debug/googletest/googletest/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="gtest">
+				<Option output="/home/shocik/Pulpit/NOKIA/cmake-build-debug/lib/libgtestd.a" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/home/shocik/Pulpit/NOKIA/cmake-build-debug/googletest/googletest"/>
+				<Option object_output="./"/>
+				<Option type="2"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add directory="/home/shocik/Pulpit/NOKIA/googletest/googletest/include"/>
+					<Add directory="/home/shocik/Pulpit/NOKIA/googletest/googletest"/>
+					<Add directory="/usr/include/c++/9"/>
+					<Add directory="/usr/include/x86_64-linux-gnu/c++/9"/>
+					<Add directory="/usr/include/c++/9/backward"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/9/include"/>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/usr/include/x86_64-linux-gnu"/>
+					<Add directory="/usr/include"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j2 -f &quot;/home/shocik/Pulpit/NOKIA/cmake-build-debug/googletest/googletest/Makefile&quot;  VERBOSE=1 gtest"/>
+					<CompileFile command="/usr/bin/make -j2 -f &quot;/home/shocik/Pulpit/NOKIA/cmake-build-debug/googletest/googletest/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j2 -f &quot;/home/shocik/Pulpit/NOKIA/cmake-build-debug/googletest/googletest/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j2 -f &quot;/home/shocik/Pulpit/NOKIA/cmake-build-debug/googletest/googletest/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="gtest/fast">
+				<Option output="/home/shocik/Pulpit/NOKIA/cmake-build-debug/lib/libgtestd.a" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/home/shocik/Pulpit/NOKIA/cmake-build-debug/googletest/googletest"/>
+				<Option object_output="./"/>
+				<Option type="2"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add directory="/home/shocik/Pulpit/NOKIA/googletest/googletest/include"/>
+					<Add directory="/home/shocik/Pulpit/NOKIA/googletest/googletest"/>
+					<Add directory="/usr/include/c++/9"/>
+					<Add directory="/usr/include/x86_64-linux-gnu/c++/9"/>
+					<Add directory="/usr/include/c++/9/backward"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/9/include"/>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/usr/include/x86_64-linux-gnu"/>
+					<Add directory="/usr/include"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j2 -f &quot;/home/shocik/Pulpit/NOKIA/cmake-build-debug/googletest/googletest/Makefile&quot;  VERBOSE=1 gtest/fast"/>
+					<CompileFile command="/usr/bin/make -j2 -f &quot;/home/shocik/Pulpit/NOKIA/cmake-build-debug/googletest/googletest/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j2 -f &quot;/home/shocik/Pulpit/NOKIA/cmake-build-debug/googletest/googletest/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j2 -f &quot;/home/shocik/Pulpit/NOKIA/cmake-build-debug/googletest/googletest/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="UE">
+				<Option output="/home/shocik/Pulpit/NOKIA/cmake-build-debug/UE/UE" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/home/shocik/Pulpit/NOKIA/cmake-build-debug/UE"/>
+				<Option object_output="./"/>
+				<Option type="1"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add option="-DQT_WIDGETS_LIB"/>
+					<Add option="-DQT_GUI_LIB"/>
+					<Add option="-DQT_CORE_LIB"/>
+					<Add option="-DQT_NETWORK_LIB"/>
+					<Add directory="/home/shocik/Pulpit/NOKIA/cmake-build-debug/UE"/>
+					<Add directory="/home/shocik/Pulpit/NOKIA/UE"/>
+					<Add directory="/home/shocik/Pulpit/NOKIA/cmake-build-debug/UE/UE_autogen/include"/>
+					<Add directory="/home/shocik/Pulpit/NOKIA/UE/Application"/>
+					<Add directory="/home/shocik/Pulpit/NOKIA/UE/ApplicationEnvironment"/>
+					<Add directory="/home/shocik/Pulpit/NOKIA/UE/../COMMON"/>
+					<Add directory="/usr/include/x86_64-linux-gnu/qt5"/>
+					<Add directory="/usr/include/x86_64-linux-gnu/qt5/QtWidgets"/>
+					<Add directory="/usr/include/x86_64-linux-gnu/qt5/QtGui"/>
+					<Add directory="/usr/include/x86_64-linux-gnu/qt5/QtCore"/>
+					<Add directory="/usr/lib/x86_64-linux-gnu/qt5/mkspecs/linux-g++"/>
+					<Add directory="/usr/include/x86_64-linux-gnu/qt5/QtNetwork"/>
+					<Add directory="/usr/include/c++/9"/>
+					<Add directory="/usr/include/x86_64-linux-gnu/c++/9"/>
+					<Add directory="/usr/include/c++/9/backward"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/9/include"/>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/usr/include/x86_64-linux-gnu"/>
+					<Add directory="/usr/include"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j2 -f &quot;/home/shocik/Pulpit/NOKIA/cmake-build-debug/UE/Makefile&quot;  VERBOSE=1 UE"/>
+					<CompileFile command="/usr/bin/make -j2 -f &quot;/home/shocik/Pulpit/NOKIA/cmake-build-debug/UE/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j2 -f &quot;/home/shocik/Pulpit/NOKIA/cmake-build-debug/UE/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j2 -f &quot;/home/shocik/Pulpit/NOKIA/cmake-build-debug/UE/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="UE/fast">
+				<Option output="/home/shocik/Pulpit/NOKIA/cmake-build-debug/UE/UE" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/home/shocik/Pulpit/NOKIA/cmake-build-debug/UE"/>
+				<Option object_output="./"/>
+				<Option type="1"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add option="-DQT_WIDGETS_LIB"/>
+					<Add option="-DQT_GUI_LIB"/>
+					<Add option="-DQT_CORE_LIB"/>
+					<Add option="-DQT_NETWORK_LIB"/>
+					<Add directory="/home/shocik/Pulpit/NOKIA/cmake-build-debug/UE"/>
+					<Add directory="/home/shocik/Pulpit/NOKIA/UE"/>
+					<Add directory="/home/shocik/Pulpit/NOKIA/cmake-build-debug/UE/UE_autogen/include"/>
+					<Add directory="/home/shocik/Pulpit/NOKIA/UE/Application"/>
+					<Add directory="/home/shocik/Pulpit/NOKIA/UE/ApplicationEnvironment"/>
+					<Add directory="/home/shocik/Pulpit/NOKIA/UE/../COMMON"/>
+					<Add directory="/usr/include/x86_64-linux-gnu/qt5"/>
+					<Add directory="/usr/include/x86_64-linux-gnu/qt5/QtWidgets"/>
+					<Add directory="/usr/include/x86_64-linux-gnu/qt5/QtGui"/>
+					<Add directory="/usr/include/x86_64-linux-gnu/qt5/QtCore"/>
+					<Add directory="/usr/lib/x86_64-linux-gnu/qt5/mkspecs/linux-g++"/>
+					<Add directory="/usr/include/x86_64-linux-gnu/qt5/QtNetwork"/>
+					<Add directory="/usr/include/c++/9"/>
+					<Add directory="/usr/include/x86_64-linux-gnu/c++/9"/>
+					<Add directory="/usr/include/c++/9/backward"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/9/include"/>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/usr/include/x86_64-linux-gnu"/>
+					<Add directory="/usr/include"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j2 -f &quot;/home/shocik/Pulpit/NOKIA/cmake-build-debug/UE/Makefile&quot;  VERBOSE=1 UE/fast"/>
+					<CompileFile command="/usr/bin/make -j2 -f &quot;/home/shocik/Pulpit/NOKIA/cmake-build-debug/UE/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j2 -f &quot;/home/shocik/Pulpit/NOKIA/cmake-build-debug/UE/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j2 -f &quot;/home/shocik/Pulpit/NOKIA/cmake-build-debug/UE/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="UE_autogen">
+				<Option working_dir="/home/shocik/Pulpit/NOKIA/cmake-build-debug/UE"/>
+				<Option type="4"/>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j2 -f &quot;/home/shocik/Pulpit/NOKIA/cmake-build-debug/UE/Makefile&quot;  VERBOSE=1 UE_autogen"/>
+					<CompileFile command="/usr/bin/make -j2 -f &quot;/home/shocik/Pulpit/NOKIA/cmake-build-debug/UE/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j2 -f &quot;/home/shocik/Pulpit/NOKIA/cmake-build-debug/UE/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j2 -f &quot;/home/shocik/Pulpit/NOKIA/cmake-build-debug/UE/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="UeApplication">
+				<Option output="/home/shocik/Pulpit/NOKIA/cmake-build-debug/UE/Application/libUeApplication.a" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/home/shocik/Pulpit/NOKIA/cmake-build-debug/UE/Application"/>
+				<Option object_output="./"/>
+				<Option type="2"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add directory="/home/shocik/Pulpit/NOKIA/cmake-build-debug/UE/Application"/>
+					<Add directory="/home/shocik/Pulpit/NOKIA/UE/Application"/>
+					<Add directory="/home/shocik/Pulpit/NOKIA/UE/ApplicationEnvironment"/>
+					<Add directory="/home/shocik/Pulpit/NOKIA/UE/../COMMON"/>
+					<Add directory="/usr/include/c++/9"/>
+					<Add directory="/usr/include/x86_64-linux-gnu/c++/9"/>
+					<Add directory="/usr/include/c++/9/backward"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/9/include"/>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/usr/include/x86_64-linux-gnu"/>
+					<Add directory="/usr/include"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j2 -f &quot;/home/shocik/Pulpit/NOKIA/cmake-build-debug/UE/Application/Makefile&quot;  VERBOSE=1 UeApplication"/>
+					<CompileFile command="/usr/bin/make -j2 -f &quot;/home/shocik/Pulpit/NOKIA/cmake-build-debug/UE/Application/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j2 -f &quot;/home/shocik/Pulpit/NOKIA/cmake-build-debug/UE/Application/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j2 -f &quot;/home/shocik/Pulpit/NOKIA/cmake-build-debug/UE/Application/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="UeApplication/fast">
+				<Option output="/home/shocik/Pulpit/NOKIA/cmake-build-debug/UE/Application/libUeApplication.a" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/home/shocik/Pulpit/NOKIA/cmake-build-debug/UE/Application"/>
+				<Option object_output="./"/>
+				<Option type="2"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add directory="/home/shocik/Pulpit/NOKIA/cmake-build-debug/UE/Application"/>
+					<Add directory="/home/shocik/Pulpit/NOKIA/UE/Application"/>
+					<Add directory="/home/shocik/Pulpit/NOKIA/UE/ApplicationEnvironment"/>
+					<Add directory="/home/shocik/Pulpit/NOKIA/UE/../COMMON"/>
+					<Add directory="/usr/include/c++/9"/>
+					<Add directory="/usr/include/x86_64-linux-gnu/c++/9"/>
+					<Add directory="/usr/include/c++/9/backward"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/9/include"/>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/usr/include/x86_64-linux-gnu"/>
+					<Add directory="/usr/include"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j2 -f &quot;/home/shocik/Pulpit/NOKIA/cmake-build-debug/UE/Application/Makefile&quot;  VERBOSE=1 UeApplication/fast"/>
+					<CompileFile command="/usr/bin/make -j2 -f &quot;/home/shocik/Pulpit/NOKIA/cmake-build-debug/UE/Application/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j2 -f &quot;/home/shocik/Pulpit/NOKIA/cmake-build-debug/UE/Application/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j2 -f &quot;/home/shocik/Pulpit/NOKIA/cmake-build-debug/UE/Application/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="UeApplicationEnvironment">
+				<Option output="/home/shocik/Pulpit/NOKIA/cmake-build-debug/UE/ApplicationEnvironment/libUeApplicationEnvironment.a" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/home/shocik/Pulpit/NOKIA/cmake-build-debug/UE/ApplicationEnvironment"/>
+				<Option object_output="./"/>
+				<Option type="2"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add directory="/home/shocik/Pulpit/NOKIA/cmake-build-debug/UE/ApplicationEnvironment"/>
+					<Add directory="/home/shocik/Pulpit/NOKIA/UE/ApplicationEnvironment"/>
+					<Add directory="/home/shocik/Pulpit/NOKIA/UE/Application"/>
+					<Add directory="/home/shocik/Pulpit/NOKIA/UE/../COMMON"/>
+					<Add directory="/usr/include/c++/9"/>
+					<Add directory="/usr/include/x86_64-linux-gnu/c++/9"/>
+					<Add directory="/usr/include/c++/9/backward"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/9/include"/>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/usr/include/x86_64-linux-gnu"/>
+					<Add directory="/usr/include"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j2 -f &quot;/home/shocik/Pulpit/NOKIA/cmake-build-debug/UE/ApplicationEnvironment/Makefile&quot;  VERBOSE=1 UeApplicationEnvironment"/>
+					<CompileFile command="/usr/bin/make -j2 -f &quot;/home/shocik/Pulpit/NOKIA/cmake-build-debug/UE/ApplicationEnvironment/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j2 -f &quot;/home/shocik/Pulpit/NOKIA/cmake-build-debug/UE/ApplicationEnvironment/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j2 -f &quot;/home/shocik/Pulpit/NOKIA/cmake-build-debug/UE/ApplicationEnvironment/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="UeApplicationEnvironment/fast">
+				<Option output="/home/shocik/Pulpit/NOKIA/cmake-build-debug/UE/ApplicationEnvironment/libUeApplicationEnvironment.a" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/home/shocik/Pulpit/NOKIA/cmake-build-debug/UE/ApplicationEnvironment"/>
+				<Option object_output="./"/>
+				<Option type="2"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add directory="/home/shocik/Pulpit/NOKIA/cmake-build-debug/UE/ApplicationEnvironment"/>
+					<Add directory="/home/shocik/Pulpit/NOKIA/UE/ApplicationEnvironment"/>
+					<Add directory="/home/shocik/Pulpit/NOKIA/UE/Application"/>
+					<Add directory="/home/shocik/Pulpit/NOKIA/UE/../COMMON"/>
+					<Add directory="/usr/include/c++/9"/>
+					<Add directory="/usr/include/x86_64-linux-gnu/c++/9"/>
+					<Add directory="/usr/include/c++/9/backward"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/9/include"/>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/usr/include/x86_64-linux-gnu"/>
+					<Add directory="/usr/include"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j2 -f &quot;/home/shocik/Pulpit/NOKIA/cmake-build-debug/UE/ApplicationEnvironment/Makefile&quot;  VERBOSE=1 UeApplicationEnvironment/fast"/>
+					<CompileFile command="/usr/bin/make -j2 -f &quot;/home/shocik/Pulpit/NOKIA/cmake-build-debug/UE/ApplicationEnvironment/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j2 -f &quot;/home/shocik/Pulpit/NOKIA/cmake-build-debug/UE/ApplicationEnvironment/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j2 -f &quot;/home/shocik/Pulpit/NOKIA/cmake-build-debug/UE/ApplicationEnvironment/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="QtUeApplicationEnvironment">
+				<Option output="/home/shocik/Pulpit/NOKIA/cmake-build-debug/UE/QtApplicationEnvironment/libQtUeApplicationEnvironment.a" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/home/shocik/Pulpit/NOKIA/cmake-build-debug/UE/QtApplicationEnvironment"/>
+				<Option object_output="./"/>
+				<Option type="2"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add option="-DQT_WIDGETS_LIB"/>
+					<Add option="-DQT_GUI_LIB"/>
+					<Add option="-DQT_CORE_LIB"/>
+					<Add option="-DQT_NETWORK_LIB"/>
+					<Add directory="/home/shocik/Pulpit/NOKIA/cmake-build-debug/UE/QtApplicationEnvironment"/>
+					<Add directory="/home/shocik/Pulpit/NOKIA/UE/QtApplicationEnvironment"/>
+					<Add directory="/home/shocik/Pulpit/NOKIA/cmake-build-debug/UE/QtApplicationEnvironment/QtUeApplicationEnvironment_autogen/include"/>
+					<Add directory="/home/shocik/Pulpit/NOKIA/UE/Application"/>
+					<Add directory="/home/shocik/Pulpit/NOKIA/UE/ApplicationEnvironment"/>
+					<Add directory="/home/shocik/Pulpit/NOKIA/UE/../COMMON"/>
+					<Add directory="/usr/include/x86_64-linux-gnu/qt5"/>
+					<Add directory="/usr/include/x86_64-linux-gnu/qt5/QtWidgets"/>
+					<Add directory="/usr/include/x86_64-linux-gnu/qt5/QtGui"/>
+					<Add directory="/usr/include/x86_64-linux-gnu/qt5/QtCore"/>
+					<Add directory="/usr/lib/x86_64-linux-gnu/qt5/mkspecs/linux-g++"/>
+					<Add directory="/usr/include/x86_64-linux-gnu/qt5/QtNetwork"/>
+					<Add directory="/usr/include/c++/9"/>
+					<Add directory="/usr/include/x86_64-linux-gnu/c++/9"/>
+					<Add directory="/usr/include/c++/9/backward"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/9/include"/>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/usr/include/x86_64-linux-gnu"/>
+					<Add directory="/usr/include"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j2 -f &quot;/home/shocik/Pulpit/NOKIA/cmake-build-debug/UE/QtApplicationEnvironment/Makefile&quot;  VERBOSE=1 QtUeApplicationEnvironment"/>
+					<CompileFile command="/usr/bin/make -j2 -f &quot;/home/shocik/Pulpit/NOKIA/cmake-build-debug/UE/QtApplicationEnvironment/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j2 -f &quot;/home/shocik/Pulpit/NOKIA/cmake-build-debug/UE/QtApplicationEnvironment/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j2 -f &quot;/home/shocik/Pulpit/NOKIA/cmake-build-debug/UE/QtApplicationEnvironment/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="QtUeApplicationEnvironment/fast">
+				<Option output="/home/shocik/Pulpit/NOKIA/cmake-build-debug/UE/QtApplicationEnvironment/libQtUeApplicationEnvironment.a" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/home/shocik/Pulpit/NOKIA/cmake-build-debug/UE/QtApplicationEnvironment"/>
+				<Option object_output="./"/>
+				<Option type="2"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add option="-DQT_WIDGETS_LIB"/>
+					<Add option="-DQT_GUI_LIB"/>
+					<Add option="-DQT_CORE_LIB"/>
+					<Add option="-DQT_NETWORK_LIB"/>
+					<Add directory="/home/shocik/Pulpit/NOKIA/cmake-build-debug/UE/QtApplicationEnvironment"/>
+					<Add directory="/home/shocik/Pulpit/NOKIA/UE/QtApplicationEnvironment"/>
+					<Add directory="/home/shocik/Pulpit/NOKIA/cmake-build-debug/UE/QtApplicationEnvironment/QtUeApplicationEnvironment_autogen/include"/>
+					<Add directory="/home/shocik/Pulpit/NOKIA/UE/Application"/>
+					<Add directory="/home/shocik/Pulpit/NOKIA/UE/ApplicationEnvironment"/>
+					<Add directory="/home/shocik/Pulpit/NOKIA/UE/../COMMON"/>
+					<Add directory="/usr/include/x86_64-linux-gnu/qt5"/>
+					<Add directory="/usr/include/x86_64-linux-gnu/qt5/QtWidgets"/>
+					<Add directory="/usr/include/x86_64-linux-gnu/qt5/QtGui"/>
+					<Add directory="/usr/include/x86_64-linux-gnu/qt5/QtCore"/>
+					<Add directory="/usr/lib/x86_64-linux-gnu/qt5/mkspecs/linux-g++"/>
+					<Add directory="/usr/include/x86_64-linux-gnu/qt5/QtNetwork"/>
+					<Add directory="/usr/include/c++/9"/>
+					<Add directory="/usr/include/x86_64-linux-gnu/c++/9"/>
+					<Add directory="/usr/include/c++/9/backward"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/9/include"/>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/usr/include/x86_64-linux-gnu"/>
+					<Add directory="/usr/include"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j2 -f &quot;/home/shocik/Pulpit/NOKIA/cmake-build-debug/UE/QtApplicationEnvironment/Makefile&quot;  VERBOSE=1 QtUeApplicationEnvironment/fast"/>
+					<CompileFile command="/usr/bin/make -j2 -f &quot;/home/shocik/Pulpit/NOKIA/cmake-build-debug/UE/QtApplicationEnvironment/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j2 -f &quot;/home/shocik/Pulpit/NOKIA/cmake-build-debug/UE/QtApplicationEnvironment/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j2 -f &quot;/home/shocik/Pulpit/NOKIA/cmake-build-debug/UE/QtApplicationEnvironment/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="QtUeApplicationEnvironment_autogen">
+				<Option working_dir="/home/shocik/Pulpit/NOKIA/cmake-build-debug/UE/QtApplicationEnvironment"/>
+				<Option type="4"/>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j2 -f &quot;/home/shocik/Pulpit/NOKIA/cmake-build-debug/UE/QtApplicationEnvironment/Makefile&quot;  VERBOSE=1 QtUeApplicationEnvironment_autogen"/>
+					<CompileFile command="/usr/bin/make -j2 -f &quot;/home/shocik/Pulpit/NOKIA/cmake-build-debug/UE/QtApplicationEnvironment/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j2 -f &quot;/home/shocik/Pulpit/NOKIA/cmake-build-debug/UE/QtApplicationEnvironment/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j2 -f &quot;/home/shocik/Pulpit/NOKIA/cmake-build-debug/UE/QtApplicationEnvironment/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="QtUeGUI">
+				<Option output="/home/shocik/Pulpit/NOKIA/cmake-build-debug/UE/QtApplicationEnvironment/GUI/libQtUeGUI.a" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/home/shocik/Pulpit/NOKIA/cmake-build-debug/UE/QtApplicationEnvironment/GUI"/>
+				<Option object_output="./"/>
+				<Option type="2"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add option="-DQT_WIDGETS_LIB"/>
+					<Add option="-DQT_GUI_LIB"/>
+					<Add option="-DQT_CORE_LIB"/>
+					<Add option="-DQT_NETWORK_LIB"/>
+					<Add directory="/home/shocik/Pulpit/NOKIA/cmake-build-debug/UE/QtApplicationEnvironment/GUI"/>
+					<Add directory="/home/shocik/Pulpit/NOKIA/UE/QtApplicationEnvironment/GUI"/>
+					<Add directory="/home/shocik/Pulpit/NOKIA/cmake-build-debug/UE/QtApplicationEnvironment/GUI/QtUeGUI_autogen/include"/>
+					<Add directory="/home/shocik/Pulpit/NOKIA/UE/Application"/>
+					<Add directory="/home/shocik/Pulpit/NOKIA/UE/ApplicationEnvironment"/>
+					<Add directory="/home/shocik/Pulpit/NOKIA/UE/../COMMON"/>
+					<Add directory="/usr/include/x86_64-linux-gnu/qt5"/>
+					<Add directory="/usr/include/x86_64-linux-gnu/qt5/QtWidgets"/>
+					<Add directory="/usr/include/x86_64-linux-gnu/qt5/QtGui"/>
+					<Add directory="/usr/include/x86_64-linux-gnu/qt5/QtCore"/>
+					<Add directory="/usr/lib/x86_64-linux-gnu/qt5/mkspecs/linux-g++"/>
+					<Add directory="/usr/include/x86_64-linux-gnu/qt5/QtNetwork"/>
+					<Add directory="/usr/include/c++/9"/>
+					<Add directory="/usr/include/x86_64-linux-gnu/c++/9"/>
+					<Add directory="/usr/include/c++/9/backward"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/9/include"/>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/usr/include/x86_64-linux-gnu"/>
+					<Add directory="/usr/include"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j2 -f &quot;/home/shocik/Pulpit/NOKIA/cmake-build-debug/UE/QtApplicationEnvironment/GUI/Makefile&quot;  VERBOSE=1 QtUeGUI"/>
+					<CompileFile command="/usr/bin/make -j2 -f &quot;/home/shocik/Pulpit/NOKIA/cmake-build-debug/UE/QtApplicationEnvironment/GUI/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j2 -f &quot;/home/shocik/Pulpit/NOKIA/cmake-build-debug/UE/QtApplicationEnvironment/GUI/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j2 -f &quot;/home/shocik/Pulpit/NOKIA/cmake-build-debug/UE/QtApplicationEnvironment/GUI/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="QtUeGUI/fast">
+				<Option output="/home/shocik/Pulpit/NOKIA/cmake-build-debug/UE/QtApplicationEnvironment/GUI/libQtUeGUI.a" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/home/shocik/Pulpit/NOKIA/cmake-build-debug/UE/QtApplicationEnvironment/GUI"/>
+				<Option object_output="./"/>
+				<Option type="2"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add option="-DQT_WIDGETS_LIB"/>
+					<Add option="-DQT_GUI_LIB"/>
+					<Add option="-DQT_CORE_LIB"/>
+					<Add option="-DQT_NETWORK_LIB"/>
+					<Add directory="/home/shocik/Pulpit/NOKIA/cmake-build-debug/UE/QtApplicationEnvironment/GUI"/>
+					<Add directory="/home/shocik/Pulpit/NOKIA/UE/QtApplicationEnvironment/GUI"/>
+					<Add directory="/home/shocik/Pulpit/NOKIA/cmake-build-debug/UE/QtApplicationEnvironment/GUI/QtUeGUI_autogen/include"/>
+					<Add directory="/home/shocik/Pulpit/NOKIA/UE/Application"/>
+					<Add directory="/home/shocik/Pulpit/NOKIA/UE/ApplicationEnvironment"/>
+					<Add directory="/home/shocik/Pulpit/NOKIA/UE/../COMMON"/>
+					<Add directory="/usr/include/x86_64-linux-gnu/qt5"/>
+					<Add directory="/usr/include/x86_64-linux-gnu/qt5/QtWidgets"/>
+					<Add directory="/usr/include/x86_64-linux-gnu/qt5/QtGui"/>
+					<Add directory="/usr/include/x86_64-linux-gnu/qt5/QtCore"/>
+					<Add directory="/usr/lib/x86_64-linux-gnu/qt5/mkspecs/linux-g++"/>
+					<Add directory="/usr/include/x86_64-linux-gnu/qt5/QtNetwork"/>
+					<Add directory="/usr/include/c++/9"/>
+					<Add directory="/usr/include/x86_64-linux-gnu/c++/9"/>
+					<Add directory="/usr/include/c++/9/backward"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/9/include"/>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/usr/include/x86_64-linux-gnu"/>
+					<Add directory="/usr/include"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j2 -f &quot;/home/shocik/Pulpit/NOKIA/cmake-build-debug/UE/QtApplicationEnvironment/GUI/Makefile&quot;  VERBOSE=1 QtUeGUI/fast"/>
+					<CompileFile command="/usr/bin/make -j2 -f &quot;/home/shocik/Pulpit/NOKIA/cmake-build-debug/UE/QtApplicationEnvironment/GUI/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j2 -f &quot;/home/shocik/Pulpit/NOKIA/cmake-build-debug/UE/QtApplicationEnvironment/GUI/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j2 -f &quot;/home/shocik/Pulpit/NOKIA/cmake-build-debug/UE/QtApplicationEnvironment/GUI/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="QtUeGUI_autogen">
+				<Option working_dir="/home/shocik/Pulpit/NOKIA/cmake-build-debug/UE/QtApplicationEnvironment/GUI"/>
+				<Option type="4"/>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j2 -f &quot;/home/shocik/Pulpit/NOKIA/cmake-build-debug/UE/QtApplicationEnvironment/GUI/Makefile&quot;  VERBOSE=1 QtUeGUI_autogen"/>
+					<CompileFile command="/usr/bin/make -j2 -f &quot;/home/shocik/Pulpit/NOKIA/cmake-build-debug/UE/QtApplicationEnvironment/GUI/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j2 -f &quot;/home/shocik/Pulpit/NOKIA/cmake-build-debug/UE/QtApplicationEnvironment/GUI/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j2 -f &quot;/home/shocik/Pulpit/NOKIA/cmake-build-debug/UE/QtApplicationEnvironment/GUI/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="QtUeTransport">
+				<Option output="/home/shocik/Pulpit/NOKIA/cmake-build-debug/UE/QtApplicationEnvironment/Transport/libQtUeTransport.a" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/home/shocik/Pulpit/NOKIA/cmake-build-debug/UE/QtApplicationEnvironment/Transport"/>
+				<Option object_output="./"/>
+				<Option type="2"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add option="-DQT_WIDGETS_LIB"/>
+					<Add option="-DQT_GUI_LIB"/>
+					<Add option="-DQT_CORE_LIB"/>
+					<Add option="-DQT_NETWORK_LIB"/>
+					<Add directory="/home/shocik/Pulpit/NOKIA/cmake-build-debug/UE/QtApplicationEnvironment/Transport"/>
+					<Add directory="/home/shocik/Pulpit/NOKIA/UE/QtApplicationEnvironment/Transport"/>
+					<Add directory="/home/shocik/Pulpit/NOKIA/cmake-build-debug/UE/QtApplicationEnvironment/Transport/QtUeTransport_autogen/include"/>
+					<Add directory="/home/shocik/Pulpit/NOKIA/UE/Application"/>
+					<Add directory="/home/shocik/Pulpit/NOKIA/UE/ApplicationEnvironment"/>
+					<Add directory="/home/shocik/Pulpit/NOKIA/UE/../COMMON"/>
+					<Add directory="/usr/include/x86_64-linux-gnu/qt5"/>
+					<Add directory="/usr/include/x86_64-linux-gnu/qt5/QtWidgets"/>
+					<Add directory="/usr/include/x86_64-linux-gnu/qt5/QtGui"/>
+					<Add directory="/usr/include/x86_64-linux-gnu/qt5/QtCore"/>
+					<Add directory="/usr/lib/x86_64-linux-gnu/qt5/mkspecs/linux-g++"/>
+					<Add directory="/usr/include/x86_64-linux-gnu/qt5/QtNetwork"/>
+					<Add directory="/usr/include/c++/9"/>
+					<Add directory="/usr/include/x86_64-linux-gnu/c++/9"/>
+					<Add directory="/usr/include/c++/9/backward"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/9/include"/>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/usr/include/x86_64-linux-gnu"/>
+					<Add directory="/usr/include"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j2 -f &quot;/home/shocik/Pulpit/NOKIA/cmake-build-debug/UE/QtApplicationEnvironment/Transport/Makefile&quot;  VERBOSE=1 QtUeTransport"/>
+					<CompileFile command="/usr/bin/make -j2 -f &quot;/home/shocik/Pulpit/NOKIA/cmake-build-debug/UE/QtApplicationEnvironment/Transport/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j2 -f &quot;/home/shocik/Pulpit/NOKIA/cmake-build-debug/UE/QtApplicationEnvironment/Transport/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j2 -f &quot;/home/shocik/Pulpit/NOKIA/cmake-build-debug/UE/QtApplicationEnvironment/Transport/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="QtUeTransport/fast">
+				<Option output="/home/shocik/Pulpit/NOKIA/cmake-build-debug/UE/QtApplicationEnvironment/Transport/libQtUeTransport.a" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/home/shocik/Pulpit/NOKIA/cmake-build-debug/UE/QtApplicationEnvironment/Transport"/>
+				<Option object_output="./"/>
+				<Option type="2"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add option="-DQT_WIDGETS_LIB"/>
+					<Add option="-DQT_GUI_LIB"/>
+					<Add option="-DQT_CORE_LIB"/>
+					<Add option="-DQT_NETWORK_LIB"/>
+					<Add directory="/home/shocik/Pulpit/NOKIA/cmake-build-debug/UE/QtApplicationEnvironment/Transport"/>
+					<Add directory="/home/shocik/Pulpit/NOKIA/UE/QtApplicationEnvironment/Transport"/>
+					<Add directory="/home/shocik/Pulpit/NOKIA/cmake-build-debug/UE/QtApplicationEnvironment/Transport/QtUeTransport_autogen/include"/>
+					<Add directory="/home/shocik/Pulpit/NOKIA/UE/Application"/>
+					<Add directory="/home/shocik/Pulpit/NOKIA/UE/ApplicationEnvironment"/>
+					<Add directory="/home/shocik/Pulpit/NOKIA/UE/../COMMON"/>
+					<Add directory="/usr/include/x86_64-linux-gnu/qt5"/>
+					<Add directory="/usr/include/x86_64-linux-gnu/qt5/QtWidgets"/>
+					<Add directory="/usr/include/x86_64-linux-gnu/qt5/QtGui"/>
+					<Add directory="/usr/include/x86_64-linux-gnu/qt5/QtCore"/>
+					<Add directory="/usr/lib/x86_64-linux-gnu/qt5/mkspecs/linux-g++"/>
+					<Add directory="/usr/include/x86_64-linux-gnu/qt5/QtNetwork"/>
+					<Add directory="/usr/include/c++/9"/>
+					<Add directory="/usr/include/x86_64-linux-gnu/c++/9"/>
+					<Add directory="/usr/include/c++/9/backward"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/9/include"/>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/usr/include/x86_64-linux-gnu"/>
+					<Add directory="/usr/include"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j2 -f &quot;/home/shocik/Pulpit/NOKIA/cmake-build-debug/UE/QtApplicationEnvironment/Transport/Makefile&quot;  VERBOSE=1 QtUeTransport/fast"/>
+					<CompileFile command="/usr/bin/make -j2 -f &quot;/home/shocik/Pulpit/NOKIA/cmake-build-debug/UE/QtApplicationEnvironment/Transport/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j2 -f &quot;/home/shocik/Pulpit/NOKIA/cmake-build-debug/UE/QtApplicationEnvironment/Transport/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j2 -f &quot;/home/shocik/Pulpit/NOKIA/cmake-build-debug/UE/QtApplicationEnvironment/Transport/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="QtUeTransport_autogen">
+				<Option working_dir="/home/shocik/Pulpit/NOKIA/cmake-build-debug/UE/QtApplicationEnvironment/Transport"/>
+				<Option type="4"/>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j2 -f &quot;/home/shocik/Pulpit/NOKIA/cmake-build-debug/UE/QtApplicationEnvironment/Transport/Makefile&quot;  VERBOSE=1 QtUeTransport_autogen"/>
+					<CompileFile command="/usr/bin/make -j2 -f &quot;/home/shocik/Pulpit/NOKIA/cmake-build-debug/UE/QtApplicationEnvironment/Transport/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j2 -f &quot;/home/shocik/Pulpit/NOKIA/cmake-build-debug/UE/QtApplicationEnvironment/Transport/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j2 -f &quot;/home/shocik/Pulpit/NOKIA/cmake-build-debug/UE/QtApplicationEnvironment/Transport/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="UeApplicationUT">
+				<Option output="/home/shocik/Pulpit/NOKIA/cmake-build-debug/UE/Tests/Application/UeApplicationUT" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/home/shocik/Pulpit/NOKIA/cmake-build-debug/UE/Tests/Application"/>
+				<Option object_output="./"/>
+				<Option type="1"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add directory="/home/shocik/Pulpit/NOKIA/cmake-build-debug/UE/Tests/Application"/>
+					<Add directory="/home/shocik/Pulpit/NOKIA/UE/Tests/Application"/>
+					<Add directory="/home/shocik/Pulpit/NOKIA/UE/Application"/>
+					<Add directory="/home/shocik/Pulpit/NOKIA/UE/ApplicationEnvironment"/>
+					<Add directory="/home/shocik/Pulpit/NOKIA/UE/../COMMON"/>
+					<Add directory="/home/shocik/Pulpit/NOKIA/UE/../COMMON/Tests"/>
+					<Add directory="/home/shocik/Pulpit/NOKIA/UE/Tests"/>
+					<Add directory="/home/shocik/Pulpit/NOKIA/googletest/googletest/include"/>
+					<Add directory="/home/shocik/Pulpit/NOKIA/googletest/googlemock/include"/>
+					<Add directory="/home/shocik/Pulpit/NOKIA/googletest/googletest"/>
+					<Add directory="/home/shocik/Pulpit/NOKIA/googletest/googlemock"/>
+					<Add directory="/usr/include/c++/9"/>
+					<Add directory="/usr/include/x86_64-linux-gnu/c++/9"/>
+					<Add directory="/usr/include/c++/9/backward"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/9/include"/>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/usr/include/x86_64-linux-gnu"/>
+					<Add directory="/usr/include"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j2 -f &quot;/home/shocik/Pulpit/NOKIA/cmake-build-debug/UE/Tests/Application/Makefile&quot;  VERBOSE=1 UeApplicationUT"/>
+					<CompileFile command="/usr/bin/make -j2 -f &quot;/home/shocik/Pulpit/NOKIA/cmake-build-debug/UE/Tests/Application/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j2 -f &quot;/home/shocik/Pulpit/NOKIA/cmake-build-debug/UE/Tests/Application/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j2 -f &quot;/home/shocik/Pulpit/NOKIA/cmake-build-debug/UE/Tests/Application/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="UeApplicationUT/fast">
+				<Option output="/home/shocik/Pulpit/NOKIA/cmake-build-debug/UE/Tests/Application/UeApplicationUT" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/home/shocik/Pulpit/NOKIA/cmake-build-debug/UE/Tests/Application"/>
+				<Option object_output="./"/>
+				<Option type="1"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add directory="/home/shocik/Pulpit/NOKIA/cmake-build-debug/UE/Tests/Application"/>
+					<Add directory="/home/shocik/Pulpit/NOKIA/UE/Tests/Application"/>
+					<Add directory="/home/shocik/Pulpit/NOKIA/UE/Application"/>
+					<Add directory="/home/shocik/Pulpit/NOKIA/UE/ApplicationEnvironment"/>
+					<Add directory="/home/shocik/Pulpit/NOKIA/UE/../COMMON"/>
+					<Add directory="/home/shocik/Pulpit/NOKIA/UE/../COMMON/Tests"/>
+					<Add directory="/home/shocik/Pulpit/NOKIA/UE/Tests"/>
+					<Add directory="/home/shocik/Pulpit/NOKIA/googletest/googletest/include"/>
+					<Add directory="/home/shocik/Pulpit/NOKIA/googletest/googlemock/include"/>
+					<Add directory="/home/shocik/Pulpit/NOKIA/googletest/googletest"/>
+					<Add directory="/home/shocik/Pulpit/NOKIA/googletest/googlemock"/>
+					<Add directory="/usr/include/c++/9"/>
+					<Add directory="/usr/include/x86_64-linux-gnu/c++/9"/>
+					<Add directory="/usr/include/c++/9/backward"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/9/include"/>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/usr/include/x86_64-linux-gnu"/>
+					<Add directory="/usr/include"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j2 -f &quot;/home/shocik/Pulpit/NOKIA/cmake-build-debug/UE/Tests/Application/Makefile&quot;  VERBOSE=1 UeApplicationUT/fast"/>
+					<CompileFile command="/usr/bin/make -j2 -f &quot;/home/shocik/Pulpit/NOKIA/cmake-build-debug/UE/Tests/Application/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j2 -f &quot;/home/shocik/Pulpit/NOKIA/cmake-build-debug/UE/Tests/Application/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j2 -f &quot;/home/shocik/Pulpit/NOKIA/cmake-build-debug/UE/Tests/Application/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="BTS">
+				<Option output="/home/shocik/Pulpit/NOKIA/cmake-build-debug/BTS/BTS" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/home/shocik/Pulpit/NOKIA/cmake-build-debug/BTS"/>
+				<Option object_output="./"/>
+				<Option type="1"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add option="-DQT_WIDGETS_LIB"/>
+					<Add option="-DQT_GUI_LIB"/>
+					<Add option="-DQT_CORE_LIB"/>
+					<Add option="-DQT_NETWORK_LIB"/>
+					<Add directory="/home/shocik/Pulpit/NOKIA/cmake-build-debug/BTS"/>
+					<Add directory="/home/shocik/Pulpit/NOKIA/BTS"/>
+					<Add directory="/home/shocik/Pulpit/NOKIA/cmake-build-debug/BTS/BTS_autogen/include"/>
+					<Add directory="/home/shocik/Pulpit/NOKIA/BTS/../COMMON"/>
+					<Add directory="/home/shocik/Pulpit/NOKIA/BTS/ApplicationEnvironment"/>
+					<Add directory="/home/shocik/Pulpit/NOKIA/BTS/Application"/>
+					<Add directory="/usr/include/x86_64-linux-gnu/qt5"/>
+					<Add directory="/usr/include/x86_64-linux-gnu/qt5/QtWidgets"/>
+					<Add directory="/usr/include/x86_64-linux-gnu/qt5/QtGui"/>
+					<Add directory="/usr/include/x86_64-linux-gnu/qt5/QtCore"/>
+					<Add directory="/usr/lib/x86_64-linux-gnu/qt5/mkspecs/linux-g++"/>
+					<Add directory="/usr/include/x86_64-linux-gnu/qt5/QtNetwork"/>
+					<Add directory="/usr/include/c++/9"/>
+					<Add directory="/usr/include/x86_64-linux-gnu/c++/9"/>
+					<Add directory="/usr/include/c++/9/backward"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/9/include"/>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/usr/include/x86_64-linux-gnu"/>
+					<Add directory="/usr/include"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j2 -f &quot;/home/shocik/Pulpit/NOKIA/cmake-build-debug/BTS/Makefile&quot;  VERBOSE=1 BTS"/>
+					<CompileFile command="/usr/bin/make -j2 -f &quot;/home/shocik/Pulpit/NOKIA/cmake-build-debug/BTS/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j2 -f &quot;/home/shocik/Pulpit/NOKIA/cmake-build-debug/BTS/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j2 -f &quot;/home/shocik/Pulpit/NOKIA/cmake-build-debug/BTS/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="BTS/fast">
+				<Option output="/home/shocik/Pulpit/NOKIA/cmake-build-debug/BTS/BTS" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/home/shocik/Pulpit/NOKIA/cmake-build-debug/BTS"/>
+				<Option object_output="./"/>
+				<Option type="1"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add option="-DQT_WIDGETS_LIB"/>
+					<Add option="-DQT_GUI_LIB"/>
+					<Add option="-DQT_CORE_LIB"/>
+					<Add option="-DQT_NETWORK_LIB"/>
+					<Add directory="/home/shocik/Pulpit/NOKIA/cmake-build-debug/BTS"/>
+					<Add directory="/home/shocik/Pulpit/NOKIA/BTS"/>
+					<Add directory="/home/shocik/Pulpit/NOKIA/cmake-build-debug/BTS/BTS_autogen/include"/>
+					<Add directory="/home/shocik/Pulpit/NOKIA/BTS/../COMMON"/>
+					<Add directory="/home/shocik/Pulpit/NOKIA/BTS/ApplicationEnvironment"/>
+					<Add directory="/home/shocik/Pulpit/NOKIA/BTS/Application"/>
+					<Add directory="/usr/include/x86_64-linux-gnu/qt5"/>
+					<Add directory="/usr/include/x86_64-linux-gnu/qt5/QtWidgets"/>
+					<Add directory="/usr/include/x86_64-linux-gnu/qt5/QtGui"/>
+					<Add directory="/usr/include/x86_64-linux-gnu/qt5/QtCore"/>
+					<Add directory="/usr/lib/x86_64-linux-gnu/qt5/mkspecs/linux-g++"/>
+					<Add directory="/usr/include/x86_64-linux-gnu/qt5/QtNetwork"/>
+					<Add directory="/usr/include/c++/9"/>
+					<Add directory="/usr/include/x86_64-linux-gnu/c++/9"/>
+					<Add directory="/usr/include/c++/9/backward"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/9/include"/>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/usr/include/x86_64-linux-gnu"/>
+					<Add directory="/usr/include"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j2 -f &quot;/home/shocik/Pulpit/NOKIA/cmake-build-debug/BTS/Makefile&quot;  VERBOSE=1 BTS/fast"/>
+					<CompileFile command="/usr/bin/make -j2 -f &quot;/home/shocik/Pulpit/NOKIA/cmake-build-debug/BTS/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j2 -f &quot;/home/shocik/Pulpit/NOKIA/cmake-build-debug/BTS/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j2 -f &quot;/home/shocik/Pulpit/NOKIA/cmake-build-debug/BTS/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="BTS_autogen">
+				<Option working_dir="/home/shocik/Pulpit/NOKIA/cmake-build-debug/BTS"/>
+				<Option type="4"/>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j2 -f &quot;/home/shocik/Pulpit/NOKIA/cmake-build-debug/BTS/Makefile&quot;  VERBOSE=1 BTS_autogen"/>
+					<CompileFile command="/usr/bin/make -j2 -f &quot;/home/shocik/Pulpit/NOKIA/cmake-build-debug/BTS/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j2 -f &quot;/home/shocik/Pulpit/NOKIA/cmake-build-debug/BTS/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j2 -f &quot;/home/shocik/Pulpit/NOKIA/cmake-build-debug/BTS/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="BtsApplication">
+				<Option output="/home/shocik/Pulpit/NOKIA/cmake-build-debug/BTS/Application/libBtsApplication.a" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/home/shocik/Pulpit/NOKIA/cmake-build-debug/BTS/Application"/>
+				<Option object_output="./"/>
+				<Option type="2"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add directory="/home/shocik/Pulpit/NOKIA/cmake-build-debug/BTS/Application"/>
+					<Add directory="/home/shocik/Pulpit/NOKIA/BTS/Application"/>
+					<Add directory="/home/shocik/Pulpit/NOKIA/BTS/../COMMON"/>
+					<Add directory="/home/shocik/Pulpit/NOKIA/BTS/ApplicationEnvironment"/>
+					<Add directory="/usr/include/c++/9"/>
+					<Add directory="/usr/include/x86_64-linux-gnu/c++/9"/>
+					<Add directory="/usr/include/c++/9/backward"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/9/include"/>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/usr/include/x86_64-linux-gnu"/>
+					<Add directory="/usr/include"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j2 -f &quot;/home/shocik/Pulpit/NOKIA/cmake-build-debug/BTS/Application/Makefile&quot;  VERBOSE=1 BtsApplication"/>
+					<CompileFile command="/usr/bin/make -j2 -f &quot;/home/shocik/Pulpit/NOKIA/cmake-build-debug/BTS/Application/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j2 -f &quot;/home/shocik/Pulpit/NOKIA/cmake-build-debug/BTS/Application/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j2 -f &quot;/home/shocik/Pulpit/NOKIA/cmake-build-debug/BTS/Application/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="BtsApplication/fast">
+				<Option output="/home/shocik/Pulpit/NOKIA/cmake-build-debug/BTS/Application/libBtsApplication.a" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/home/shocik/Pulpit/NOKIA/cmake-build-debug/BTS/Application"/>
+				<Option object_output="./"/>
+				<Option type="2"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add directory="/home/shocik/Pulpit/NOKIA/cmake-build-debug/BTS/Application"/>
+					<Add directory="/home/shocik/Pulpit/NOKIA/BTS/Application"/>
+					<Add directory="/home/shocik/Pulpit/NOKIA/BTS/../COMMON"/>
+					<Add directory="/home/shocik/Pulpit/NOKIA/BTS/ApplicationEnvironment"/>
+					<Add directory="/usr/include/c++/9"/>
+					<Add directory="/usr/include/x86_64-linux-gnu/c++/9"/>
+					<Add directory="/usr/include/c++/9/backward"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/9/include"/>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/usr/include/x86_64-linux-gnu"/>
+					<Add directory="/usr/include"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j2 -f &quot;/home/shocik/Pulpit/NOKIA/cmake-build-debug/BTS/Application/Makefile&quot;  VERBOSE=1 BtsApplication/fast"/>
+					<CompileFile command="/usr/bin/make -j2 -f &quot;/home/shocik/Pulpit/NOKIA/cmake-build-debug/BTS/Application/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j2 -f &quot;/home/shocik/Pulpit/NOKIA/cmake-build-debug/BTS/Application/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j2 -f &quot;/home/shocik/Pulpit/NOKIA/cmake-build-debug/BTS/Application/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="BtsApplicationEnvironment">
+				<Option output="/home/shocik/Pulpit/NOKIA/cmake-build-debug/BTS/ApplicationEnvironment/libBtsApplicationEnvironment.a" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/home/shocik/Pulpit/NOKIA/cmake-build-debug/BTS/ApplicationEnvironment"/>
+				<Option object_output="./"/>
+				<Option type="2"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add directory="/home/shocik/Pulpit/NOKIA/cmake-build-debug/BTS/ApplicationEnvironment"/>
+					<Add directory="/home/shocik/Pulpit/NOKIA/BTS/ApplicationEnvironment"/>
+					<Add directory="/home/shocik/Pulpit/NOKIA/BTS/../COMMON"/>
+					<Add directory="/home/shocik/Pulpit/NOKIA/BTS/Application"/>
+					<Add directory="/usr/include/c++/9"/>
+					<Add directory="/usr/include/x86_64-linux-gnu/c++/9"/>
+					<Add directory="/usr/include/c++/9/backward"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/9/include"/>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/usr/include/x86_64-linux-gnu"/>
+					<Add directory="/usr/include"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j2 -f &quot;/home/shocik/Pulpit/NOKIA/cmake-build-debug/BTS/ApplicationEnvironment/Makefile&quot;  VERBOSE=1 BtsApplicationEnvironment"/>
+					<CompileFile command="/usr/bin/make -j2 -f &quot;/home/shocik/Pulpit/NOKIA/cmake-build-debug/BTS/ApplicationEnvironment/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j2 -f &quot;/home/shocik/Pulpit/NOKIA/cmake-build-debug/BTS/ApplicationEnvironment/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j2 -f &quot;/home/shocik/Pulpit/NOKIA/cmake-build-debug/BTS/ApplicationEnvironment/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="BtsApplicationEnvironment/fast">
+				<Option output="/home/shocik/Pulpit/NOKIA/cmake-build-debug/BTS/ApplicationEnvironment/libBtsApplicationEnvironment.a" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/home/shocik/Pulpit/NOKIA/cmake-build-debug/BTS/ApplicationEnvironment"/>
+				<Option object_output="./"/>
+				<Option type="2"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add directory="/home/shocik/Pulpit/NOKIA/cmake-build-debug/BTS/ApplicationEnvironment"/>
+					<Add directory="/home/shocik/Pulpit/NOKIA/BTS/ApplicationEnvironment"/>
+					<Add directory="/home/shocik/Pulpit/NOKIA/BTS/../COMMON"/>
+					<Add directory="/home/shocik/Pulpit/NOKIA/BTS/Application"/>
+					<Add directory="/usr/include/c++/9"/>
+					<Add directory="/usr/include/x86_64-linux-gnu/c++/9"/>
+					<Add directory="/usr/include/c++/9/backward"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/9/include"/>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/usr/include/x86_64-linux-gnu"/>
+					<Add directory="/usr/include"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j2 -f &quot;/home/shocik/Pulpit/NOKIA/cmake-build-debug/BTS/ApplicationEnvironment/Makefile&quot;  VERBOSE=1 BtsApplicationEnvironment/fast"/>
+					<CompileFile command="/usr/bin/make -j2 -f &quot;/home/shocik/Pulpit/NOKIA/cmake-build-debug/BTS/ApplicationEnvironment/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j2 -f &quot;/home/shocik/Pulpit/NOKIA/cmake-build-debug/BTS/ApplicationEnvironment/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j2 -f &quot;/home/shocik/Pulpit/NOKIA/cmake-build-debug/BTS/ApplicationEnvironment/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="QtBtsApplicationEnvironment">
+				<Option output="/home/shocik/Pulpit/NOKIA/cmake-build-debug/BTS/QtApplicationEnvironment/libQtBtsApplicationEnvironment.a" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/home/shocik/Pulpit/NOKIA/cmake-build-debug/BTS/QtApplicationEnvironment"/>
+				<Option object_output="./"/>
+				<Option type="2"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add option="-DQT_WIDGETS_LIB"/>
+					<Add option="-DQT_GUI_LIB"/>
+					<Add option="-DQT_CORE_LIB"/>
+					<Add option="-DQT_NETWORK_LIB"/>
+					<Add directory="/home/shocik/Pulpit/NOKIA/cmake-build-debug/BTS/QtApplicationEnvironment"/>
+					<Add directory="/home/shocik/Pulpit/NOKIA/BTS/QtApplicationEnvironment"/>
+					<Add directory="/home/shocik/Pulpit/NOKIA/cmake-build-debug/BTS/QtApplicationEnvironment/QtBtsApplicationEnvironment_autogen/include"/>
+					<Add directory="/home/shocik/Pulpit/NOKIA/BTS/../COMMON"/>
+					<Add directory="/home/shocik/Pulpit/NOKIA/BTS/ApplicationEnvironment"/>
+					<Add directory="/home/shocik/Pulpit/NOKIA/BTS/Application"/>
+					<Add directory="/usr/include/x86_64-linux-gnu/qt5"/>
+					<Add directory="/usr/include/x86_64-linux-gnu/qt5/QtWidgets"/>
+					<Add directory="/usr/include/x86_64-linux-gnu/qt5/QtGui"/>
+					<Add directory="/usr/include/x86_64-linux-gnu/qt5/QtCore"/>
+					<Add directory="/usr/lib/x86_64-linux-gnu/qt5/mkspecs/linux-g++"/>
+					<Add directory="/usr/include/x86_64-linux-gnu/qt5/QtNetwork"/>
+					<Add directory="/usr/include/c++/9"/>
+					<Add directory="/usr/include/x86_64-linux-gnu/c++/9"/>
+					<Add directory="/usr/include/c++/9/backward"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/9/include"/>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/usr/include/x86_64-linux-gnu"/>
+					<Add directory="/usr/include"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j2 -f &quot;/home/shocik/Pulpit/NOKIA/cmake-build-debug/BTS/QtApplicationEnvironment/Makefile&quot;  VERBOSE=1 QtBtsApplicationEnvironment"/>
+					<CompileFile command="/usr/bin/make -j2 -f &quot;/home/shocik/Pulpit/NOKIA/cmake-build-debug/BTS/QtApplicationEnvironment/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j2 -f &quot;/home/shocik/Pulpit/NOKIA/cmake-build-debug/BTS/QtApplicationEnvironment/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j2 -f &quot;/home/shocik/Pulpit/NOKIA/cmake-build-debug/BTS/QtApplicationEnvironment/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="QtBtsApplicationEnvironment/fast">
+				<Option output="/home/shocik/Pulpit/NOKIA/cmake-build-debug/BTS/QtApplicationEnvironment/libQtBtsApplicationEnvironment.a" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/home/shocik/Pulpit/NOKIA/cmake-build-debug/BTS/QtApplicationEnvironment"/>
+				<Option object_output="./"/>
+				<Option type="2"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add option="-DQT_WIDGETS_LIB"/>
+					<Add option="-DQT_GUI_LIB"/>
+					<Add option="-DQT_CORE_LIB"/>
+					<Add option="-DQT_NETWORK_LIB"/>
+					<Add directory="/home/shocik/Pulpit/NOKIA/cmake-build-debug/BTS/QtApplicationEnvironment"/>
+					<Add directory="/home/shocik/Pulpit/NOKIA/BTS/QtApplicationEnvironment"/>
+					<Add directory="/home/shocik/Pulpit/NOKIA/cmake-build-debug/BTS/QtApplicationEnvironment/QtBtsApplicationEnvironment_autogen/include"/>
+					<Add directory="/home/shocik/Pulpit/NOKIA/BTS/../COMMON"/>
+					<Add directory="/home/shocik/Pulpit/NOKIA/BTS/ApplicationEnvironment"/>
+					<Add directory="/home/shocik/Pulpit/NOKIA/BTS/Application"/>
+					<Add directory="/usr/include/x86_64-linux-gnu/qt5"/>
+					<Add directory="/usr/include/x86_64-linux-gnu/qt5/QtWidgets"/>
+					<Add directory="/usr/include/x86_64-linux-gnu/qt5/QtGui"/>
+					<Add directory="/usr/include/x86_64-linux-gnu/qt5/QtCore"/>
+					<Add directory="/usr/lib/x86_64-linux-gnu/qt5/mkspecs/linux-g++"/>
+					<Add directory="/usr/include/x86_64-linux-gnu/qt5/QtNetwork"/>
+					<Add directory="/usr/include/c++/9"/>
+					<Add directory="/usr/include/x86_64-linux-gnu/c++/9"/>
+					<Add directory="/usr/include/c++/9/backward"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/9/include"/>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/usr/include/x86_64-linux-gnu"/>
+					<Add directory="/usr/include"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j2 -f &quot;/home/shocik/Pulpit/NOKIA/cmake-build-debug/BTS/QtApplicationEnvironment/Makefile&quot;  VERBOSE=1 QtBtsApplicationEnvironment/fast"/>
+					<CompileFile command="/usr/bin/make -j2 -f &quot;/home/shocik/Pulpit/NOKIA/cmake-build-debug/BTS/QtApplicationEnvironment/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j2 -f &quot;/home/shocik/Pulpit/NOKIA/cmake-build-debug/BTS/QtApplicationEnvironment/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j2 -f &quot;/home/shocik/Pulpit/NOKIA/cmake-build-debug/BTS/QtApplicationEnvironment/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="QtBtsApplicationEnvironment_autogen">
+				<Option working_dir="/home/shocik/Pulpit/NOKIA/cmake-build-debug/BTS/QtApplicationEnvironment"/>
+				<Option type="4"/>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j2 -f &quot;/home/shocik/Pulpit/NOKIA/cmake-build-debug/BTS/QtApplicationEnvironment/Makefile&quot;  VERBOSE=1 QtBtsApplicationEnvironment_autogen"/>
+					<CompileFile command="/usr/bin/make -j2 -f &quot;/home/shocik/Pulpit/NOKIA/cmake-build-debug/BTS/QtApplicationEnvironment/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j2 -f &quot;/home/shocik/Pulpit/NOKIA/cmake-build-debug/BTS/QtApplicationEnvironment/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j2 -f &quot;/home/shocik/Pulpit/NOKIA/cmake-build-debug/BTS/QtApplicationEnvironment/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="QtBtsConsole">
+				<Option output="/home/shocik/Pulpit/NOKIA/cmake-build-debug/BTS/QtApplicationEnvironment/Console/libQtBtsConsole.a" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/home/shocik/Pulpit/NOKIA/cmake-build-debug/BTS/QtApplicationEnvironment/Console"/>
+				<Option object_output="./"/>
+				<Option type="2"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add option="-DQT_WIDGETS_LIB"/>
+					<Add option="-DQT_GUI_LIB"/>
+					<Add option="-DQT_CORE_LIB"/>
+					<Add option="-DQT_NETWORK_LIB"/>
+					<Add directory="/home/shocik/Pulpit/NOKIA/cmake-build-debug/BTS/QtApplicationEnvironment/Console"/>
+					<Add directory="/home/shocik/Pulpit/NOKIA/BTS/QtApplicationEnvironment/Console"/>
+					<Add directory="/home/shocik/Pulpit/NOKIA/cmake-build-debug/BTS/QtApplicationEnvironment/Console/QtBtsConsole_autogen/include"/>
+					<Add directory="/home/shocik/Pulpit/NOKIA/BTS/../COMMON"/>
+					<Add directory="/home/shocik/Pulpit/NOKIA/BTS/ApplicationEnvironment"/>
+					<Add directory="/home/shocik/Pulpit/NOKIA/BTS/Application"/>
+					<Add directory="/usr/include/x86_64-linux-gnu/qt5"/>
+					<Add directory="/usr/include/x86_64-linux-gnu/qt5/QtWidgets"/>
+					<Add directory="/usr/include/x86_64-linux-gnu/qt5/QtGui"/>
+					<Add directory="/usr/include/x86_64-linux-gnu/qt5/QtCore"/>
+					<Add directory="/usr/lib/x86_64-linux-gnu/qt5/mkspecs/linux-g++"/>
+					<Add directory="/usr/include/x86_64-linux-gnu/qt5/QtNetwork"/>
+					<Add directory="/usr/include/c++/9"/>
+					<Add directory="/usr/include/x86_64-linux-gnu/c++/9"/>
+					<Add directory="/usr/include/c++/9/backward"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/9/include"/>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/usr/include/x86_64-linux-gnu"/>
+					<Add directory="/usr/include"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j2 -f &quot;/home/shocik/Pulpit/NOKIA/cmake-build-debug/BTS/QtApplicationEnvironment/Console/Makefile&quot;  VERBOSE=1 QtBtsConsole"/>
+					<CompileFile command="/usr/bin/make -j2 -f &quot;/home/shocik/Pulpit/NOKIA/cmake-build-debug/BTS/QtApplicationEnvironment/Console/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j2 -f &quot;/home/shocik/Pulpit/NOKIA/cmake-build-debug/BTS/QtApplicationEnvironment/Console/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j2 -f &quot;/home/shocik/Pulpit/NOKIA/cmake-build-debug/BTS/QtApplicationEnvironment/Console/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="QtBtsConsole/fast">
+				<Option output="/home/shocik/Pulpit/NOKIA/cmake-build-debug/BTS/QtApplicationEnvironment/Console/libQtBtsConsole.a" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/home/shocik/Pulpit/NOKIA/cmake-build-debug/BTS/QtApplicationEnvironment/Console"/>
+				<Option object_output="./"/>
+				<Option type="2"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add option="-DQT_WIDGETS_LIB"/>
+					<Add option="-DQT_GUI_LIB"/>
+					<Add option="-DQT_CORE_LIB"/>
+					<Add option="-DQT_NETWORK_LIB"/>
+					<Add directory="/home/shocik/Pulpit/NOKIA/cmake-build-debug/BTS/QtApplicationEnvironment/Console"/>
+					<Add directory="/home/shocik/Pulpit/NOKIA/BTS/QtApplicationEnvironment/Console"/>
+					<Add directory="/home/shocik/Pulpit/NOKIA/cmake-build-debug/BTS/QtApplicationEnvironment/Console/QtBtsConsole_autogen/include"/>
+					<Add directory="/home/shocik/Pulpit/NOKIA/BTS/../COMMON"/>
+					<Add directory="/home/shocik/Pulpit/NOKIA/BTS/ApplicationEnvironment"/>
+					<Add directory="/home/shocik/Pulpit/NOKIA/BTS/Application"/>
+					<Add directory="/usr/include/x86_64-linux-gnu/qt5"/>
+					<Add directory="/usr/include/x86_64-linux-gnu/qt5/QtWidgets"/>
+					<Add directory="/usr/include/x86_64-linux-gnu/qt5/QtGui"/>
+					<Add directory="/usr/include/x86_64-linux-gnu/qt5/QtCore"/>
+					<Add directory="/usr/lib/x86_64-linux-gnu/qt5/mkspecs/linux-g++"/>
+					<Add directory="/usr/include/x86_64-linux-gnu/qt5/QtNetwork"/>
+					<Add directory="/usr/include/c++/9"/>
+					<Add directory="/usr/include/x86_64-linux-gnu/c++/9"/>
+					<Add directory="/usr/include/c++/9/backward"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/9/include"/>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/usr/include/x86_64-linux-gnu"/>
+					<Add directory="/usr/include"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j2 -f &quot;/home/shocik/Pulpit/NOKIA/cmake-build-debug/BTS/QtApplicationEnvironment/Console/Makefile&quot;  VERBOSE=1 QtBtsConsole/fast"/>
+					<CompileFile command="/usr/bin/make -j2 -f &quot;/home/shocik/Pulpit/NOKIA/cmake-build-debug/BTS/QtApplicationEnvironment/Console/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j2 -f &quot;/home/shocik/Pulpit/NOKIA/cmake-build-debug/BTS/QtApplicationEnvironment/Console/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j2 -f &quot;/home/shocik/Pulpit/NOKIA/cmake-build-debug/BTS/QtApplicationEnvironment/Console/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="QtBtsConsole_autogen">
+				<Option working_dir="/home/shocik/Pulpit/NOKIA/cmake-build-debug/BTS/QtApplicationEnvironment/Console"/>
+				<Option type="4"/>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j2 -f &quot;/home/shocik/Pulpit/NOKIA/cmake-build-debug/BTS/QtApplicationEnvironment/Console/Makefile&quot;  VERBOSE=1 QtBtsConsole_autogen"/>
+					<CompileFile command="/usr/bin/make -j2 -f &quot;/home/shocik/Pulpit/NOKIA/cmake-build-debug/BTS/QtApplicationEnvironment/Console/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j2 -f &quot;/home/shocik/Pulpit/NOKIA/cmake-build-debug/BTS/QtApplicationEnvironment/Console/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j2 -f &quot;/home/shocik/Pulpit/NOKIA/cmake-build-debug/BTS/QtApplicationEnvironment/Console/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="QtBtsTransport">
+				<Option output="/home/shocik/Pulpit/NOKIA/cmake-build-debug/BTS/QtApplicationEnvironment/Transport/libQtBtsTransport.a" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/home/shocik/Pulpit/NOKIA/cmake-build-debug/BTS/QtApplicationEnvironment/Transport"/>
+				<Option object_output="./"/>
+				<Option type="2"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add option="-DQT_WIDGETS_LIB"/>
+					<Add option="-DQT_GUI_LIB"/>
+					<Add option="-DQT_CORE_LIB"/>
+					<Add option="-DQT_NETWORK_LIB"/>
+					<Add directory="/home/shocik/Pulpit/NOKIA/cmake-build-debug/BTS/QtApplicationEnvironment/Transport"/>
+					<Add directory="/home/shocik/Pulpit/NOKIA/BTS/QtApplicationEnvironment/Transport"/>
+					<Add directory="/home/shocik/Pulpit/NOKIA/cmake-build-debug/BTS/QtApplicationEnvironment/Transport/QtBtsTransport_autogen/include"/>
+					<Add directory="/home/shocik/Pulpit/NOKIA/BTS/../COMMON"/>
+					<Add directory="/home/shocik/Pulpit/NOKIA/BTS/ApplicationEnvironment"/>
+					<Add directory="/home/shocik/Pulpit/NOKIA/BTS/Application"/>
+					<Add directory="/usr/include/x86_64-linux-gnu/qt5"/>
+					<Add directory="/usr/include/x86_64-linux-gnu/qt5/QtWidgets"/>
+					<Add directory="/usr/include/x86_64-linux-gnu/qt5/QtGui"/>
+					<Add directory="/usr/include/x86_64-linux-gnu/qt5/QtCore"/>
+					<Add directory="/usr/lib/x86_64-linux-gnu/qt5/mkspecs/linux-g++"/>
+					<Add directory="/usr/include/x86_64-linux-gnu/qt5/QtNetwork"/>
+					<Add directory="/usr/include/c++/9"/>
+					<Add directory="/usr/include/x86_64-linux-gnu/c++/9"/>
+					<Add directory="/usr/include/c++/9/backward"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/9/include"/>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/usr/include/x86_64-linux-gnu"/>
+					<Add directory="/usr/include"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j2 -f &quot;/home/shocik/Pulpit/NOKIA/cmake-build-debug/BTS/QtApplicationEnvironment/Transport/Makefile&quot;  VERBOSE=1 QtBtsTransport"/>
+					<CompileFile command="/usr/bin/make -j2 -f &quot;/home/shocik/Pulpit/NOKIA/cmake-build-debug/BTS/QtApplicationEnvironment/Transport/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j2 -f &quot;/home/shocik/Pulpit/NOKIA/cmake-build-debug/BTS/QtApplicationEnvironment/Transport/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j2 -f &quot;/home/shocik/Pulpit/NOKIA/cmake-build-debug/BTS/QtApplicationEnvironment/Transport/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="QtBtsTransport/fast">
+				<Option output="/home/shocik/Pulpit/NOKIA/cmake-build-debug/BTS/QtApplicationEnvironment/Transport/libQtBtsTransport.a" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/home/shocik/Pulpit/NOKIA/cmake-build-debug/BTS/QtApplicationEnvironment/Transport"/>
+				<Option object_output="./"/>
+				<Option type="2"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add option="-DQT_WIDGETS_LIB"/>
+					<Add option="-DQT_GUI_LIB"/>
+					<Add option="-DQT_CORE_LIB"/>
+					<Add option="-DQT_NETWORK_LIB"/>
+					<Add directory="/home/shocik/Pulpit/NOKIA/cmake-build-debug/BTS/QtApplicationEnvironment/Transport"/>
+					<Add directory="/home/shocik/Pulpit/NOKIA/BTS/QtApplicationEnvironment/Transport"/>
+					<Add directory="/home/shocik/Pulpit/NOKIA/cmake-build-debug/BTS/QtApplicationEnvironment/Transport/QtBtsTransport_autogen/include"/>
+					<Add directory="/home/shocik/Pulpit/NOKIA/BTS/../COMMON"/>
+					<Add directory="/home/shocik/Pulpit/NOKIA/BTS/ApplicationEnvironment"/>
+					<Add directory="/home/shocik/Pulpit/NOKIA/BTS/Application"/>
+					<Add directory="/usr/include/x86_64-linux-gnu/qt5"/>
+					<Add directory="/usr/include/x86_64-linux-gnu/qt5/QtWidgets"/>
+					<Add directory="/usr/include/x86_64-linux-gnu/qt5/QtGui"/>
+					<Add directory="/usr/include/x86_64-linux-gnu/qt5/QtCore"/>
+					<Add directory="/usr/lib/x86_64-linux-gnu/qt5/mkspecs/linux-g++"/>
+					<Add directory="/usr/include/x86_64-linux-gnu/qt5/QtNetwork"/>
+					<Add directory="/usr/include/c++/9"/>
+					<Add directory="/usr/include/x86_64-linux-gnu/c++/9"/>
+					<Add directory="/usr/include/c++/9/backward"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/9/include"/>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/usr/include/x86_64-linux-gnu"/>
+					<Add directory="/usr/include"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j2 -f &quot;/home/shocik/Pulpit/NOKIA/cmake-build-debug/BTS/QtApplicationEnvironment/Transport/Makefile&quot;  VERBOSE=1 QtBtsTransport/fast"/>
+					<CompileFile command="/usr/bin/make -j2 -f &quot;/home/shocik/Pulpit/NOKIA/cmake-build-debug/BTS/QtApplicationEnvironment/Transport/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j2 -f &quot;/home/shocik/Pulpit/NOKIA/cmake-build-debug/BTS/QtApplicationEnvironment/Transport/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j2 -f &quot;/home/shocik/Pulpit/NOKIA/cmake-build-debug/BTS/QtApplicationEnvironment/Transport/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="QtBtsTransport_autogen">
+				<Option working_dir="/home/shocik/Pulpit/NOKIA/cmake-build-debug/BTS/QtApplicationEnvironment/Transport"/>
+				<Option type="4"/>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j2 -f &quot;/home/shocik/Pulpit/NOKIA/cmake-build-debug/BTS/QtApplicationEnvironment/Transport/Makefile&quot;  VERBOSE=1 QtBtsTransport_autogen"/>
+					<CompileFile command="/usr/bin/make -j2 -f &quot;/home/shocik/Pulpit/NOKIA/cmake-build-debug/BTS/QtApplicationEnvironment/Transport/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j2 -f &quot;/home/shocik/Pulpit/NOKIA/cmake-build-debug/BTS/QtApplicationEnvironment/Transport/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j2 -f &quot;/home/shocik/Pulpit/NOKIA/cmake-build-debug/BTS/QtApplicationEnvironment/Transport/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="BtsApplicationUT">
+				<Option output="/home/shocik/Pulpit/NOKIA/cmake-build-debug/BTS/Tests/Application/BtsApplicationUT" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/home/shocik/Pulpit/NOKIA/cmake-build-debug/BTS/Tests/Application"/>
+				<Option object_output="./"/>
+				<Option type="1"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add directory="/home/shocik/Pulpit/NOKIA/cmake-build-debug/BTS/Tests/Application"/>
+					<Add directory="/home/shocik/Pulpit/NOKIA/BTS/Tests/Application"/>
+					<Add directory="/home/shocik/Pulpit/NOKIA/BTS/../COMMON"/>
+					<Add directory="/home/shocik/Pulpit/NOKIA/BTS/ApplicationEnvironment"/>
+					<Add directory="/home/shocik/Pulpit/NOKIA/BTS/Application"/>
+					<Add directory="/home/shocik/Pulpit/NOKIA/BTS/../COMMON/Tests"/>
+					<Add directory="/home/shocik/Pulpit/NOKIA/googletest/googletest/include"/>
+					<Add directory="/home/shocik/Pulpit/NOKIA/googletest/googlemock/include"/>
+					<Add directory="/home/shocik/Pulpit/NOKIA/googletest/googletest"/>
+					<Add directory="/home/shocik/Pulpit/NOKIA/googletest/googlemock"/>
+					<Add directory="/usr/include/c++/9"/>
+					<Add directory="/usr/include/x86_64-linux-gnu/c++/9"/>
+					<Add directory="/usr/include/c++/9/backward"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/9/include"/>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/usr/include/x86_64-linux-gnu"/>
+					<Add directory="/usr/include"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j2 -f &quot;/home/shocik/Pulpit/NOKIA/cmake-build-debug/BTS/Tests/Application/Makefile&quot;  VERBOSE=1 BtsApplicationUT"/>
+					<CompileFile command="/usr/bin/make -j2 -f &quot;/home/shocik/Pulpit/NOKIA/cmake-build-debug/BTS/Tests/Application/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j2 -f &quot;/home/shocik/Pulpit/NOKIA/cmake-build-debug/BTS/Tests/Application/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j2 -f &quot;/home/shocik/Pulpit/NOKIA/cmake-build-debug/BTS/Tests/Application/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="BtsApplicationUT/fast">
+				<Option output="/home/shocik/Pulpit/NOKIA/cmake-build-debug/BTS/Tests/Application/BtsApplicationUT" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/home/shocik/Pulpit/NOKIA/cmake-build-debug/BTS/Tests/Application"/>
+				<Option object_output="./"/>
+				<Option type="1"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add directory="/home/shocik/Pulpit/NOKIA/cmake-build-debug/BTS/Tests/Application"/>
+					<Add directory="/home/shocik/Pulpit/NOKIA/BTS/Tests/Application"/>
+					<Add directory="/home/shocik/Pulpit/NOKIA/BTS/../COMMON"/>
+					<Add directory="/home/shocik/Pulpit/NOKIA/BTS/ApplicationEnvironment"/>
+					<Add directory="/home/shocik/Pulpit/NOKIA/BTS/Application"/>
+					<Add directory="/home/shocik/Pulpit/NOKIA/BTS/../COMMON/Tests"/>
+					<Add directory="/home/shocik/Pulpit/NOKIA/googletest/googletest/include"/>
+					<Add directory="/home/shocik/Pulpit/NOKIA/googletest/googlemock/include"/>
+					<Add directory="/home/shocik/Pulpit/NOKIA/googletest/googletest"/>
+					<Add directory="/home/shocik/Pulpit/NOKIA/googletest/googlemock"/>
+					<Add directory="/usr/include/c++/9"/>
+					<Add directory="/usr/include/x86_64-linux-gnu/c++/9"/>
+					<Add directory="/usr/include/c++/9/backward"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/9/include"/>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/usr/include/x86_64-linux-gnu"/>
+					<Add directory="/usr/include"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j2 -f &quot;/home/shocik/Pulpit/NOKIA/cmake-build-debug/BTS/Tests/Application/Makefile&quot;  VERBOSE=1 BtsApplicationUT/fast"/>
+					<CompileFile command="/usr/bin/make -j2 -f &quot;/home/shocik/Pulpit/NOKIA/cmake-build-debug/BTS/Tests/Application/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j2 -f &quot;/home/shocik/Pulpit/NOKIA/cmake-build-debug/BTS/Tests/Application/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j2 -f &quot;/home/shocik/Pulpit/NOKIA/cmake-build-debug/BTS/Tests/Application/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="Common">
+				<Option output="/home/shocik/Pulpit/NOKIA/cmake-build-debug/COMMON/libCommon.a" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/home/shocik/Pulpit/NOKIA/cmake-build-debug/COMMON"/>
+				<Option object_output="./"/>
+				<Option type="2"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add directory="/home/shocik/Pulpit/NOKIA/cmake-build-debug/COMMON"/>
+					<Add directory="/home/shocik/Pulpit/NOKIA/COMMON"/>
+					<Add directory="/usr/include/c++/9"/>
+					<Add directory="/usr/include/x86_64-linux-gnu/c++/9"/>
+					<Add directory="/usr/include/c++/9/backward"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/9/include"/>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/usr/include/x86_64-linux-gnu"/>
+					<Add directory="/usr/include"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j2 -f &quot;/home/shocik/Pulpit/NOKIA/cmake-build-debug/COMMON/Makefile&quot;  VERBOSE=1 Common"/>
+					<CompileFile command="/usr/bin/make -j2 -f &quot;/home/shocik/Pulpit/NOKIA/cmake-build-debug/COMMON/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j2 -f &quot;/home/shocik/Pulpit/NOKIA/cmake-build-debug/COMMON/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j2 -f &quot;/home/shocik/Pulpit/NOKIA/cmake-build-debug/COMMON/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="Common/fast">
+				<Option output="/home/shocik/Pulpit/NOKIA/cmake-build-debug/COMMON/libCommon.a" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/home/shocik/Pulpit/NOKIA/cmake-build-debug/COMMON"/>
+				<Option object_output="./"/>
+				<Option type="2"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add directory="/home/shocik/Pulpit/NOKIA/cmake-build-debug/COMMON"/>
+					<Add directory="/home/shocik/Pulpit/NOKIA/COMMON"/>
+					<Add directory="/usr/include/c++/9"/>
+					<Add directory="/usr/include/x86_64-linux-gnu/c++/9"/>
+					<Add directory="/usr/include/c++/9/backward"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/9/include"/>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/usr/include/x86_64-linux-gnu"/>
+					<Add directory="/usr/include"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j2 -f &quot;/home/shocik/Pulpit/NOKIA/cmake-build-debug/COMMON/Makefile&quot;  VERBOSE=1 Common/fast"/>
+					<CompileFile command="/usr/bin/make -j2 -f &quot;/home/shocik/Pulpit/NOKIA/cmake-build-debug/COMMON/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j2 -f &quot;/home/shocik/Pulpit/NOKIA/cmake-build-debug/COMMON/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j2 -f &quot;/home/shocik/Pulpit/NOKIA/cmake-build-debug/COMMON/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="COMMON_UT">
+				<Option output="/home/shocik/Pulpit/NOKIA/cmake-build-debug/COMMON/Tests/COMMON_UT" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/home/shocik/Pulpit/NOKIA/cmake-build-debug/COMMON/Tests"/>
+				<Option object_output="./"/>
+				<Option type="1"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add directory="/home/shocik/Pulpit/NOKIA/cmake-build-debug/COMMON/Tests"/>
+					<Add directory="/home/shocik/Pulpit/NOKIA/COMMON/Tests"/>
+					<Add directory="/home/shocik/Pulpit/NOKIA/COMMON"/>
+					<Add directory="/home/shocik/Pulpit/NOKIA/googletest/googletest/include"/>
+					<Add directory="/home/shocik/Pulpit/NOKIA/googletest/googlemock/include"/>
+					<Add directory="/home/shocik/Pulpit/NOKIA/googletest/googletest"/>
+					<Add directory="/home/shocik/Pulpit/NOKIA/googletest/googlemock"/>
+					<Add directory="/usr/include/c++/9"/>
+					<Add directory="/usr/include/x86_64-linux-gnu/c++/9"/>
+					<Add directory="/usr/include/c++/9/backward"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/9/include"/>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/usr/include/x86_64-linux-gnu"/>
+					<Add directory="/usr/include"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j2 -f &quot;/home/shocik/Pulpit/NOKIA/cmake-build-debug/COMMON/Tests/Makefile&quot;  VERBOSE=1 COMMON_UT"/>
+					<CompileFile command="/usr/bin/make -j2 -f &quot;/home/shocik/Pulpit/NOKIA/cmake-build-debug/COMMON/Tests/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j2 -f &quot;/home/shocik/Pulpit/NOKIA/cmake-build-debug/COMMON/Tests/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j2 -f &quot;/home/shocik/Pulpit/NOKIA/cmake-build-debug/COMMON/Tests/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="COMMON_UT/fast">
+				<Option output="/home/shocik/Pulpit/NOKIA/cmake-build-debug/COMMON/Tests/COMMON_UT" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/home/shocik/Pulpit/NOKIA/cmake-build-debug/COMMON/Tests"/>
+				<Option object_output="./"/>
+				<Option type="1"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add directory="/home/shocik/Pulpit/NOKIA/cmake-build-debug/COMMON/Tests"/>
+					<Add directory="/home/shocik/Pulpit/NOKIA/COMMON/Tests"/>
+					<Add directory="/home/shocik/Pulpit/NOKIA/COMMON"/>
+					<Add directory="/home/shocik/Pulpit/NOKIA/googletest/googletest/include"/>
+					<Add directory="/home/shocik/Pulpit/NOKIA/googletest/googlemock/include"/>
+					<Add directory="/home/shocik/Pulpit/NOKIA/googletest/googletest"/>
+					<Add directory="/home/shocik/Pulpit/NOKIA/googletest/googlemock"/>
+					<Add directory="/usr/include/c++/9"/>
+					<Add directory="/usr/include/x86_64-linux-gnu/c++/9"/>
+					<Add directory="/usr/include/c++/9/backward"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/9/include"/>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/usr/include/x86_64-linux-gnu"/>
+					<Add directory="/usr/include"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j2 -f &quot;/home/shocik/Pulpit/NOKIA/cmake-build-debug/COMMON/Tests/Makefile&quot;  VERBOSE=1 COMMON_UT/fast"/>
+					<CompileFile command="/usr/bin/make -j2 -f &quot;/home/shocik/Pulpit/NOKIA/cmake-build-debug/COMMON/Tests/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j2 -f &quot;/home/shocik/Pulpit/NOKIA/cmake-build-debug/COMMON/Tests/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j2 -f &quot;/home/shocik/Pulpit/NOKIA/cmake-build-debug/COMMON/Tests/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="CommonUtMocks">
+				<Option output="/home/shocik/Pulpit/NOKIA/cmake-build-debug/COMMON/Tests/Mocks/libCommonUtMocks.a" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/home/shocik/Pulpit/NOKIA/cmake-build-debug/COMMON/Tests/Mocks"/>
+				<Option object_output="./"/>
+				<Option type="2"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add directory="/home/shocik/Pulpit/NOKIA/cmake-build-debug/COMMON/Tests/Mocks"/>
+					<Add directory="/home/shocik/Pulpit/NOKIA/COMMON/Tests/Mocks"/>
+					<Add directory="/home/shocik/Pulpit/NOKIA/COMMON"/>
+					<Add directory="/home/shocik/Pulpit/NOKIA/googletest/googletest/include"/>
+					<Add directory="/home/shocik/Pulpit/NOKIA/googletest/googlemock/include"/>
+					<Add directory="/home/shocik/Pulpit/NOKIA/googletest/googletest"/>
+					<Add directory="/home/shocik/Pulpit/NOKIA/googletest/googlemock"/>
+					<Add directory="/usr/include/c++/9"/>
+					<Add directory="/usr/include/x86_64-linux-gnu/c++/9"/>
+					<Add directory="/usr/include/c++/9/backward"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/9/include"/>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/usr/include/x86_64-linux-gnu"/>
+					<Add directory="/usr/include"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j2 -f &quot;/home/shocik/Pulpit/NOKIA/cmake-build-debug/COMMON/Tests/Mocks/Makefile&quot;  VERBOSE=1 CommonUtMocks"/>
+					<CompileFile command="/usr/bin/make -j2 -f &quot;/home/shocik/Pulpit/NOKIA/cmake-build-debug/COMMON/Tests/Mocks/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j2 -f &quot;/home/shocik/Pulpit/NOKIA/cmake-build-debug/COMMON/Tests/Mocks/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j2 -f &quot;/home/shocik/Pulpit/NOKIA/cmake-build-debug/COMMON/Tests/Mocks/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="CommonUtMocks/fast">
+				<Option output="/home/shocik/Pulpit/NOKIA/cmake-build-debug/COMMON/Tests/Mocks/libCommonUtMocks.a" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/home/shocik/Pulpit/NOKIA/cmake-build-debug/COMMON/Tests/Mocks"/>
+				<Option object_output="./"/>
+				<Option type="2"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add directory="/home/shocik/Pulpit/NOKIA/cmake-build-debug/COMMON/Tests/Mocks"/>
+					<Add directory="/home/shocik/Pulpit/NOKIA/COMMON/Tests/Mocks"/>
+					<Add directory="/home/shocik/Pulpit/NOKIA/COMMON"/>
+					<Add directory="/home/shocik/Pulpit/NOKIA/googletest/googletest/include"/>
+					<Add directory="/home/shocik/Pulpit/NOKIA/googletest/googlemock/include"/>
+					<Add directory="/home/shocik/Pulpit/NOKIA/googletest/googletest"/>
+					<Add directory="/home/shocik/Pulpit/NOKIA/googletest/googlemock"/>
+					<Add directory="/usr/include/c++/9"/>
+					<Add directory="/usr/include/x86_64-linux-gnu/c++/9"/>
+					<Add directory="/usr/include/c++/9/backward"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/9/include"/>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/usr/include/x86_64-linux-gnu"/>
+					<Add directory="/usr/include"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j2 -f &quot;/home/shocik/Pulpit/NOKIA/cmake-build-debug/COMMON/Tests/Mocks/Makefile&quot;  VERBOSE=1 CommonUtMocks/fast"/>
+					<CompileFile command="/usr/bin/make -j2 -f &quot;/home/shocik/Pulpit/NOKIA/cmake-build-debug/COMMON/Tests/Mocks/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j2 -f &quot;/home/shocik/Pulpit/NOKIA/cmake-build-debug/COMMON/Tests/Mocks/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j2 -f &quot;/home/shocik/Pulpit/NOKIA/cmake-build-debug/COMMON/Tests/Mocks/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+		</Build>
+		<Unit filename="/home/shocik/Pulpit/NOKIA/BTS/Application/Application.cpp">
+			<Option target="BtsApplication"/>
+		</Unit>
+		<Unit filename="/home/shocik/Pulpit/NOKIA/BTS/Application/Application.hpp">
+			<Option target="BtsApplication"/>
+		</Unit>
+		<Unit filename="/home/shocik/Pulpit/NOKIA/BTS/Application/ApplicationFactory.cpp">
+			<Option target="BtsApplication"/>
+		</Unit>
+		<Unit filename="/home/shocik/Pulpit/NOKIA/BTS/Application/ApplicationFactory.hpp">
+			<Option target="BtsApplication"/>
+		</Unit>
+		<Unit filename="/home/shocik/Pulpit/NOKIA/BTS/Application/ConsoleCommands.cpp">
+			<Option target="BtsApplication"/>
+		</Unit>
+		<Unit filename="/home/shocik/Pulpit/NOKIA/BTS/Application/ConsoleCommands.hpp">
+			<Option target="BtsApplication"/>
+		</Unit>
+		<Unit filename="/home/shocik/Pulpit/NOKIA/BTS/Application/IComponent.cpp">
+			<Option target="BtsApplication"/>
+		</Unit>
+		<Unit filename="/home/shocik/Pulpit/NOKIA/BTS/Application/IComponent.hpp">
+			<Option target="BtsApplication"/>
+		</Unit>
+		<Unit filename="/home/shocik/Pulpit/NOKIA/BTS/Application/SibMolester.cpp">
+			<Option target="BtsApplication"/>
+		</Unit>
+		<Unit filename="/home/shocik/Pulpit/NOKIA/BTS/Application/SibMolester.hpp">
+			<Option target="BtsApplication"/>
+		</Unit>
+		<Unit filename="/home/shocik/Pulpit/NOKIA/BTS/Application/Synchronization.cpp">
+			<Option target="BtsApplication"/>
+		</Unit>
+		<Unit filename="/home/shocik/Pulpit/NOKIA/BTS/Application/Synchronization.hpp">
+			<Option target="BtsApplication"/>
+		</Unit>
+		<Unit filename="/home/shocik/Pulpit/NOKIA/BTS/Application/UeConnection/IUeConnection.cpp">
+			<Option target="BtsApplication"/>
+		</Unit>
+		<Unit filename="/home/shocik/Pulpit/NOKIA/BTS/Application/UeConnection/IUeConnection.hpp">
+			<Option target="BtsApplication"/>
+		</Unit>
+		<Unit filename="/home/shocik/Pulpit/NOKIA/BTS/Application/UeConnection/IUeConnectionFactory.cpp">
+			<Option target="BtsApplication"/>
+		</Unit>
+		<Unit filename="/home/shocik/Pulpit/NOKIA/BTS/Application/UeConnection/IUeConnectionFactory.hpp">
+			<Option target="BtsApplication"/>
+		</Unit>
+		<Unit filename="/home/shocik/Pulpit/NOKIA/BTS/Application/UeConnection/UeConnection.cpp">
+			<Option target="BtsApplication"/>
+		</Unit>
+		<Unit filename="/home/shocik/Pulpit/NOKIA/BTS/Application/UeConnection/UeConnection.hpp">
+			<Option target="BtsApplication"/>
+		</Unit>
+		<Unit filename="/home/shocik/Pulpit/NOKIA/BTS/Application/UeConnection/UeConnectionFactory.cpp">
+			<Option target="BtsApplication"/>
+		</Unit>
+		<Unit filename="/home/shocik/Pulpit/NOKIA/BTS/Application/UeConnection/UeConnectionFactory.hpp">
+			<Option target="BtsApplication"/>
+		</Unit>
+		<Unit filename="/home/shocik/Pulpit/NOKIA/BTS/Application/UeConnection/UeConnectionSpawner.cpp">
+			<Option target="BtsApplication"/>
+		</Unit>
+		<Unit filename="/home/shocik/Pulpit/NOKIA/BTS/Application/UeConnection/UeConnectionSpawner.hpp">
+			<Option target="BtsApplication"/>
+		</Unit>
+		<Unit filename="/home/shocik/Pulpit/NOKIA/BTS/Application/UeConnection/UeSlot.cpp">
+			<Option target="BtsApplication"/>
+		</Unit>
+		<Unit filename="/home/shocik/Pulpit/NOKIA/BTS/Application/UeConnection/UeSlot.hpp">
+			<Option target="BtsApplication"/>
+		</Unit>
+		<Unit filename="/home/shocik/Pulpit/NOKIA/BTS/Application/UeRelay/IUeRelay.cpp">
+			<Option target="BtsApplication"/>
+		</Unit>
+		<Unit filename="/home/shocik/Pulpit/NOKIA/BTS/Application/UeRelay/IUeRelay.hpp">
+			<Option target="BtsApplication"/>
+		</Unit>
+		<Unit filename="/home/shocik/Pulpit/NOKIA/BTS/Application/UeRelay/UeRelay.cpp">
+			<Option target="BtsApplication"/>
+		</Unit>
+		<Unit filename="/home/shocik/Pulpit/NOKIA/BTS/Application/UeRelay/UeRelay.hpp">
+			<Option target="BtsApplication"/>
+		</Unit>
+		<Unit filename="/home/shocik/Pulpit/NOKIA/BTS/ApplicationEnvironment/ApplicationEnvironmentFactory.cpp">
+			<Option target="BtsApplicationEnvironment"/>
+		</Unit>
+		<Unit filename="/home/shocik/Pulpit/NOKIA/BTS/ApplicationEnvironment/ApplicationEnvironmentFactory.hpp">
+			<Option target="BtsApplicationEnvironment"/>
+		</Unit>
+		<Unit filename="/home/shocik/Pulpit/NOKIA/BTS/ApplicationEnvironment/IApplicationEnvironment.cpp">
+			<Option target="BtsApplicationEnvironment"/>
+		</Unit>
+		<Unit filename="/home/shocik/Pulpit/NOKIA/BTS/ApplicationEnvironment/IApplicationEnvironment.hpp">
+			<Option target="BtsApplicationEnvironment"/>
+		</Unit>
+		<Unit filename="/home/shocik/Pulpit/NOKIA/BTS/ApplicationEnvironment/IConsole.cpp">
+			<Option target="BtsApplicationEnvironment"/>
+		</Unit>
+		<Unit filename="/home/shocik/Pulpit/NOKIA/BTS/ApplicationEnvironment/IConsole.hpp">
+			<Option target="BtsApplicationEnvironment"/>
+		</Unit>
+		<Unit filename="/home/shocik/Pulpit/NOKIA/BTS/ApplicationEnvironment/ITransport.cpp">
+			<Option target="BtsApplicationEnvironment"/>
+		</Unit>
+		<Unit filename="/home/shocik/Pulpit/NOKIA/BTS/ApplicationEnvironment/ITransport.hpp">
+			<Option target="BtsApplicationEnvironment"/>
+		</Unit>
+		<Unit filename="/home/shocik/Pulpit/NOKIA/BTS/QtApplicationEnvironment/ApplicationEnvironment.cpp">
+			<Option target="QtBtsApplicationEnvironment"/>
+		</Unit>
+		<Unit filename="/home/shocik/Pulpit/NOKIA/BTS/QtApplicationEnvironment/ApplicationEnvironment.hpp">
+			<Option target="QtBtsApplicationEnvironment"/>
+		</Unit>
+		<Unit filename="/home/shocik/Pulpit/NOKIA/BTS/QtApplicationEnvironment/ApplicationEnvironmentFactory.cpp">
+			<Option target="QtBtsApplicationEnvironment"/>
+		</Unit>
+		<Unit filename="/home/shocik/Pulpit/NOKIA/BTS/QtApplicationEnvironment/Console/TextConsole.cpp">
+			<Option target="QtBtsConsole"/>
+		</Unit>
+		<Unit filename="/home/shocik/Pulpit/NOKIA/BTS/QtApplicationEnvironment/Console/TextConsole.hpp">
+			<Option target="QtBtsConsole"/>
+		</Unit>
+		<Unit filename="/home/shocik/Pulpit/NOKIA/BTS/QtApplicationEnvironment/Transport/QtTransport.cpp">
+			<Option target="QtBtsTransport"/>
+		</Unit>
+		<Unit filename="/home/shocik/Pulpit/NOKIA/BTS/QtApplicationEnvironment/Transport/QtTransport.hpp">
+			<Option target="QtBtsTransport"/>
+		</Unit>
+		<Unit filename="/home/shocik/Pulpit/NOKIA/BTS/QtApplicationEnvironment/Transport/QtTransportEnvironment.cpp">
+			<Option target="QtBtsTransport"/>
+		</Unit>
+		<Unit filename="/home/shocik/Pulpit/NOKIA/BTS/QtApplicationEnvironment/Transport/QtTransportEnvironment.hpp">
+			<Option target="QtBtsTransport"/>
+		</Unit>
+		<Unit filename="/home/shocik/Pulpit/NOKIA/BTS/Tests/Application/ApplicationTestSuite.cpp">
+			<Option target="BtsApplicationUT"/>
+		</Unit>
+		<Unit filename="/home/shocik/Pulpit/NOKIA/BTS/Tests/Application/ApplicationTestSuite.hpp">
+			<Option target="BtsApplicationUT"/>
+		</Unit>
+		<Unit filename="/home/shocik/Pulpit/NOKIA/BTS/Tests/Application/ConsoleCommandsTestSuite.cpp">
+			<Option target="BtsApplicationUT"/>
+		</Unit>
+		<Unit filename="/home/shocik/Pulpit/NOKIA/BTS/Tests/Application/ConsoleCommandsTestSuite.hpp">
+			<Option target="BtsApplicationUT"/>
+		</Unit>
+		<Unit filename="/home/shocik/Pulpit/NOKIA/BTS/Tests/Application/Mocks/IApplicationEnvironmentMock.cpp">
+			<Option target="BtsApplicationUT"/>
+		</Unit>
+		<Unit filename="/home/shocik/Pulpit/NOKIA/BTS/Tests/Application/Mocks/IApplicationEnvironmentMock.hpp">
+			<Option target="BtsApplicationUT"/>
+		</Unit>
+		<Unit filename="/home/shocik/Pulpit/NOKIA/BTS/Tests/Application/Mocks/IComponentMock.cpp">
+			<Option target="BtsApplicationUT"/>
+		</Unit>
+		<Unit filename="/home/shocik/Pulpit/NOKIA/BTS/Tests/Application/Mocks/IComponentMock.hpp">
+			<Option target="BtsApplicationUT"/>
+		</Unit>
+		<Unit filename="/home/shocik/Pulpit/NOKIA/BTS/Tests/Application/Mocks/IConsoleMock.cpp">
+			<Option target="BtsApplicationUT"/>
+		</Unit>
+		<Unit filename="/home/shocik/Pulpit/NOKIA/BTS/Tests/Application/Mocks/IConsoleMock.hpp">
+			<Option target="BtsApplicationUT"/>
+		</Unit>
+		<Unit filename="/home/shocik/Pulpit/NOKIA/BTS/Tests/Application/Mocks/IUeConnectionFactoryMock.cpp">
+			<Option target="BtsApplicationUT"/>
+		</Unit>
+		<Unit filename="/home/shocik/Pulpit/NOKIA/BTS/Tests/Application/Mocks/IUeConnectionFactoryMock.hpp">
+			<Option target="BtsApplicationUT"/>
+		</Unit>
+		<Unit filename="/home/shocik/Pulpit/NOKIA/BTS/Tests/Application/Mocks/IUeConnectionMock.cpp">
+			<Option target="BtsApplicationUT"/>
+		</Unit>
+		<Unit filename="/home/shocik/Pulpit/NOKIA/BTS/Tests/Application/Mocks/IUeConnectionMock.hpp">
+			<Option target="BtsApplicationUT"/>
+		</Unit>
+		<Unit filename="/home/shocik/Pulpit/NOKIA/BTS/Tests/Application/Mocks/IUeRelayMock.cpp">
+			<Option target="BtsApplicationUT"/>
+		</Unit>
+		<Unit filename="/home/shocik/Pulpit/NOKIA/BTS/Tests/Application/Mocks/IUeRelayMock.hpp">
+			<Option target="BtsApplicationUT"/>
+		</Unit>
+		<Unit filename="/home/shocik/Pulpit/NOKIA/BTS/Tests/Application/Mocks/UeSlotMock.cpp">
+			<Option target="BtsApplicationUT"/>
+		</Unit>
+		<Unit filename="/home/shocik/Pulpit/NOKIA/BTS/Tests/Application/Mocks/UeSlotMock.hpp">
+			<Option target="BtsApplicationUT"/>
+		</Unit>
+		<Unit filename="/home/shocik/Pulpit/NOKIA/BTS/Tests/Application/Printers/UeSlotPrint.cpp">
+			<Option target="BtsApplicationUT"/>
+		</Unit>
+		<Unit filename="/home/shocik/Pulpit/NOKIA/BTS/Tests/Application/Printers/UeSlotPrint.hpp">
+			<Option target="BtsApplicationUT"/>
+		</Unit>
+		<Unit filename="/home/shocik/Pulpit/NOKIA/BTS/Tests/Application/SibMolesterTestSuite.cpp">
+			<Option target="BtsApplicationUT"/>
+		</Unit>
+		<Unit filename="/home/shocik/Pulpit/NOKIA/BTS/Tests/Application/SibMolesterTestSuite.hpp">
+			<Option target="BtsApplicationUT"/>
+		</Unit>
+		<Unit filename="/home/shocik/Pulpit/NOKIA/BTS/Tests/Application/UeConnectionSpawnerTestSuite.cpp">
+			<Option target="BtsApplicationUT"/>
+		</Unit>
+		<Unit filename="/home/shocik/Pulpit/NOKIA/BTS/Tests/Application/UeConnectionSpawnerTestSuite.hpp">
+			<Option target="BtsApplicationUT"/>
+		</Unit>
+		<Unit filename="/home/shocik/Pulpit/NOKIA/BTS/Tests/Application/UeConnectionTestSuite.cpp">
+			<Option target="BtsApplicationUT"/>
+		</Unit>
+		<Unit filename="/home/shocik/Pulpit/NOKIA/BTS/Tests/Application/UeConnectionTestSuite.hpp">
+			<Option target="BtsApplicationUT"/>
+		</Unit>
+		<Unit filename="/home/shocik/Pulpit/NOKIA/BTS/Tests/Application/UeRelayTestSuite.cpp">
+			<Option target="BtsApplicationUT"/>
+		</Unit>
+		<Unit filename="/home/shocik/Pulpit/NOKIA/BTS/Tests/Application/UeRelayTestSuite.hpp">
+			<Option target="BtsApplicationUT"/>
+		</Unit>
+		<Unit filename="/home/shocik/Pulpit/NOKIA/BTS/main.cpp">
+			<Option target="BTS"/>
+		</Unit>
+		<Unit filename="/home/shocik/Pulpit/NOKIA/COMMON/CommonEnvironment/ITransport.cpp">
+			<Option target="Common"/>
+		</Unit>
+		<Unit filename="/home/shocik/Pulpit/NOKIA/COMMON/CommonEnvironment/ITransport.hpp">
+			<Option target="Common"/>
+		</Unit>
+		<Unit filename="/home/shocik/Pulpit/NOKIA/COMMON/Config/MultiLineConfig.cpp">
+			<Option target="Common"/>
+		</Unit>
+		<Unit filename="/home/shocik/Pulpit/NOKIA/COMMON/Config/MultiLineConfig.hpp">
+			<Option target="Common"/>
+		</Unit>
+		<Unit filename="/home/shocik/Pulpit/NOKIA/COMMON/Logger/ILogger.cpp">
+			<Option target="Common"/>
+		</Unit>
+		<Unit filename="/home/shocik/Pulpit/NOKIA/COMMON/Logger/ILogger.hpp">
+			<Option target="Common"/>
+		</Unit>
+		<Unit filename="/home/shocik/Pulpit/NOKIA/COMMON/Logger/Logger.cpp">
+			<Option target="Common"/>
+		</Unit>
+		<Unit filename="/home/shocik/Pulpit/NOKIA/COMMON/Logger/Logger.hpp">
+			<Option target="Common"/>
+		</Unit>
+		<Unit filename="/home/shocik/Pulpit/NOKIA/COMMON/Logger/PrefixedLogger.cpp">
+			<Option target="Common"/>
+		</Unit>
+		<Unit filename="/home/shocik/Pulpit/NOKIA/COMMON/Logger/PrefixedLogger.hpp">
+			<Option target="Common"/>
+		</Unit>
+		<Unit filename="/home/shocik/Pulpit/NOKIA/COMMON/Messages.cpp">
+			<Option target="Common"/>
+		</Unit>
+		<Unit filename="/home/shocik/Pulpit/NOKIA/COMMON/Messages.hpp">
+			<Option target="Common"/>
+		</Unit>
+		<Unit filename="/home/shocik/Pulpit/NOKIA/COMMON/Messages/BinaryMessage.cpp">
+			<Option target="Common"/>
+		</Unit>
+		<Unit filename="/home/shocik/Pulpit/NOKIA/COMMON/Messages/BinaryMessage.hpp">
+			<Option target="Common"/>
+		</Unit>
+		<Unit filename="/home/shocik/Pulpit/NOKIA/COMMON/Messages/BtsId.cpp">
+			<Option target="Common"/>
+		</Unit>
+		<Unit filename="/home/shocik/Pulpit/NOKIA/COMMON/Messages/BtsId.hpp">
+			<Option target="Common"/>
+		</Unit>
+		<Unit filename="/home/shocik/Pulpit/NOKIA/COMMON/Messages/IncomingMessage.cpp">
+			<Option target="Common"/>
+		</Unit>
+		<Unit filename="/home/shocik/Pulpit/NOKIA/COMMON/Messages/IncomingMessage.hpp">
+			<Option target="Common"/>
+		</Unit>
+		<Unit filename="/home/shocik/Pulpit/NOKIA/COMMON/Messages/LimitedVector.cpp">
+			<Option target="Common"/>
+		</Unit>
+		<Unit filename="/home/shocik/Pulpit/NOKIA/COMMON/Messages/LimitedVector.hpp">
+			<Option target="Common"/>
+		</Unit>
+		<Unit filename="/home/shocik/Pulpit/NOKIA/COMMON/Messages/MessageHeader.cpp">
+			<Option target="Common"/>
+		</Unit>
+		<Unit filename="/home/shocik/Pulpit/NOKIA/COMMON/Messages/MessageHeader.hpp">
+			<Option target="Common"/>
+		</Unit>
+		<Unit filename="/home/shocik/Pulpit/NOKIA/COMMON/Messages/MessageId.cpp">
+			<Option target="Common"/>
+		</Unit>
+		<Unit filename="/home/shocik/Pulpit/NOKIA/COMMON/Messages/MessageId.hpp">
+			<Option target="Common"/>
+		</Unit>
+		<Unit filename="/home/shocik/Pulpit/NOKIA/COMMON/Messages/OutgoingMessage.cpp">
+			<Option target="Common"/>
+		</Unit>
+		<Unit filename="/home/shocik/Pulpit/NOKIA/COMMON/Messages/OutgoingMessage.hpp">
+			<Option target="Common"/>
+		</Unit>
+		<Unit filename="/home/shocik/Pulpit/NOKIA/COMMON/Messages/PhoneNumber.cpp">
+			<Option target="Common"/>
+		</Unit>
+		<Unit filename="/home/shocik/Pulpit/NOKIA/COMMON/Messages/PhoneNumber.hpp">
+			<Option target="Common"/>
+		</Unit>
+		<Unit filename="/home/shocik/Pulpit/NOKIA/COMMON/TestCommands/TestCommands.cpp">
+			<Option target="Common"/>
+		</Unit>
+		<Unit filename="/home/shocik/Pulpit/NOKIA/COMMON/TestCommands/TestCommands.hpp">
+			<Option target="Common"/>
+		</Unit>
+		<Unit filename="/home/shocik/Pulpit/NOKIA/COMMON/Tests/EnumTraitsTestSuite.cpp">
+			<Option target="COMMON_UT"/>
+		</Unit>
+		<Unit filename="/home/shocik/Pulpit/NOKIA/COMMON/Tests/ILoggerTestSuite.cpp">
+			<Option target="COMMON_UT"/>
+		</Unit>
+		<Unit filename="/home/shocik/Pulpit/NOKIA/COMMON/Tests/IncomingMessageTestSuite.cpp">
+			<Option target="COMMON_UT"/>
+		</Unit>
+		<Unit filename="/home/shocik/Pulpit/NOKIA/COMMON/Tests/LoggerTestSuite.cpp">
+			<Option target="COMMON_UT"/>
+		</Unit>
+		<Unit filename="/home/shocik/Pulpit/NOKIA/COMMON/Tests/Mocks/ILoggerMock.cpp">
+			<Option target="CommonUtMocks"/>
+		</Unit>
+		<Unit filename="/home/shocik/Pulpit/NOKIA/COMMON/Tests/Mocks/ILoggerMock.hpp">
+			<Option target="CommonUtMocks"/>
+		</Unit>
+		<Unit filename="/home/shocik/Pulpit/NOKIA/COMMON/Tests/Mocks/ITransportMock.cpp">
+			<Option target="CommonUtMocks"/>
+		</Unit>
+		<Unit filename="/home/shocik/Pulpit/NOKIA/COMMON/Tests/Mocks/ITransportMock.hpp">
+			<Option target="CommonUtMocks"/>
+		</Unit>
+		<Unit filename="/home/shocik/Pulpit/NOKIA/COMMON/Tests/MultiLineConfigTestSuite.cpp">
+			<Option target="COMMON_UT"/>
+		</Unit>
+		<Unit filename="/home/shocik/Pulpit/NOKIA/COMMON/Tests/OutgoingMessageTestSuite.cpp">
+			<Option target="COMMON_UT"/>
+		</Unit>
+		<Unit filename="/home/shocik/Pulpit/NOKIA/COMMON/Tests/PrefixedLoggerTestSuite.cpp">
+			<Option target="COMMON_UT"/>
+		</Unit>
+		<Unit filename="/home/shocik/Pulpit/NOKIA/COMMON/Traits/EnumTraits.cpp">
+			<Option target="Common"/>
+		</Unit>
+		<Unit filename="/home/shocik/Pulpit/NOKIA/COMMON/Traits/EnumTraits.hpp">
+			<Option target="Common"/>
+		</Unit>
+		<Unit filename="/home/shocik/Pulpit/NOKIA/UE/Application/Application.cpp">
+			<Option target="UeApplication"/>
+		</Unit>
+		<Unit filename="/home/shocik/Pulpit/NOKIA/UE/Application/Application.hpp">
+			<Option target="UeApplication"/>
+		</Unit>
+		<Unit filename="/home/shocik/Pulpit/NOKIA/UE/Application/Ports/BtsPort.cpp">
+			<Option target="UeApplication"/>
+		</Unit>
+		<Unit filename="/home/shocik/Pulpit/NOKIA/UE/Application/Ports/BtsPort.hpp">
+			<Option target="UeApplication"/>
+		</Unit>
+		<Unit filename="/home/shocik/Pulpit/NOKIA/UE/Application/Ports/TimerPort.cpp">
+			<Option target="UeApplication"/>
+		</Unit>
+		<Unit filename="/home/shocik/Pulpit/NOKIA/UE/Application/Ports/TimerPort.hpp">
+			<Option target="UeApplication"/>
+		</Unit>
+		<Unit filename="/home/shocik/Pulpit/NOKIA/UE/Application/Ports/UserPort.cpp">
+			<Option target="UeApplication"/>
+		</Unit>
+		<Unit filename="/home/shocik/Pulpit/NOKIA/UE/Application/Ports/UserPort.hpp">
+			<Option target="UeApplication"/>
+		</Unit>
+		<Unit filename="/home/shocik/Pulpit/NOKIA/UE/Application/States/BaseState.cpp">
+			<Option target="UeApplication"/>
+		</Unit>
+		<Unit filename="/home/shocik/Pulpit/NOKIA/UE/Application/States/BaseState.hpp">
+			<Option target="UeApplication"/>
+		</Unit>
+		<Unit filename="/home/shocik/Pulpit/NOKIA/UE/Application/States/ConnectedState.cpp">
+			<Option target="UeApplication"/>
+		</Unit>
+		<Unit filename="/home/shocik/Pulpit/NOKIA/UE/Application/States/ConnectedState.hpp">
+			<Option target="UeApplication"/>
+		</Unit>
+		<Unit filename="/home/shocik/Pulpit/NOKIA/UE/Application/States/ConnectingState.cpp">
+			<Option target="UeApplication"/>
+		</Unit>
+		<Unit filename="/home/shocik/Pulpit/NOKIA/UE/Application/States/ConnectingState.hpp">
+			<Option target="UeApplication"/>
+		</Unit>
+		<Unit filename="/home/shocik/Pulpit/NOKIA/UE/Application/States/NotConnectedState.cpp">
+			<Option target="UeApplication"/>
+		</Unit>
+		<Unit filename="/home/shocik/Pulpit/NOKIA/UE/Application/States/NotConnectedState.hpp">
+			<Option target="UeApplication"/>
+		</Unit>
+		<Unit filename="/home/shocik/Pulpit/NOKIA/UE/ApplicationEnvironment/ApplicationEnvironmentFactory.cpp">
+			<Option target="UeApplicationEnvironment"/>
+		</Unit>
+		<Unit filename="/home/shocik/Pulpit/NOKIA/UE/ApplicationEnvironment/ApplicationEnvironmentFactory.hpp">
+			<Option target="UeApplicationEnvironment"/>
+		</Unit>
+		<Unit filename="/home/shocik/Pulpit/NOKIA/UE/ApplicationEnvironment/IApplicationEnvironment.cpp">
+			<Option target="UeApplicationEnvironment"/>
+		</Unit>
+		<Unit filename="/home/shocik/Pulpit/NOKIA/UE/ApplicationEnvironment/IApplicationEnvironment.hpp">
+			<Option target="UeApplicationEnvironment"/>
+		</Unit>
+		<Unit filename="/home/shocik/Pulpit/NOKIA/UE/ApplicationEnvironment/ITransport.cpp">
+			<Option target="UeApplicationEnvironment"/>
+		</Unit>
+		<Unit filename="/home/shocik/Pulpit/NOKIA/UE/ApplicationEnvironment/ITransport.hpp">
+			<Option target="UeApplicationEnvironment"/>
+		</Unit>
+		<Unit filename="/home/shocik/Pulpit/NOKIA/UE/ApplicationEnvironment/IUeGui.cpp">
+			<Option target="UeApplicationEnvironment"/>
+		</Unit>
+		<Unit filename="/home/shocik/Pulpit/NOKIA/UE/ApplicationEnvironment/IUeGui.hpp">
+			<Option target="UeApplicationEnvironment"/>
+		</Unit>
+		<Unit filename="/home/shocik/Pulpit/NOKIA/UE/ApplicationEnvironment/UeGui/ICallMode.cpp">
+			<Option target="UeApplicationEnvironment"/>
+		</Unit>
+		<Unit filename="/home/shocik/Pulpit/NOKIA/UE/ApplicationEnvironment/UeGui/ICallMode.hpp">
+			<Option target="UeApplicationEnvironment"/>
+		</Unit>
+		<Unit filename="/home/shocik/Pulpit/NOKIA/UE/ApplicationEnvironment/UeGui/IDialMode.cpp">
+			<Option target="UeApplicationEnvironment"/>
+		</Unit>
+		<Unit filename="/home/shocik/Pulpit/NOKIA/UE/ApplicationEnvironment/UeGui/IDialMode.hpp">
+			<Option target="UeApplicationEnvironment"/>
+		</Unit>
+		<Unit filename="/home/shocik/Pulpit/NOKIA/UE/ApplicationEnvironment/UeGui/IListViewMode.cpp">
+			<Option target="UeApplicationEnvironment"/>
+		</Unit>
+		<Unit filename="/home/shocik/Pulpit/NOKIA/UE/ApplicationEnvironment/UeGui/IListViewMode.hpp">
+			<Option target="UeApplicationEnvironment"/>
+		</Unit>
+		<Unit filename="/home/shocik/Pulpit/NOKIA/UE/ApplicationEnvironment/UeGui/ISmsComposeMode.cpp">
+			<Option target="UeApplicationEnvironment"/>
+		</Unit>
+		<Unit filename="/home/shocik/Pulpit/NOKIA/UE/ApplicationEnvironment/UeGui/ISmsComposeMode.hpp">
+			<Option target="UeApplicationEnvironment"/>
+		</Unit>
+		<Unit filename="/home/shocik/Pulpit/NOKIA/UE/ApplicationEnvironment/UeGui/ITextMode.cpp">
+			<Option target="UeApplicationEnvironment"/>
+		</Unit>
+		<Unit filename="/home/shocik/Pulpit/NOKIA/UE/ApplicationEnvironment/UeGui/ITextMode.hpp">
+			<Option target="UeApplicationEnvironment"/>
+		</Unit>
+		<Unit filename="/home/shocik/Pulpit/NOKIA/UE/QtApplicationEnvironment/ApplicationEnvironment.cpp">
+			<Option target="QtUeApplicationEnvironment"/>
+		</Unit>
+		<Unit filename="/home/shocik/Pulpit/NOKIA/UE/QtApplicationEnvironment/ApplicationEnvironment.hpp">
+			<Option target="QtUeApplicationEnvironment"/>
+		</Unit>
+		<Unit filename="/home/shocik/Pulpit/NOKIA/UE/QtApplicationEnvironment/ApplicationEnvironmentFactory.cpp">
+			<Option target="QtUeApplicationEnvironment"/>
+		</Unit>
+		<Unit filename="/home/shocik/Pulpit/NOKIA/UE/QtApplicationEnvironment/GUI/QtAlertMode.cpp">
+			<Option target="QtUeGUI"/>
+		</Unit>
+		<Unit filename="/home/shocik/Pulpit/NOKIA/UE/QtApplicationEnvironment/GUI/QtAlertMode.hpp">
+			<Option target="QtUeGUI"/>
+		</Unit>
+		<Unit filename="/home/shocik/Pulpit/NOKIA/UE/QtApplicationEnvironment/GUI/QtApplication.cpp">
+			<Option target="QtUeGUI"/>
+		</Unit>
+		<Unit filename="/home/shocik/Pulpit/NOKIA/UE/QtApplicationEnvironment/GUI/QtApplication.hpp">
+			<Option target="QtUeGUI"/>
+		</Unit>
+		<Unit filename="/home/shocik/Pulpit/NOKIA/UE/QtApplicationEnvironment/GUI/QtCallMode.cpp">
+			<Option target="QtUeGUI"/>
+		</Unit>
+		<Unit filename="/home/shocik/Pulpit/NOKIA/UE/QtApplicationEnvironment/GUI/QtCallMode.hpp">
+			<Option target="QtUeGUI"/>
+		</Unit>
+		<Unit filename="/home/shocik/Pulpit/NOKIA/UE/QtApplicationEnvironment/GUI/QtDialMode.cpp">
+			<Option target="QtUeGUI"/>
+		</Unit>
+		<Unit filename="/home/shocik/Pulpit/NOKIA/UE/QtApplicationEnvironment/GUI/QtDialMode.hpp">
+			<Option target="QtUeGUI"/>
+		</Unit>
+		<Unit filename="/home/shocik/Pulpit/NOKIA/UE/QtApplicationEnvironment/GUI/QtMainWindow.cpp">
+			<Option target="QtUeGUI"/>
+		</Unit>
+		<Unit filename="/home/shocik/Pulpit/NOKIA/UE/QtApplicationEnvironment/GUI/QtMainWindow.hpp">
+			<Option target="QtUeGUI"/>
+		</Unit>
+		<Unit filename="/home/shocik/Pulpit/NOKIA/UE/QtApplicationEnvironment/GUI/QtPhoneNumberEdit.cpp">
+			<Option target="QtUeGUI"/>
+		</Unit>
+		<Unit filename="/home/shocik/Pulpit/NOKIA/UE/QtApplicationEnvironment/GUI/QtPhoneNumberEdit.hpp">
+			<Option target="QtUeGUI"/>
+		</Unit>
+		<Unit filename="/home/shocik/Pulpit/NOKIA/UE/QtApplicationEnvironment/GUI/QtSelectionListMode.cpp">
+			<Option target="QtUeGUI"/>
+		</Unit>
+		<Unit filename="/home/shocik/Pulpit/NOKIA/UE/QtApplicationEnvironment/GUI/QtSelectionListMode.hpp">
+			<Option target="QtUeGUI"/>
+		</Unit>
+		<Unit filename="/home/shocik/Pulpit/NOKIA/UE/QtApplicationEnvironment/GUI/QtSmsComposeMode.cpp">
+			<Option target="QtUeGUI"/>
+		</Unit>
+		<Unit filename="/home/shocik/Pulpit/NOKIA/UE/QtApplicationEnvironment/GUI/QtSmsComposeMode.hpp">
+			<Option target="QtUeGUI"/>
+		</Unit>
+		<Unit filename="/home/shocik/Pulpit/NOKIA/UE/QtApplicationEnvironment/GUI/QtStackedWidget.cpp">
+			<Option target="QtUeGUI"/>
+		</Unit>
+		<Unit filename="/home/shocik/Pulpit/NOKIA/UE/QtApplicationEnvironment/GUI/QtStackedWidget.hpp">
+			<Option target="QtUeGUI"/>
+		</Unit>
+		<Unit filename="/home/shocik/Pulpit/NOKIA/UE/QtApplicationEnvironment/GUI/QtSubmitTextEdit.cpp">
+			<Option target="QtUeGUI"/>
+		</Unit>
+		<Unit filename="/home/shocik/Pulpit/NOKIA/UE/QtApplicationEnvironment/GUI/QtSubmitTextEdit.hpp">
+			<Option target="QtUeGUI"/>
+		</Unit>
+		<Unit filename="/home/shocik/Pulpit/NOKIA/UE/QtApplicationEnvironment/GUI/QtTextViewMode.cpp">
+			<Option target="QtUeGUI"/>
+		</Unit>
+		<Unit filename="/home/shocik/Pulpit/NOKIA/UE/QtApplicationEnvironment/GUI/QtTextViewMode.hpp">
+			<Option target="QtUeGUI"/>
+		</Unit>
+		<Unit filename="/home/shocik/Pulpit/NOKIA/UE/QtApplicationEnvironment/GUI/QtUeGui.cpp">
+			<Option target="QtUeGUI"/>
+		</Unit>
+		<Unit filename="/home/shocik/Pulpit/NOKIA/UE/QtApplicationEnvironment/GUI/QtUeGui.hpp">
+			<Option target="QtUeGUI"/>
+		</Unit>
+		<Unit filename="/home/shocik/Pulpit/NOKIA/UE/QtApplicationEnvironment/GUI/QtUeModeWidget.cpp">
+			<Option target="QtUeGUI"/>
+		</Unit>
+		<Unit filename="/home/shocik/Pulpit/NOKIA/UE/QtApplicationEnvironment/GUI/QtUeModeWidget.hpp">
+			<Option target="QtUeGUI"/>
+		</Unit>
+		<Unit filename="/home/shocik/Pulpit/NOKIA/UE/QtApplicationEnvironment/Transport/Transport.cpp">
+			<Option target="QtUeTransport"/>
+		</Unit>
+		<Unit filename="/home/shocik/Pulpit/NOKIA/UE/QtApplicationEnvironment/Transport/Transport.hpp">
+			<Option target="QtUeTransport"/>
+		</Unit>
+		<Unit filename="/home/shocik/Pulpit/NOKIA/UE/Tests/Application/ApplicationTestSuite.cpp">
+			<Option target="UeApplicationUT"/>
+		</Unit>
+		<Unit filename="/home/shocik/Pulpit/NOKIA/UE/Tests/Application/Mocks/IApplicationEnvironmentMock.cpp">
+			<Option target="UeApplicationUT"/>
+		</Unit>
+		<Unit filename="/home/shocik/Pulpit/NOKIA/UE/Tests/Application/Mocks/IApplicationEnvironmentMock.hpp">
+			<Option target="UeApplicationUT"/>
+		</Unit>
+		<Unit filename="/home/shocik/Pulpit/NOKIA/UE/Tests/Application/Mocks/IBtsPortMock.cpp">
+			<Option target="UeApplicationUT"/>
+		</Unit>
+		<Unit filename="/home/shocik/Pulpit/NOKIA/UE/Tests/Application/Mocks/IBtsPortMock.hpp">
+			<Option target="UeApplicationUT"/>
+		</Unit>
+		<Unit filename="/home/shocik/Pulpit/NOKIA/UE/Tests/Application/Mocks/ITimerPortMock.cpp">
+			<Option target="UeApplicationUT"/>
+		</Unit>
+		<Unit filename="/home/shocik/Pulpit/NOKIA/UE/Tests/Application/Mocks/ITimerPortMock.hpp">
+			<Option target="UeApplicationUT"/>
+		</Unit>
+		<Unit filename="/home/shocik/Pulpit/NOKIA/UE/Tests/Application/Mocks/IUeGuiMock.cpp">
+			<Option target="UeApplicationUT"/>
+		</Unit>
+		<Unit filename="/home/shocik/Pulpit/NOKIA/UE/Tests/Application/Mocks/IUeGuiMock.hpp">
+			<Option target="UeApplicationUT"/>
+		</Unit>
+		<Unit filename="/home/shocik/Pulpit/NOKIA/UE/Tests/Application/Mocks/IUserPortMock.cpp">
+			<Option target="UeApplicationUT"/>
+		</Unit>
+		<Unit filename="/home/shocik/Pulpit/NOKIA/UE/Tests/Application/Mocks/IUserPortMock.hpp">
+			<Option target="UeApplicationUT"/>
+		</Unit>
+		<Unit filename="/home/shocik/Pulpit/NOKIA/UE/Tests/Application/Ports/BtsPortTestSuite.cpp">
+			<Option target="UeApplicationUT"/>
+		</Unit>
+		<Unit filename="/home/shocik/Pulpit/NOKIA/UE/Tests/Application/Ports/TimerPortTestSuite.cpp">
+			<Option target="UeApplicationUT"/>
+		</Unit>
+		<Unit filename="/home/shocik/Pulpit/NOKIA/UE/Tests/Application/Ports/UserPortTestSuite.cpp">
+			<Option target="UeApplicationUT"/>
+		</Unit>
+		<Unit filename="/home/shocik/Pulpit/NOKIA/UE/main.cpp">
+			<Option target="UE"/>
+		</Unit>
+		<Unit filename="/home/shocik/Pulpit/NOKIA/cmake-build-debug/BTS/BTS_autogen/mocs_compilation.cpp">
+			<Option target="BTS"/>
+		</Unit>
+		<Unit filename="/home/shocik/Pulpit/NOKIA/cmake-build-debug/BTS/QtApplicationEnvironment/Console/QtBtsConsole_autogen/mocs_compilation.cpp">
+			<Option target="QtBtsConsole"/>
+		</Unit>
+		<Unit filename="/home/shocik/Pulpit/NOKIA/cmake-build-debug/BTS/QtApplicationEnvironment/QtBtsApplicationEnvironment_autogen/mocs_compilation.cpp">
+			<Option target="QtBtsApplicationEnvironment"/>
+		</Unit>
+		<Unit filename="/home/shocik/Pulpit/NOKIA/cmake-build-debug/BTS/QtApplicationEnvironment/Transport/QtBtsTransport_autogen/mocs_compilation.cpp">
+			<Option target="QtBtsTransport"/>
+		</Unit>
+		<Unit filename="/home/shocik/Pulpit/NOKIA/cmake-build-debug/UE/QtApplicationEnvironment/GUI/QtUeGUI_autogen/mocs_compilation.cpp">
+			<Option target="QtUeGUI"/>
+		</Unit>
+		<Unit filename="/home/shocik/Pulpit/NOKIA/cmake-build-debug/UE/QtApplicationEnvironment/QtUeApplicationEnvironment_autogen/mocs_compilation.cpp">
+			<Option target="QtUeApplicationEnvironment"/>
+		</Unit>
+		<Unit filename="/home/shocik/Pulpit/NOKIA/cmake-build-debug/UE/QtApplicationEnvironment/Transport/QtUeTransport_autogen/mocs_compilation.cpp">
+			<Option target="QtUeTransport"/>
+		</Unit>
+		<Unit filename="/home/shocik/Pulpit/NOKIA/cmake-build-debug/UE/UE_autogen/mocs_compilation.cpp">
+			<Option target="UE"/>
+		</Unit>
+		<Unit filename="/home/shocik/Pulpit/NOKIA/googletest/googlemock/src/gmock-all.cc">
+			<Option target="gmock"/>
+		</Unit>
+		<Unit filename="/home/shocik/Pulpit/NOKIA/googletest/googlemock/src/gmock_main.cc">
+			<Option target="gmock_main"/>
+		</Unit>
+		<Unit filename="/home/shocik/Pulpit/NOKIA/googletest/googletest/src/gtest-all.cc">
+			<Option target="gtest"/>
+		</Unit>
+		<Unit filename="/home/shocik/Pulpit/NOKIA/googletest/googletest/src/gtest_main.cc">
+			<Option target="gtest_main"/>
+		</Unit>
+		<Unit filename="/home/shocik/Pulpit/NOKIA/CMakeLists.txt">
+			<Option virtualFolder="CMake Files\"/>
+		</Unit>
+		<Unit filename="/home/shocik/Pulpit/NOKIA/internal_commands.cmake">
+			<Option virtualFolder="CMake Files\"/>
+		</Unit>
+		<Unit filename="/home/shocik/Pulpit/NOKIA/BTS/CMakeLists.txt">
+			<Option virtualFolder="CMake Files\BTS\"/>
+		</Unit>
+		<Unit filename="/home/shocik/Pulpit/NOKIA/BTS/Application/CMakeLists.txt">
+			<Option virtualFolder="CMake Files\BTS\Application\"/>
+		</Unit>
+		<Unit filename="/home/shocik/Pulpit/NOKIA/BTS/ApplicationEnvironment/CMakeLists.txt">
+			<Option virtualFolder="CMake Files\BTS\ApplicationEnvironment\"/>
+		</Unit>
+		<Unit filename="/home/shocik/Pulpit/NOKIA/BTS/QtApplicationEnvironment/CMakeLists.txt">
+			<Option virtualFolder="CMake Files\BTS\QtApplicationEnvironment\"/>
+		</Unit>
+		<Unit filename="/home/shocik/Pulpit/NOKIA/BTS/QtApplicationEnvironment/Console/CMakeLists.txt">
+			<Option virtualFolder="CMake Files\BTS\QtApplicationEnvironment\Console\"/>
+		</Unit>
+		<Unit filename="/home/shocik/Pulpit/NOKIA/BTS/QtApplicationEnvironment/Transport/CMakeLists.txt">
+			<Option virtualFolder="CMake Files\BTS\QtApplicationEnvironment\Transport\"/>
+		</Unit>
+		<Unit filename="/home/shocik/Pulpit/NOKIA/BTS/Tests/CMakeLists.txt">
+			<Option virtualFolder="CMake Files\BTS\Tests\"/>
+		</Unit>
+		<Unit filename="/home/shocik/Pulpit/NOKIA/BTS/Tests/Application/CMakeLists.txt">
+			<Option virtualFolder="CMake Files\BTS\Tests\Application\"/>
+		</Unit>
+		<Unit filename="/home/shocik/Pulpit/NOKIA/../../../../usr/lib/x86_64-linux-gnu/cmake/Qt5Widgets/Qt5WidgetsConfig.cmake">
+			<Option virtualFolder="CMake Files\..\..\..\..\usr\lib\x86_64-linux-gnu\cmake\Qt5Widgets\"/>
+		</Unit>
+		<Unit filename="/home/shocik/Pulpit/NOKIA/../../../../usr/lib/x86_64-linux-gnu/cmake/Qt5Widgets/Qt5WidgetsConfigExtras.cmake">
+			<Option virtualFolder="CMake Files\..\..\..\..\usr\lib\x86_64-linux-gnu\cmake\Qt5Widgets\"/>
+		</Unit>
+		<Unit filename="/home/shocik/Pulpit/NOKIA/../../../../usr/lib/x86_64-linux-gnu/cmake/Qt5Widgets/Qt5WidgetsConfigVersion.cmake">
+			<Option virtualFolder="CMake Files\..\..\..\..\usr\lib\x86_64-linux-gnu\cmake\Qt5Widgets\"/>
+		</Unit>
+		<Unit filename="/home/shocik/Pulpit/NOKIA/../../../../usr/lib/x86_64-linux-gnu/cmake/Qt5Widgets/Qt5WidgetsMacros.cmake">
+			<Option virtualFolder="CMake Files\..\..\..\..\usr\lib\x86_64-linux-gnu\cmake\Qt5Widgets\"/>
+		</Unit>
+		<Unit filename="/home/shocik/Pulpit/NOKIA/../../../../usr/lib/x86_64-linux-gnu/cmake/Qt5Gui/Qt5GuiConfig.cmake">
+			<Option virtualFolder="CMake Files\..\..\..\..\usr\lib\x86_64-linux-gnu\cmake\Qt5Gui\"/>
+		</Unit>
+		<Unit filename="/home/shocik/Pulpit/NOKIA/../../../../usr/lib/x86_64-linux-gnu/cmake/Qt5Gui/Qt5GuiConfigExtras.cmake">
+			<Option virtualFolder="CMake Files\..\..\..\..\usr\lib\x86_64-linux-gnu\cmake\Qt5Gui\"/>
+		</Unit>
+		<Unit filename="/home/shocik/Pulpit/NOKIA/../../../../usr/lib/x86_64-linux-gnu/cmake/Qt5Gui/Qt5GuiConfigVersion.cmake">
+			<Option virtualFolder="CMake Files\..\..\..\..\usr\lib\x86_64-linux-gnu\cmake\Qt5Gui\"/>
+		</Unit>
+		<Unit filename="/home/shocik/Pulpit/NOKIA/../../../../usr/lib/x86_64-linux-gnu/cmake/Qt5Gui/Qt5Gui_QComposePlatformInputContextPlugin.cmake">
+			<Option virtualFolder="CMake Files\..\..\..\..\usr\lib\x86_64-linux-gnu\cmake\Qt5Gui\"/>
+		</Unit>
+		<Unit filename="/home/shocik/Pulpit/NOKIA/../../../../usr/lib/x86_64-linux-gnu/cmake/Qt5Gui/Qt5Gui_QEglFSEmulatorIntegrationPlugin.cmake">
+			<Option virtualFolder="CMake Files\..\..\..\..\usr\lib\x86_64-linux-gnu\cmake\Qt5Gui\"/>
+		</Unit>
+		<Unit filename="/home/shocik/Pulpit/NOKIA/../../../../usr/lib/x86_64-linux-gnu/cmake/Qt5Gui/Qt5Gui_QEglFSIntegrationPlugin.cmake">
+			<Option virtualFolder="CMake Files\..\..\..\..\usr\lib\x86_64-linux-gnu\cmake\Qt5Gui\"/>
+		</Unit>
+		<Unit filename="/home/shocik/Pulpit/NOKIA/../../../../usr/lib/x86_64-linux-gnu/cmake/Qt5Gui/Qt5Gui_QEglFSKmsEglDeviceIntegrationPlugin.cmake">
+			<Option virtualFolder="CMake Files\..\..\..\..\usr\lib\x86_64-linux-gnu\cmake\Qt5Gui\"/>
+		</Unit>
+		<Unit filename="/home/shocik/Pulpit/NOKIA/../../../../usr/lib/x86_64-linux-gnu/cmake/Qt5Gui/Qt5Gui_QEglFSKmsGbmIntegrationPlugin.cmake">
+			<Option virtualFolder="CMake Files\..\..\..\..\usr\lib\x86_64-linux-gnu\cmake\Qt5Gui\"/>
+		</Unit>
+		<Unit filename="/home/shocik/Pulpit/NOKIA/../../../../usr/lib/x86_64-linux-gnu/cmake/Qt5Gui/Qt5Gui_QEglFSX11IntegrationPlugin.cmake">
+			<Option virtualFolder="CMake Files\..\..\..\..\usr\lib\x86_64-linux-gnu\cmake\Qt5Gui\"/>
+		</Unit>
+		<Unit filename="/home/shocik/Pulpit/NOKIA/../../../../usr/lib/x86_64-linux-gnu/cmake/Qt5Gui/Qt5Gui_QEvdevKeyboardPlugin.cmake">
+			<Option virtualFolder="CMake Files\..\..\..\..\usr\lib\x86_64-linux-gnu\cmake\Qt5Gui\"/>
+		</Unit>
+		<Unit filename="/home/shocik/Pulpit/NOKIA/../../../../usr/lib/x86_64-linux-gnu/cmake/Qt5Gui/Qt5Gui_QEvdevMousePlugin.cmake">
+			<Option virtualFolder="CMake Files\..\..\..\..\usr\lib\x86_64-linux-gnu\cmake\Qt5Gui\"/>
+		</Unit>
+		<Unit filename="/home/shocik/Pulpit/NOKIA/../../../../usr/lib/x86_64-linux-gnu/cmake/Qt5Gui/Qt5Gui_QEvdevTabletPlugin.cmake">
+			<Option virtualFolder="CMake Files\..\..\..\..\usr\lib\x86_64-linux-gnu\cmake\Qt5Gui\"/>
+		</Unit>
+		<Unit filename="/home/shocik/Pulpit/NOKIA/../../../../usr/lib/x86_64-linux-gnu/cmake/Qt5Gui/Qt5Gui_QEvdevTouchScreenPlugin.cmake">
+			<Option virtualFolder="CMake Files\..\..\..\..\usr\lib\x86_64-linux-gnu\cmake\Qt5Gui\"/>
+		</Unit>
+		<Unit filename="/home/shocik/Pulpit/NOKIA/../../../../usr/lib/x86_64-linux-gnu/cmake/Qt5Gui/Qt5Gui_QGifPlugin.cmake">
+			<Option virtualFolder="CMake Files\..\..\..\..\usr\lib\x86_64-linux-gnu\cmake\Qt5Gui\"/>
+		</Unit>
+		<Unit filename="/home/shocik/Pulpit/NOKIA/../../../../usr/lib/x86_64-linux-gnu/cmake/Qt5Gui/Qt5Gui_QICOPlugin.cmake">
+			<Option virtualFolder="CMake Files\..\..\..\..\usr\lib\x86_64-linux-gnu\cmake\Qt5Gui\"/>
+		</Unit>
+		<Unit filename="/home/shocik/Pulpit/NOKIA/../../../../usr/lib/x86_64-linux-gnu/cmake/Qt5Gui/Qt5Gui_QIbusPlatformInputContextPlugin.cmake">
+			<Option virtualFolder="CMake Files\..\..\..\..\usr\lib\x86_64-linux-gnu\cmake\Qt5Gui\"/>
+		</Unit>
+		<Unit filename="/home/shocik/Pulpit/NOKIA/../../../../usr/lib/x86_64-linux-gnu/cmake/Qt5Gui/Qt5Gui_QJpegPlugin.cmake">
+			<Option virtualFolder="CMake Files\..\..\..\..\usr\lib\x86_64-linux-gnu\cmake\Qt5Gui\"/>
+		</Unit>
+		<Unit filename="/home/shocik/Pulpit/NOKIA/../../../../usr/lib/x86_64-linux-gnu/cmake/Qt5Gui/Qt5Gui_QLibInputPlugin.cmake">
+			<Option virtualFolder="CMake Files\..\..\..\..\usr\lib\x86_64-linux-gnu\cmake\Qt5Gui\"/>
+		</Unit>
+		<Unit filename="/home/shocik/Pulpit/NOKIA/../../../../usr/lib/x86_64-linux-gnu/cmake/Qt5Gui/Qt5Gui_QLinuxFbIntegrationPlugin.cmake">
+			<Option virtualFolder="CMake Files\..\..\..\..\usr\lib\x86_64-linux-gnu\cmake\Qt5Gui\"/>
+		</Unit>
+		<Unit filename="/home/shocik/Pulpit/NOKIA/../../../../usr/lib/x86_64-linux-gnu/cmake/Qt5Gui/Qt5Gui_QMinimalEglIntegrationPlugin.cmake">
+			<Option virtualFolder="CMake Files\..\..\..\..\usr\lib\x86_64-linux-gnu\cmake\Qt5Gui\"/>
+		</Unit>
+		<Unit filename="/home/shocik/Pulpit/NOKIA/../../../../usr/lib/x86_64-linux-gnu/cmake/Qt5Gui/Qt5Gui_QMinimalIntegrationPlugin.cmake">
+			<Option virtualFolder="CMake Files\..\..\..\..\usr\lib\x86_64-linux-gnu\cmake\Qt5Gui\"/>
+		</Unit>
+		<Unit filename="/home/shocik/Pulpit/NOKIA/../../../../usr/lib/x86_64-linux-gnu/cmake/Qt5Gui/Qt5Gui_QOffscreenIntegrationPlugin.cmake">
+			<Option virtualFolder="CMake Files\..\..\..\..\usr\lib\x86_64-linux-gnu\cmake\Qt5Gui\"/>
+		</Unit>
+		<Unit filename="/home/shocik/Pulpit/NOKIA/../../../../usr/lib/x86_64-linux-gnu/cmake/Qt5Gui/Qt5Gui_QTuioTouchPlugin.cmake">
+			<Option virtualFolder="CMake Files\..\..\..\..\usr\lib\x86_64-linux-gnu\cmake\Qt5Gui\"/>
+		</Unit>
+		<Unit filename="/home/shocik/Pulpit/NOKIA/../../../../usr/lib/x86_64-linux-gnu/cmake/Qt5Gui/Qt5Gui_QVncIntegrationPlugin.cmake">
+			<Option virtualFolder="CMake Files\..\..\..\..\usr\lib\x86_64-linux-gnu\cmake\Qt5Gui\"/>
+		</Unit>
+		<Unit filename="/home/shocik/Pulpit/NOKIA/../../../../usr/lib/x86_64-linux-gnu/cmake/Qt5Gui/Qt5Gui_QXcbEglIntegrationPlugin.cmake">
+			<Option virtualFolder="CMake Files\..\..\..\..\usr\lib\x86_64-linux-gnu\cmake\Qt5Gui\"/>
+		</Unit>
+		<Unit filename="/home/shocik/Pulpit/NOKIA/../../../../usr/lib/x86_64-linux-gnu/cmake/Qt5Gui/Qt5Gui_QXcbGlxIntegrationPlugin.cmake">
+			<Option virtualFolder="CMake Files\..\..\..\..\usr\lib\x86_64-linux-gnu\cmake\Qt5Gui\"/>
+		</Unit>
+		<Unit filename="/home/shocik/Pulpit/NOKIA/../../../../usr/lib/x86_64-linux-gnu/cmake/Qt5Gui/Qt5Gui_QXcbIntegrationPlugin.cmake">
+			<Option virtualFolder="CMake Files\..\..\..\..\usr\lib\x86_64-linux-gnu\cmake\Qt5Gui\"/>
+		</Unit>
+		<Unit filename="/home/shocik/Pulpit/NOKIA/../../../../usr/lib/x86_64-linux-gnu/cmake/Qt5Core/Qt5CoreConfig.cmake">
+			<Option virtualFolder="CMake Files\..\..\..\..\usr\lib\x86_64-linux-gnu\cmake\Qt5Core\"/>
+		</Unit>
+		<Unit filename="/home/shocik/Pulpit/NOKIA/../../../../usr/lib/x86_64-linux-gnu/cmake/Qt5Core/Qt5CoreConfigExtras.cmake">
+			<Option virtualFolder="CMake Files\..\..\..\..\usr\lib\x86_64-linux-gnu\cmake\Qt5Core\"/>
+		</Unit>
+		<Unit filename="/home/shocik/Pulpit/NOKIA/../../../../usr/lib/x86_64-linux-gnu/cmake/Qt5Core/Qt5CoreConfigExtrasMkspecDir.cmake">
+			<Option virtualFolder="CMake Files\..\..\..\..\usr\lib\x86_64-linux-gnu\cmake\Qt5Core\"/>
+		</Unit>
+		<Unit filename="/home/shocik/Pulpit/NOKIA/../../../../usr/lib/x86_64-linux-gnu/cmake/Qt5Core/Qt5CoreConfigVersion.cmake">
+			<Option virtualFolder="CMake Files\..\..\..\..\usr\lib\x86_64-linux-gnu\cmake\Qt5Core\"/>
+		</Unit>
+		<Unit filename="/home/shocik/Pulpit/NOKIA/../../../../usr/lib/x86_64-linux-gnu/cmake/Qt5Core/Qt5CoreMacros.cmake">
+			<Option virtualFolder="CMake Files\..\..\..\..\usr\lib\x86_64-linux-gnu\cmake\Qt5Core\"/>
+		</Unit>
+		<Unit filename="/home/shocik/Pulpit/NOKIA/../../../../usr/lib/x86_64-linux-gnu/cmake/Qt5Network/Qt5NetworkConfig.cmake">
+			<Option virtualFolder="CMake Files\..\..\..\..\usr\lib\x86_64-linux-gnu\cmake\Qt5Network\"/>
+		</Unit>
+		<Unit filename="/home/shocik/Pulpit/NOKIA/../../../../usr/lib/x86_64-linux-gnu/cmake/Qt5Network/Qt5NetworkConfigVersion.cmake">
+			<Option virtualFolder="CMake Files\..\..\..\..\usr\lib\x86_64-linux-gnu\cmake\Qt5Network\"/>
+		</Unit>
+		<Unit filename="/home/shocik/Pulpit/NOKIA/../../../../usr/lib/x86_64-linux-gnu/cmake/Qt5Network/Qt5Network_QConnmanEnginePlugin.cmake">
+			<Option virtualFolder="CMake Files\..\..\..\..\usr\lib\x86_64-linux-gnu\cmake\Qt5Network\"/>
+		</Unit>
+		<Unit filename="/home/shocik/Pulpit/NOKIA/../../../../usr/lib/x86_64-linux-gnu/cmake/Qt5Network/Qt5Network_QGenericEnginePlugin.cmake">
+			<Option virtualFolder="CMake Files\..\..\..\..\usr\lib\x86_64-linux-gnu\cmake\Qt5Network\"/>
+		</Unit>
+		<Unit filename="/home/shocik/Pulpit/NOKIA/../../../../usr/lib/x86_64-linux-gnu/cmake/Qt5Network/Qt5Network_QNetworkManagerEnginePlugin.cmake">
+			<Option virtualFolder="CMake Files\..\..\..\..\usr\lib\x86_64-linux-gnu\cmake\Qt5Network\"/>
+		</Unit>
+		<Unit filename="/home/shocik/Pulpit/NOKIA/COMMON/CMakeLists.txt">
+			<Option virtualFolder="CMake Files\COMMON\"/>
+		</Unit>
+		<Unit filename="/home/shocik/Pulpit/NOKIA/COMMON/Tests/CMakeLists.txt">
+			<Option virtualFolder="CMake Files\COMMON\Tests\"/>
+		</Unit>
+		<Unit filename="/home/shocik/Pulpit/NOKIA/COMMON/Tests/Mocks/CMakeLists.txt">
+			<Option virtualFolder="CMake Files\COMMON\Tests\Mocks\"/>
+		</Unit>
+		<Unit filename="/home/shocik/Pulpit/NOKIA/googletest/CMakeLists.txt">
+			<Option virtualFolder="CMake Files\googletest\"/>
+		</Unit>
+		<Unit filename="/home/shocik/Pulpit/NOKIA/googletest/googlemock/CMakeLists.txt">
+			<Option virtualFolder="CMake Files\googletest\googlemock\"/>
+		</Unit>
+		<Unit filename="/home/shocik/Pulpit/NOKIA/googletest/googlemock/cmake/gmock.pc.in">
+			<Option virtualFolder="CMake Files\googletest\googlemock\cmake\"/>
+		</Unit>
+		<Unit filename="/home/shocik/Pulpit/NOKIA/googletest/googlemock/cmake/gmock_main.pc.in">
+			<Option virtualFolder="CMake Files\googletest\googlemock\cmake\"/>
+		</Unit>
+		<Unit filename="/home/shocik/Pulpit/NOKIA/googletest/googletest/CMakeLists.txt">
+			<Option virtualFolder="CMake Files\googletest\googletest\"/>
+		</Unit>
+		<Unit filename="/home/shocik/Pulpit/NOKIA/googletest/googletest/cmake/Config.cmake.in">
+			<Option virtualFolder="CMake Files\googletest\googletest\cmake\"/>
+		</Unit>
+		<Unit filename="/home/shocik/Pulpit/NOKIA/googletest/googletest/cmake/gtest.pc.in">
+			<Option virtualFolder="CMake Files\googletest\googletest\cmake\"/>
+		</Unit>
+		<Unit filename="/home/shocik/Pulpit/NOKIA/googletest/googletest/cmake/gtest_main.pc.in">
+			<Option virtualFolder="CMake Files\googletest\googletest\cmake\"/>
+		</Unit>
+		<Unit filename="/home/shocik/Pulpit/NOKIA/googletest/googletest/cmake/internal_utils.cmake">
+			<Option virtualFolder="CMake Files\googletest\googletest\cmake\"/>
+		</Unit>
+		<Unit filename="/home/shocik/Pulpit/NOKIA/UE/CMakeLists.txt">
+			<Option virtualFolder="CMake Files\UE\"/>
+		</Unit>
+		<Unit filename="/home/shocik/Pulpit/NOKIA/UE/Application/CMakeLists.txt">
+			<Option virtualFolder="CMake Files\UE\Application\"/>
+		</Unit>
+		<Unit filename="/home/shocik/Pulpit/NOKIA/UE/ApplicationEnvironment/CMakeLists.txt">
+			<Option virtualFolder="CMake Files\UE\ApplicationEnvironment\"/>
+		</Unit>
+		<Unit filename="/home/shocik/Pulpit/NOKIA/UE/QtApplicationEnvironment/CMakeLists.txt">
+			<Option virtualFolder="CMake Files\UE\QtApplicationEnvironment\"/>
+		</Unit>
+		<Unit filename="/home/shocik/Pulpit/NOKIA/UE/QtApplicationEnvironment/GUI/CMakeLists.txt">
+			<Option virtualFolder="CMake Files\UE\QtApplicationEnvironment\GUI\"/>
+		</Unit>
+		<Unit filename="/home/shocik/Pulpit/NOKIA/UE/QtApplicationEnvironment/Transport/CMakeLists.txt">
+			<Option virtualFolder="CMake Files\UE\QtApplicationEnvironment\Transport\"/>
+		</Unit>
+		<Unit filename="/home/shocik/Pulpit/NOKIA/UE/Tests/CMakeLists.txt">
+			<Option virtualFolder="CMake Files\UE\Tests\"/>
+		</Unit>
+		<Unit filename="/home/shocik/Pulpit/NOKIA/UE/Tests/Application/CMakeLists.txt">
+			<Option virtualFolder="CMake Files\UE\Tests\Application\"/>
+		</Unit>
+	</Project>
+</CodeBlocks_project_file>

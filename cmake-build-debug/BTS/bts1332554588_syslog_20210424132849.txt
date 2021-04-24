@@ -1,0 +1,370 @@
+#1,tid:140171318963136[DEBUG]:[Application]started
+#2,tid:140171318963136[DEBUG]:[SPAWNER]Listen to new connections
+#3,tid:140171318963136[DEBUG]:[Console]Add: `a` for "Show address"
+#4,tid:140171318963136[DEBUG]:[Console]Add: `s` for "Show status"
+#5,tid:140171318963136[DEBUG]:[Console]Add: `l` for "List attached ue"
+#6,tid:140171318963136[DEBUG]:[Console]Add close: `q` for "quit"
+#7,tid:140171318963136[DEBUG]:[Console]Add help: `h` for "help"
+#8,tid:140171318963136[DEBUG]:[Console]Add: `t` for "Test commands - details in implementation"
+#9,tid:140171318963136[DEBUG]:Application loop started
+#10,tid:140171302262528[DEBUG]:Console loop started
+#11,tid:140171310655232[DEBUG]:[SIB]started
+#12,tid:140171318963136[DEBUG]:Session opened
+#13,tid:140171318963136:server started, port: 8181
+#14,tid:140171318963136[DEBUG]:New connection from: ::ffff:127.0.0.1-54088
+#15,tid:140171318963136[DEBUG]:[SPAWNER]new connection: ::ffff:127.0.0.1-54088
+#16,tid:140171318963136[DEBUG]:Send message to: ::ffff:127.0.0.1-54088
+#17,tid:140171318963136[ERROR]:Wrong size: 18245 - available bytes: 342
+#18,tid:140171318963136[ERROR]:Wrong size: 21536 - available bytes: 340
+#19,tid:140171318963136[ERROR]:Wrong size: 12064 - available bytes: 338
+#20,tid:140171318963136[ERROR]:Wrong size: 18516 - available bytes: 336
+#21,tid:140171318963136[ERROR]:Wrong size: 21584 - available bytes: 334
+#22,tid:140171318963136[ERROR]:Wrong size: 12081 - available bytes: 332
+#23,tid:140171318963136[ERROR]:Wrong size: 11825 - available bytes: 330
+#24,tid:140171318963136[ERROR]:Wrong size: 3338 - available bytes: 328
+#25,tid:140171318963136[ERROR]:Wrong size: 18543 - available bytes: 326
+#26,tid:140171318963136[ERROR]:Wrong size: 29556 - available bytes: 324
+#27,tid:140171318963136[ERROR]:Wrong size: 14880 - available bytes: 322
+#28,tid:140171318963136[ERROR]:Wrong size: 27759 - available bytes: 320
+#29,tid:140171318963136[ERROR]:Wrong size: 25441 - available bytes: 318
+#30,tid:140171318963136[ERROR]:Wrong size: 27752 - available bytes: 316
+#31,tid:140171318963136[ERROR]:Wrong size: 28531 - available bytes: 314
+#32,tid:140171318963136[ERROR]:Wrong size: 29754 - available bytes: 312
+#33,tid:140171318963136[ERROR]:Wrong size: 14385 - available bytes: 310
+#34,tid:140171318963136[ERROR]:Wrong size: 14385 - available bytes: 308
+#35,tid:140171318963136[ERROR]:Wrong size: 3338 - available bytes: 306
+#36,tid:140171318963136[ERROR]:Wrong size: 21875 - available bytes: 304
+#37,tid:140171318963136[ERROR]:Wrong size: 25970 - available bytes: 302
+#38,tid:140171318963136[ERROR]:Wrong size: 11585 - available bytes: 300
+#39,tid:140171318963136[ERROR]:Wrong size: 26469 - available bytes: 298
+#40,tid:140171318963136[ERROR]:Wrong size: 28276 - available bytes: 296
+#41,tid:140171318963136[ERROR]:Wrong size: 14880 - available bytes: 294
+#42,tid:140171318963136[ERROR]:Wrong size: 19823 - available bytes: 292
+#43,tid:140171318963136[ERROR]:Wrong size: 31337 - available bytes: 290
+#44,tid:140171318963136[ERROR]:Wrong size: 27756 - available bytes: 288
+#45,tid:140171318963136[ERROR]:Wrong size: 24879 - available bytes: 286
+#46,tid:140171318963136[ERROR]:Wrong size: 13614 - available bytes: 284
+#47,tid:140171318963136[ERROR]:Wrong size: 12320 - available bytes: 282
+#48,tid:140171318963136[ERROR]:Wrong size: 10328 - available bytes: 280
+#49,tid:140171318963136[ERROR]:Wrong size: 12593 - available bytes: 278
+#50,tid:140171318963136[ERROR]:Wrong size: 15136 - available bytes: 276
+#51,tid:140171318963136[ERROR]:Wrong size: 21858 - available bytes: 274
+#52,tid:140171318963136[ERROR]:Wrong size: 30062 - available bytes: 272
+#53,tid:140171318963136[ERROR]:Wrong size: 29813 - available bytes: 270
+#54,tid:140171318963136[ERROR]:Wrong size: 15136 - available bytes: 268
+#55,tid:140171318963136[ERROR]:Wrong size: 19561 - available bytes: 266
+#56,tid:140171318963136[ERROR]:Wrong size: 28277 - available bytes: 264
+#57,tid:140171318963136[ERROR]:Wrong size: 30752 - available bytes: 262
+#58,tid:140171318963136[ERROR]:Wrong size: 30776 - available bytes: 260
+#59,tid:140171318963136[ERROR]:Wrong size: 13919 - available bytes: 258
+#60,tid:140171318963136[ERROR]:Wrong size: 13876 - available bytes: 256
+#61,tid:140171318963136[ERROR]:Wrong size: 15136 - available bytes: 254
+#62,tid:140171318963136[ERROR]:Wrong size: 29302 - available bytes: 252
+#63,tid:140171318963136[ERROR]:Wrong size: 14904 - available bytes: 250
+#64,tid:140171318963136[ERROR]:Wrong size: 13358 - available bytes: 248
+#65,tid:140171318963136[ERROR]:Wrong size: 12329 - available bytes: 246
+#66,tid:140171318963136[ERROR]:Wrong size: 8263 - available bytes: 244
+#67,tid:140171318963136[ERROR]:Wrong size: 25955 - available bytes: 242
+#68,tid:140171318963136[ERROR]:Wrong size: 27503 - available bytes: 240
+#69,tid:140171318963136[ERROR]:Wrong size: 12082 - available bytes: 238
+#70,tid:140171318963136[ERROR]:Wrong size: 12337 - available bytes: 236
+#71,tid:140171318963136[ERROR]:Wrong size: 12336 - available bytes: 234
+#72,tid:140171318963136[ERROR]:Wrong size: 12592 - available bytes: 232
+#73,tid:140171318963136[ERROR]:Wrong size: 12576 - available bytes: 230
+#74,tid:140171318963136[ERROR]:Wrong size: 18025 - available bytes: 228
+#75,tid:140171318963136[ERROR]:Wrong size: 29285 - available bytes: 226
+#76,tid:140171318963136[ERROR]:Wrong size: 26223 - available bytes: 224
+#77,tid:140171318963136[ERROR]:Wrong size: 30767 - available bytes: 222
+#78,tid:140171318963136[ERROR]:Wrong size: 14388 - available bytes: 220
+#79,tid:140171318963136[ERROR]:Wrong size: 11824 - available bytes: 218
+#80,tid:140171318963136[ERROR]:Wrong size: 3338 - available bytes: 216
+#81,tid:140171318963136[ERROR]:Wrong size: 16739 - available bytes: 214
+#82,tid:140171318963136[ERROR]:Wrong size: 25445 - available bytes: 212
+#83,tid:140171318963136[ERROR]:Wrong size: 28788 - available bytes: 210
+#84,tid:140171318963136[ERROR]:Wrong size: 14880 - available bytes: 208
+#85,tid:140171318963136[ERROR]:Wrong size: 29797 - available bytes: 206
+#86,tid:140171318963136[ERROR]:Wrong size: 30836 - available bytes: 204
+#87,tid:140171318963136[ERROR]:Wrong size: 12136 - available bytes: 202
+#88,tid:140171318963136[ERROR]:Wrong size: 29805 - available bytes: 200
+#89,tid:140171318963136[ERROR]:Wrong size: 27692 - available bytes: 198
+#90,tid:140171318963136[ERROR]:Wrong size: 24944 - available bytes: 196
+#91,tid:140171318963136[ERROR]:Wrong size: 28780 - available bytes: 194
+#92,tid:140171318963136[ERROR]:Wrong size: 26979 - available bytes: 192
+#93,tid:140171318963136[ERROR]:Wrong size: 24948 - available bytes: 190
+#94,tid:140171318963136[ERROR]:Wrong size: 26991 - available bytes: 188
+#95,tid:140171318963136[ERROR]:Wrong size: 28207 - available bytes: 186
+#96,tid:140171318963136[ERROR]:Wrong size: 30824 - available bytes: 184
+#97,tid:140171318963136[ERROR]:Wrong size: 29805 - available bytes: 182
+#98,tid:140171318963136[ERROR]:Wrong size: 27691 - available bytes: 180
+#99,tid:140171318963136[ERROR]:Wrong size: 30829 - available bytes: 178
+#100,tid:140171318963136[ERROR]:Wrong size: 27692 - available bytes: 176
+#101,tid:140171318963136[ERROR]:Wrong size: 24944 - available bytes: 174
+#102,tid:140171318963136[ERROR]:Wrong size: 28780 - available bytes: 172
+#103,tid:140171318963136[ERROR]:Wrong size: 26979 - available bytes: 170
+#104,tid:140171318963136[ERROR]:Wrong size: 24948 - available bytes: 168
+#105,tid:140171318963136[ERROR]:Wrong size: 26991 - available bytes: 166
+#106,tid:140171318963136[ERROR]:Wrong size: 28207 - available bytes: 164
+#107,tid:140171318963136[ERROR]:Wrong size: 30829 - available bytes: 162
+#108,tid:140171318963136[ERROR]:Wrong size: 27707 - available bytes: 160
+#109,tid:140171318963136[ERROR]:Wrong size: 28989 - available bytes: 158
+#110,tid:140171318963136[ERROR]:Wrong size: 12334 - available bytes: 156
+#111,tid:140171318963136[ERROR]:Wrong size: 14636 - available bytes: 154
+#112,tid:140171318963136[ERROR]:Wrong size: 26989 - available bytes: 152
+#113,tid:140171318963136[ERROR]:Wrong size: 24935 - available bytes: 150
+#114,tid:140171318963136[ERROR]:Wrong size: 25903 - available bytes: 148
+#115,tid:140171318963136[ERROR]:Wrong size: 30565 - available bytes: 146
+#116,tid:140171318963136[ERROR]:Wrong size: 25200 - available bytes: 144
+#117,tid:140171318963136[ERROR]:Wrong size: 11306 - available bytes: 142
+#118,tid:140171318963136[ERROR]:Wrong size: 12074 - available bytes: 140
+#119,tid:140171318963136[ERROR]:Wrong size: 15217 - available bytes: 138
+#120,tid:140171318963136[ERROR]:Wrong size: 15664 - available bytes: 136
+#121,tid:140171318963136[ERROR]:Wrong size: 11832 - available bytes: 134
+#122,tid:140171318963136[ERROR]:Wrong size: 3338 - available bytes: 132
+#123,tid:140171318963136[ERROR]:Wrong size: 16739 - available bytes: 130
+#124,tid:140171318963136[ERROR]:Wrong size: 25445 - available bytes: 128
+#125,tid:140171318963136[ERROR]:Wrong size: 28788 - available bytes: 126
+#126,tid:140171318963136[ERROR]:Wrong size: 11596 - available bytes: 124
+#127,tid:140171318963136[ERROR]:Wrong size: 24942 - available bytes: 122
+#128,tid:140171318963136[ERROR]:Wrong size: 26485 - available bytes: 120
+#129,tid:140171318963136[ERROR]:Wrong size: 24935 - available bytes: 118
+#130,tid:140171318963136[ERROR]:Wrong size: 25914 - available bytes: 116
+#131,tid:140171318963136[ERROR]:Wrong size: 8304 - available bytes: 114
+#132,tid:140171318963136[ERROR]:Wrong size: 27692 - available bytes: 112
+#133,tid:140171318963136[ERROR]:Wrong size: 25966 - available bytes: 110
+#134,tid:140171318963136[ERROR]:Wrong size: 11605 - available bytes: 108
+#135,tid:140171318963136[ERROR]:Wrong size: 21307 - available bytes: 106
+#136,tid:140171318963136[ERROR]:Wrong size: 28989 - available bytes: 104
+#137,tid:140171318963136[ERROR]:Wrong size: 12334 - available bytes: 102
+#138,tid:140171318963136[ERROR]:Wrong size: 14124 - available bytes: 100
+#139,tid:140171318963136[ERROR]:Wrong size: 25966 - available bytes: 98
+#140,tid:140171318963136[ERROR]:Wrong size: 15217 - available bytes: 96
+#141,tid:140171318963136[ERROR]:Wrong size: 15664 - available bytes: 94
+#142,tid:140171318963136[ERROR]:Wrong size: 11827 - available bytes: 92
+#143,tid:140171318963136[ERROR]:Wrong size: 3338 - available bytes: 90
+#144,tid:140171318963136[ERROR]:Wrong size: 16739 - available bytes: 88
+#145,tid:140171318963136[ERROR]:Wrong size: 25445 - available bytes: 86
+#146,tid:140171318963136[ERROR]:Wrong size: 28788 - available bytes: 84
+#147,tid:140171318963136[ERROR]:Wrong size: 11589 - available bytes: 82
+#148,tid:140171318963136[ERROR]:Wrong size: 28259 - available bytes: 80
+#149,tid:140171318963136[ERROR]:Wrong size: 28516 - available bytes: 78
+#150,tid:140171318963136[ERROR]:Wrong size: 26990 - available bytes: 76
+#151,tid:140171318963136[ERROR]:Wrong size: 26426 - available bytes: 74
+#152,tid:140171318963136[ERROR]:Wrong size: 8295 - available bytes: 72
+#153,tid:140171318963136[ERROR]:Wrong size: 31337 - available bytes: 70
+#154,tid:140171318963136[ERROR]:Wrong size: 28716 - available bytes: 68
+#155,tid:140171318963136[ERROR]:Wrong size: 8292 - available bytes: 66
+#156,tid:140171318963136[ERROR]:Wrong size: 25958 - available bytes: 64
+#157,tid:140171318963136[ERROR]:Wrong size: 27745 - available bytes: 62
+#158,tid:140171318963136[ERROR]:Wrong size: 29797 - available bytes: 60
+#159,tid:140171318963136[ERROR]:Wrong size: 3338 - available bytes: 58
+#160,tid:140171318963136[ERROR]:Wrong size: 17263 - available bytes: 56
+#161,tid:140171318963136[ERROR]:Wrong size: 28270 - available bytes: 54
+#162,tid:140171318963136[ERROR]:Wrong size: 25955 - available bytes: 52
+#163,tid:140171318963136[ERROR]:Wrong size: 29801 - available bytes: 50
+#164,tid:140171318963136[ERROR]:Wrong size: 28526 - available bytes: 48
+#165,tid:140171318963136[ERROR]:Wrong size: 14880 - available bytes: 46
+#166,tid:140171318963136[ERROR]:Wrong size: 27493 - available bytes: 44
+#167,tid:140171318963136[ERROR]:Wrong size: 25968 - available bytes: 42
+#168,tid:140171318963136[ERROR]:Wrong size: 11617 - available bytes: 40
+#169,tid:140171318963136[ERROR]:Wrong size: 27753 - available bytes: 38
+#170,tid:140171318963136[ERROR]:Wrong size: 30309 - available bytes: 36
+#171,tid:140171318963136[ERROR]:Wrong size: 3338 - available bytes: 34
+#172,tid:140171318963136[ERROR]:Wrong size: 21872 - available bytes: 32
+#173,tid:140171318963136[ERROR]:Wrong size: 26482 - available bytes: 30
+#174,tid:140171318963136[ERROR]:Wrong size: 24932 - available bytes: 28
+#175,tid:140171318963136[ERROR]:Wrong size: 25901 - available bytes: 26
+#176,tid:140171318963136[ERROR]:Wrong size: 18798 - available bytes: 24
+#177,tid:140171318963136[ERROR]:Wrong size: 29541 - available bytes: 22
+#178,tid:140171318963136[ERROR]:Wrong size: 25461 - available bytes: 20
+#179,tid:140171318963136[ERROR]:Wrong size: 29285 - available bytes: 18
+#180,tid:140171318963136[ERROR]:Wrong size: 11602 - available bytes: 16
+#181,tid:140171318963136[ERROR]:Wrong size: 25969 - available bytes: 14
+#182,tid:140171318963136[ERROR]:Wrong size: 30053 - available bytes: 12
+#183,tid:140171318963136[ERROR]:Wrong size: 29556 - available bytes: 10
+#184,tid:140171318963136[ERROR]:Wrong size: 29498 - available bytes: 8
+#185,tid:140171318963136[ERROR]:Wrong size: 8241 - available bytes: 6
+#186,tid:140171318963136[ERROR]:Wrong size: 3338 - available bytes: 4
+#187,tid:140171318963136[ERROR]:Wrong size: 3338 - available bytes: 2
+#188,tid:140171318963136[DEBUG]:New connection from: ::ffff:127.0.0.1-54094
+#189,tid:140171318963136[DEBUG]:[SPAWNER]new connection: ::ffff:127.0.0.1-54094
+#190,tid:140171318963136[DEBUG]:Send message to: ::ffff:127.0.0.1-54094
+#191,tid:140171318963136[ERROR]:Wrong size: 18245 - available bytes: 296
+#192,tid:140171318963136[ERROR]:Wrong size: 21536 - available bytes: 294
+#193,tid:140171318963136[ERROR]:Wrong size: 12134 - available bytes: 292
+#194,tid:140171318963136[ERROR]:Wrong size: 24950 - available bytes: 290
+#195,tid:140171318963136[ERROR]:Wrong size: 26979 - available bytes: 288
+#196,tid:140171318963136[ERROR]:Wrong size: 28526 - available bytes: 286
+#197,tid:140171318963136[ERROR]:Wrong size: 11881 - available bytes: 284
+#198,tid:140171318963136[ERROR]:Wrong size: 25455 - available bytes: 282
+#199,tid:140171318963136[ERROR]:Wrong size: 8264 - available bytes: 280
+#200,tid:140171318963136[ERROR]:Wrong size: 21588 - available bytes: 278
+#201,tid:140171318963136[ERROR]:Wrong size: 20527 - available bytes: 276
+#202,tid:140171318963136[ERROR]:Wrong size: 12590 - available bytes: 274
+#203,tid:140171318963136[ERROR]:Wrong size: 12557 - available bytes: 272
+#204,tid:140171318963136[ERROR]:Wrong size: 2632 - available bytes: 270
+#205,tid:140171318963136[ERROR]:Wrong size: 28531 - available bytes: 268
+#206,tid:140171318963136[ERROR]:Wrong size: 29754 - available bytes: 266
+#207,tid:140171318963136[ERROR]:Wrong size: 8300 - available bytes: 264
+#208,tid:140171318963136[ERROR]:Wrong size: 28515 - available bytes: 262
+#209,tid:140171318963136[ERROR]:Wrong size: 24940 - available bytes: 260
+#210,tid:140171318963136[ERROR]:Wrong size: 26735 - available bytes: 258
+#211,tid:140171318963136[ERROR]:Wrong size: 29556 - available bytes: 256
+#212,tid:140171318963136[ERROR]:Wrong size: 14904 - available bytes: 254
+#213,tid:140171318963136[ERROR]:Wrong size: 12600 - available bytes: 252
+#214,tid:140171318963136[ERROR]:Wrong size: 12557 - available bytes: 250
+#215,tid:140171318963136[ERROR]:Wrong size: 2645 - available bytes: 248
+#216,tid:140171318963136[ERROR]:Wrong size: 29541 - available bytes: 246
+#217,tid:140171318963136[ERROR]:Wrong size: 29229 - available bytes: 244
+#218,tid:140171318963136[ERROR]:Wrong size: 16743 - available bytes: 242
+#219,tid:140171318963136[ERROR]:Wrong size: 25966 - available bytes: 240
+#220,tid:140171318963136[ERROR]:Wrong size: 29754 - available bytes: 238
+#221,tid:140171318963136[ERROR]:Wrong size: 8269 - available bytes: 236
+#222,tid:140171318963136[ERROR]:Wrong size: 28538 - available bytes: 234
+#223,tid:140171318963136[ERROR]:Wrong size: 26988 - available bytes: 232
+#224,tid:140171318963136[ERROR]:Wrong size: 27745 - available bytes: 230
+#225,tid:140171318963136[ERROR]:Wrong size: 12085 - available bytes: 228
+#226,tid:140171318963136[ERROR]:Wrong size: 11824 - available bytes: 226
+#227,tid:140171318963136[ERROR]:Wrong size: 8232 - available bytes: 224
+#228,tid:140171318963136[ERROR]:Wrong size: 22577 - available bytes: 222
+#229,tid:140171318963136[ERROR]:Wrong size: 12603 - available bytes: 220
+#230,tid:140171318963136[ERROR]:Wrong size: 8277 - available bytes: 218
+#231,tid:140171318963136[ERROR]:Wrong size: 25205 - available bytes: 216
+#232,tid:140171318963136[ERROR]:Wrong size: 28276 - available bytes: 214
+#233,tid:140171318963136[ERROR]:Wrong size: 30011 - available bytes: 212
+#234,tid:140171318963136[ERROR]:Wrong size: 8268 - available bytes: 210
+#235,tid:140171318963136[ERROR]:Wrong size: 26990 - available bytes: 208
+#236,tid:140171318963136[ERROR]:Wrong size: 30072 - available bytes: 206
+#237,tid:140171318963136[ERROR]:Wrong size: 8312 - available bytes: 204
+#238,tid:140171318963136[ERROR]:Wrong size: 14390 - available bytes: 202
+#239,tid:140171318963136[ERROR]:Wrong size: 24374 - available bytes: 200
+#240,tid:140171318963136[ERROR]:Wrong size: 13371 - available bytes: 198
+#241,tid:140171318963136[ERROR]:Wrong size: 8306 - available bytes: 196
+#242,tid:140171318963136[ERROR]:Wrong size: 30266 - available bytes: 194
+#243,tid:140171318963136[ERROR]:Wrong size: 14388 - available bytes: 192
+#244,tid:140171318963136[ERROR]:Wrong size: 11824 - available bytes: 190
+#245,tid:140171318963136[ERROR]:Wrong size: 10528 - available bytes: 188
+#246,tid:140171318963136[ERROR]:Wrong size: 18277 - available bytes: 186
+#247,tid:140171318963136[ERROR]:Wrong size: 25451 - available bytes: 184
+#248,tid:140171318963136[ERROR]:Wrong size: 28463 - available bytes: 182
+#249,tid:140171318963136[ERROR]:Wrong size: 12848 - available bytes: 180
+#250,tid:140171318963136[ERROR]:Wrong size: 12592 - available bytes: 178
+#251,tid:140171318963136[ERROR]:Wrong size: 12337 - available bytes: 176
+#252,tid:140171318963136[ERROR]:Wrong size: 12337 - available bytes: 174
+#253,tid:140171318963136[ERROR]:Wrong size: 8262 - available bytes: 172
+#254,tid:140171318963136[ERROR]:Wrong size: 26994 - available bytes: 170
+#255,tid:140171318963136[ERROR]:Wrong size: 25958 - available bytes: 168
+#256,tid:140171318963136[ERROR]:Wrong size: 28536 - available bytes: 166
+#257,tid:140171318963136[ERROR]:Wrong size: 12088 - available bytes: 164
+#258,tid:140171318963136[ERROR]:Wrong size: 13358 - available bytes: 162
+#259,tid:140171318963136[ERROR]:Wrong size: 12301 - available bytes: 160
+#260,tid:140171318963136[ERROR]:Wrong size: 2625 - available bytes: 158
+#261,tid:140171318963136[ERROR]:Wrong size: 25443 - available bytes: 156
+#262,tid:140171318963136[ERROR]:Wrong size: 25968 - available bytes: 154
+#263,tid:140171318963136[ERROR]:Wrong size: 29754 - available bytes: 152
+#264,tid:140171318963136[ERROR]:Wrong size: 8297 - available bytes: 150
+#265,tid:140171318963136[ERROR]:Wrong size: 28001 - available bytes: 148
+#266,tid:140171318963136[ERROR]:Wrong size: 26469 - available bytes: 146
+#267,tid:140171318963136[ERROR]:Wrong size: 12151 - available bytes: 144
+#268,tid:140171318963136[ERROR]:Wrong size: 25954 - available bytes: 142
+#269,tid:140171318963136[ERROR]:Wrong size: 28716 - available bytes: 140
+#270,tid:140171318963136[ERROR]:Wrong size: 10799 - available bytes: 138
+#271,tid:140171318963136[ERROR]:Wrong size: 10765 - available bytes: 136
+#272,tid:140171318963136[ERROR]:Wrong size: 2625 - available bytes: 134
+#273,tid:140171318963136[ERROR]:Wrong size: 25443 - available bytes: 132
+#274,tid:140171318963136[ERROR]:Wrong size: 25968 - available bytes: 130
+#275,tid:140171318963136[ERROR]:Wrong size: 29741 - available bytes: 128
+#276,tid:140171318963136[ERROR]:Wrong size: 19553 - available bytes: 126
+#277,tid:140171318963136[ERROR]:Wrong size: 28263 - available bytes: 124
+#278,tid:140171318963136[ERROR]:Wrong size: 30049 - available bytes: 122
+#279,tid:140171318963136[ERROR]:Wrong size: 26469 - available bytes: 120
+#280,tid:140171318963136[ERROR]:Wrong size: 14880 - available bytes: 118
+#281,tid:140171318963136[ERROR]:Wrong size: 28780 - available bytes: 116
+#282,tid:140171318963136[ERROR]:Wrong size: 11365 - available bytes: 114
+#283,tid:140171318963136[ERROR]:Wrong size: 28205 - available bytes: 112
+#284,tid:140171318963136[ERROR]:Wrong size: 21843 - available bytes: 110
+#285,tid:140171318963136[ERROR]:Wrong size: 15217 - available bytes: 108
+#286,tid:140171318963136[ERROR]:Wrong size: 15664 - available bytes: 106
+#287,tid:140171318963136[ERROR]:Wrong size: 11831 - available bytes: 104
+#288,tid:140171318963136[ERROR]:Wrong size: 11365 - available bytes: 102
+#289,tid:140171318963136[ERROR]:Wrong size: 28219 - available bytes: 100
+#290,tid:140171318963136[ERROR]:Wrong size: 28989 - available bytes: 98
+#291,tid:140171318963136[ERROR]:Wrong size: 12334 - available bytes: 96
+#292,tid:140171318963136[ERROR]:Wrong size: 13069 - available bytes: 94
+#293,tid:140171318963136[ERROR]:Wrong size: 2625 - available bytes: 92
+#294,tid:140171318963136[ERROR]:Wrong size: 25443 - available bytes: 90
+#295,tid:140171318963136[ERROR]:Wrong size: 25968 - available bytes: 88
+#296,tid:140171318963136[ERROR]:Wrong size: 29741 - available bytes: 86
+#297,tid:140171318963136[ERROR]:Wrong size: 17774 - available bytes: 84
+#298,tid:140171318963136[ERROR]:Wrong size: 25455 - available bytes: 82
+#299,tid:140171318963136[ERROR]:Wrong size: 25705 - available bytes: 80
+#300,tid:140171318963136[ERROR]:Wrong size: 28263 - available bytes: 78
+#301,tid:140171318963136[ERROR]:Wrong size: 14880 - available bytes: 76
+#302,tid:140171318963136[ERROR]:Wrong size: 26490 - available bytes: 74
+#303,tid:140171318963136[ERROR]:Wrong size: 26992 - available bytes: 72
+#304,tid:140171318963136[ERROR]:Wrong size: 11296 - available bytes: 70
+#305,tid:140171318963136[ERROR]:Wrong size: 25701 - available bytes: 68
+#306,tid:140171318963136[ERROR]:Wrong size: 26220 - available bytes: 66
+#307,tid:140171318963136[ERROR]:Wrong size: 24948 - available bytes: 64
+#308,tid:140171318963136[ERROR]:Wrong size: 25869 - available bytes: 62
+#309,tid:140171318963136[ERROR]:Wrong size: 2627 - available bytes: 60
+#310,tid:140171318963136[ERROR]:Wrong size: 28526 - available bytes: 58
+#311,tid:140171318963136[ERROR]:Wrong size: 28261 - available bytes: 56
+#312,tid:140171318963136[ERROR]:Wrong size: 25460 - available bytes: 54
+#313,tid:140171318963136[ERROR]:Wrong size: 26991 - available bytes: 52
+#314,tid:140171318963136[ERROR]:Wrong size: 28218 - available bytes: 50
+#315,tid:140171318963136[ERROR]:Wrong size: 8299 - available bytes: 48
+#316,tid:140171318963136[ERROR]:Wrong size: 25957 - available bytes: 46
+#317,tid:140171318963136[ERROR]:Wrong size: 28717 - available bytes: 44
+#318,tid:140171318963136[ERROR]:Wrong size: 24940 - available bytes: 42
+#319,tid:140171318963136[ERROR]:Wrong size: 26998 - available bytes: 40
+#320,tid:140171318963136[ERROR]:Wrong size: 25869 - available bytes: 38
+#321,tid:140171318963136[ERROR]:Wrong size: 2642 - available bytes: 36
+#322,tid:140171318963136[ERROR]:Wrong size: 25958 - available bytes: 34
+#323,tid:140171318963136[ERROR]:Wrong size: 25970 - available bytes: 32
+#324,tid:140171318963136[ERROR]:Wrong size: 25970 - available bytes: 30
+#325,tid:140171318963136[ERROR]:Wrong size: 14880 - available bytes: 28
+#326,tid:140171318963136[ERROR]:Wrong size: 26740 - available bytes: 26
+#327,tid:140171318963136[ERROR]:Wrong size: 29808 - available bytes: 24
+#328,tid:140171318963136[ERROR]:Wrong size: 14895 - available bytes: 22
+#329,tid:140171318963136[ERROR]:Wrong size: 12140 - available bytes: 20
+#330,tid:140171318963136[ERROR]:Wrong size: 28515 - available bytes: 18
+#331,tid:140171318963136[ERROR]:Wrong size: 24940 - available bytes: 16
+#332,tid:140171318963136[ERROR]:Wrong size: 26735 - available bytes: 14
+#333,tid:140171318963136[ERROR]:Wrong size: 29556 - available bytes: 12
+#334,tid:140171318963136[ERROR]:Wrong size: 14904 - available bytes: 10
+#335,tid:140171318963136[ERROR]:Wrong size: 12600 - available bytes: 8
+#336,tid:140171318963136[ERROR]:Wrong size: 12591 - available bytes: 6
+#337,tid:140171318963136[ERROR]:Wrong size: 3338 - available bytes: 4
+#338,tid:140171318963136[ERROR]:Wrong size: 3338 - available bytes: 2
+#339,tid:140171310655232[DEBUG]:[SIB]send to [0]: ::ffff:127.0.0.1-54094:000:I
+#340,tid:140171318963136[DEBUG]:Send message to: ::ffff:127.0.0.1-54094
+#341,tid:140171310655232[DEBUG]:[SIB]send to [1]: ::ffff:127.0.0.1-54088:000:I
+#342,tid:140171318963136[DEBUG]:Send message to: ::ffff:127.0.0.1-54088
+#343,tid:140171310655232[DEBUG]:[SIB]send to [0]: ::ffff:127.0.0.1-54094:000:I
+#344,tid:140171318963136[DEBUG]:Send message to: ::ffff:127.0.0.1-54094
+#345,tid:140171310655232[DEBUG]:[SIB]send to [1]: ::ffff:127.0.0.1-54088:000:I
+#346,tid:140171318963136[DEBUG]:Send message to: ::ffff:127.0.0.1-54088
+#347,tid:140171310655232[DEBUG]:[SIB]send to [0]: ::ffff:127.0.0.1-54094:000:I
+#348,tid:140171318963136[DEBUG]:Send message to: ::ffff:127.0.0.1-54094
+#349,tid:140171310655232[DEBUG]:[SIB]send to [1]: ::ffff:127.0.0.1-54088:000:I
+#350,tid:140171318963136[DEBUG]:Send message to: ::ffff:127.0.0.1-54088
+#351,tid:140171310655232[DEBUG]:[SIB]send to [0]: ::ffff:127.0.0.1-54094:000:I
+#352,tid:140171318963136[DEBUG]:Send message to: ::ffff:127.0.0.1-54094
+#353,tid:140171310655232[DEBUG]:[SIB]send to [1]: ::ffff:127.0.0.1-54088:000:I
+#354,tid:140171318963136[DEBUG]:Send message to: ::ffff:127.0.0.1-54088
+#355,tid:140171310655232[DEBUG]:[SIB]send to [0]: ::ffff:127.0.0.1-54094:000:I
+#356,tid:140171318963136[DEBUG]:Send message to: ::ffff:127.0.0.1-54094
+#357,tid:140171310655232[DEBUG]:[SIB]send to [1]: ::ffff:127.0.0.1-54088:000:I
+#358,tid:140171318963136[DEBUG]:Send message to: ::ffff:127.0.0.1-54088
+#359,tid:140171310655232[DEBUG]:[SIB]send to [0]: ::ffff:127.0.0.1-54094:000:I
+#360,tid:140171318963136[DEBUG]:Send message to: ::ffff:127.0.0.1-54094
+#361,tid:140171310655232[DEBUG]:[SIB]send to [1]: ::ffff:127.0.0.1-54088:000:I
+#362,tid:140171318963136[DEBUG]:Send message to: ::ffff:127.0.0.1-54088
+#363,tid:140171318963136[DEBUG]:Connection lost from: ::ffff:127.0.0.1-54094
+#364,tid:140171318963136:[UE:::ffff:127.0.0.1-54094:000:I]Disconnected
+#365,tid:140171318963136[DEBUG]:[RELAY]Removed not attached: ::ffff:127.0.0.1-54094:000:I
+#366,tid:140171318963136[DEBUG]:QtTransport: bye
+#367,tid:140171318963136[DEBUG]:Connection lost from: ::ffff:127.0.0.1-54088
+#368,tid:140171318963136:[UE:::ffff:127.0.0.1-54088:000:I]Disconnected
+#369,tid:140171318963136[DEBUG]:[RELAY]Removed not attached: ::ffff:127.0.0.1-54088:000:I
+#370,tid:140171318963136[DEBUG]:QtTransport: bye
