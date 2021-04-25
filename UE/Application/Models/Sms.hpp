@@ -11,7 +11,7 @@ namespace ue
     public:
         unsigned long smsId;    // Id w bazie
         PhoneNumber from;       // numer odbiorcy
-        std::string texxt;      // content wiadomosci
+        std::string text;      // content wiadomosci
 
         // Konstruktory
         Sms();
