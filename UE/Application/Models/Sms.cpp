@@ -9,5 +9,4 @@ namespace ue
         this->from = from;
         this->text = text;
     }
-
 }
