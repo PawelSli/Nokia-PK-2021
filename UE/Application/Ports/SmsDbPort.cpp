@@ -7,7 +7,9 @@ namespace ue
     class SmsDb
     {
         // TODO: Implementacja konstruktorow
-        Sms::Sms(){ }
+        SmsDb::SmsDb(){ }
+        SmsDb::SmsDb(std::vector<Sms> smsList)
+            :messages(smsList) { }
         // TODO: zbieranie po smsId -> getById(smsId)
         Sms* SmsDb::getById(int smsId)
         {
