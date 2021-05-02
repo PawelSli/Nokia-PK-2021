@@ -8,6 +8,7 @@ namespace ue
     class SmsDb : ISmsDb
     {
         std::vector<Sms> messages;
+        bool read;
 
     public:
         // Konstruktory

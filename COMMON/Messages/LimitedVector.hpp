@@ -66,7 +66,7 @@ public:
     }
     void reserve(size_type size)
     {
-        Impl::reserve(alignSize(size));
+        Impl::reserve(alignSize(size));UE/Application/States/TalkingState.cpp
     }
 
 private:

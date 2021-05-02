@@ -9,7 +9,7 @@ namespace ue
         // TODO: Implementacja konstruktorow
         // TODO: zbieranie po smsId -> getById(smsId)
         // TODO: zebranie wszystkich -> getAll()
-        // TODO: usunieccie po smsID -> removeById(smsId)
+        // TODO: usuniecie po smsID -> removeById(smsId)
         // TODO: usuniecie wszystkich -> removeALL()
         // TODO: dodanie elementu -> insert(sms)
     };
