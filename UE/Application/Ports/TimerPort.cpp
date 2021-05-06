@@ -10,21 +10,25 @@ TimerPort::TimerPort(common::ILogger &logger)
 void TimerPort::start(ITimerEventsHandler &handler)
 {
     logger.logDebug("Started");
+    beggining=std::chrono::steady_clock::now();
     this->handler = &handler;
 }
 
 void TimerPort::stop()
 {
-    logger.logDebug("Stoped");
+    ending=std::chrono::steady_clock::now();
+    auto timePass=std::chrono::duration_cast<std::chrono::microseconds>(ending-beggining).count();
+    logger.logDebug("Stoped after number of miniseconds: ",timePass);
     handler = nullptr;
+
 }
 
-void TimerPort::startTimer(Duration duration)
+void TimerPort::TIMER_startTimer(Duration duration)
 {
     logger.logDebug("Start timer: ", duration.count(), "ms");
 }
 
-void TimerPort::stopTimer()
+void TimerPort::TIMER_stopTimer()
 {
     logger.logDebug("Stop timer");
 }

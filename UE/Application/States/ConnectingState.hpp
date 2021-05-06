@@ -12,12 +12,12 @@ public:
 
     // ITimerEventsHandler interface
 public:
-    void handleTimeout() final;
+    void TIMER_handleTimeout() final;
 
     // IBtsEventsHandler interface
 public:
-    void handleAttachAccept() final;
-    void handleAttachReject() final;
+    void BTS_handleAttachAccept() final;
+    void BTS_handleAttachReject() final;
 };
 
 }

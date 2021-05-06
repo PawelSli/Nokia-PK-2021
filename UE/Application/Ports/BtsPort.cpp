@@ -27,7 +27,7 @@ void BtsPort::stop()
 
 void BtsPort::handleDisconnected()
 {
-    handler->handleDisconnected();
+    handler->BST_handleDisconnected();
 }
 
 void BtsPort::handleMessage(BinaryMessage msg)
@@ -44,16 +44,26 @@ void BtsPort::handleMessage(BinaryMessage msg)
         case common::MessageId::Sib:
         {
             auto btsId = reader.readBtsId();
-            handler->handleSib(btsId);
+            handler->BTS_handleSib(btsId);
             break;
         }
         case common::MessageId::AttachResponse:
         {
             bool accept = reader.readNumber<std::uint8_t>() != 0u;
             if (accept)
-                handler->handleAttachAccept();
+                handler->BTS_handleAttachAccept();
             else
-                handler->handleAttachReject();
+                handler->BTS_handleAttachReject();
+            break;
+        }
+        case common::MessageId::CallRequest:
+        {
+            handler->BTS_handleCallRequest(from);
+            break;
+        }
+        case common::MessageId::UnknownRecipient:
+        {
+            handler->BTS_handleUknownRecipient(from);
             break;
         }
         default:
@@ -68,7 +78,7 @@ void BtsPort::handleMessage(BinaryMessage msg)
 }
 
 
-void BtsPort::sendAttachRequest(common::BtsId btsId)
+void BtsPort::BTS_sendAttachRequest(common::BtsId btsId)
 {
     logger.logDebug("sendAttachRequest: ", btsId);
     common::OutgoingMessage msg{common::MessageId::AttachRequest,
@@ -78,6 +88,42 @@ void BtsPort::sendAttachRequest(common::BtsId btsId)
     transport.sendMessage(msg.getMessage());
 
 
+}
+
+void BtsPort::BTS_sendCallAccept(common::PhoneNumber receiverPhoneNumber)
+{
+    logger.logDebug("sendCallAccept: ",receiverPhoneNumber);
+    common::OutgoingMessage msg{common::MessageId::CallAccepted,
+                               phoneNumber,
+                               receiverPhoneNumber};
+    transport.sendMessage(msg.getMessage());
+}
+
+void BtsPort::BTS_sendCallDropFromReceiver(common::PhoneNumber receiverPhoneNumber)
+{
+    logger.logDebug("sendCallDrop: ",receiverPhoneNumber);
+    common::OutgoingMessage msg{common::MessageId::CallDropped,
+                               phoneNumber,
+                               receiverPhoneNumber};
+    transport.sendMessage(msg.getMessage());
+}
+
+void BtsPort::BTS_sendCallRequest(common::PhoneNumber receiverPhoneNumber)
+{
+    logger.logDebug("sendCallDrop: ",receiverPhoneNumber);
+    common::OutgoingMessage msg{common::MessageId::CallRequest,
+                               phoneNumber,
+                               receiverPhoneNumber};
+    transport.sendMessage(msg.getMessage());
+}
+
+void BtsPort::BTS_sendCallDropFromCaller(common::PhoneNumber receiverPhoneNumber)
+{
+    logger.logDebug("sendCallDropFromCaller: ",receiverPhoneNumber);
+    common::OutgoingMessage msg{common::MessageId::CallDropped,
+                               phoneNumber,
+                               receiverPhoneNumber};
+    transport.sendMessage(msg.getMessage());
 }
 
 }

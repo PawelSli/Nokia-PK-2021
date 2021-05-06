@@ -15,7 +15,11 @@ public:
     void start(IBtsEventsHandler& handler);
     void stop();
 
-    void sendAttachRequest(common::BtsId) override;
+    void BTS_sendAttachRequest(common::BtsId) override;
+    void BTS_sendCallAccept(common::PhoneNumber) override;
+    void BTS_sendCallDropFromReceiver(common::PhoneNumber) override;
+    void BTS_sendCallRequest(common::PhoneNumber) override;
+    void BTS_sendCallDropFromCaller(common::PhoneNumber) override;
 
 private:
     void handleDisconnected();
