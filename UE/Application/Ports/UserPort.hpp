@@ -4,6 +4,7 @@
 #include "Logger/PrefixedLogger.hpp"
 #include "IUeGui.hpp"
 #include "Messages/PhoneNumber.hpp"
+#include "ISmsDbPort.hpp"
 
 namespace ue
 {
