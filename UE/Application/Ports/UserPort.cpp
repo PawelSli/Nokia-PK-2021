@@ -41,29 +41,46 @@ void UserPort::USER_showConnected()
     menu.clearSelectionList();
     menu.addSelectionListItem("Compose SMS", "");
     menu.addSelectionListItem("View SMS", "");
+    menu.addSelectionListItem("Call someone","");
+    gui.setAcceptCallback([&](){
+        switch (menu.getCurrentItemIndex().second) {
+            case 2:
+                USER_showEnterPhoneNumber();
+                break;
+        }
+    });
 }
 
 void UserPort::USER_showCallRequest(common::PhoneNumber senderPhoneNumber)
 {
-    IUeGui::IDialMode& dialMode=gui.setDialMode();
-    logger.logDebug("Call from : ",senderPhoneNumber);
-    auto accept=[&](){
-        handler->USER_handleCallAccept();
+    auto& alertMode=gui.setAlertMode();
+    alertMode.setText("Call from: "+to_string(senderPhoneNumber));
+    auto accept=[&,senderPhoneNumber](){
+        handler->USER_handleCallAccept(senderPhoneNumber);
     };
-    auto reject=[&](){
-        handler->USER_handleCallDropReceiver();
+    auto reject=[&,senderPhoneNumber](){
+        handler->USER_handleCallDrop(senderPhoneNumber);
     };
     gui.setAcceptCallback(accept);
     gui.setRejectCallback(reject);
 
 }
 
-void UserPort::USER_talk(common::PhoneNumber senderPhoneNumber)
+void UserPort::USER_callAchieved(common::PhoneNumber senderPhoneNumber)
 {
     logger.logDebug("Talking mode with: ",senderPhoneNumber);
     IUeGui::ICallMode& callMode = gui.setCallMode();
-    //TO IMPLEMENT
+    callMode.appendIncomingText("Call from: "+to_string(senderPhoneNumber));
+
 }
+
+void UserPort::USER_startTalking(common::PhoneNumber)
+{
+    auto& view=gui.setCallMode();
+    view.appendIncomingText("");
+    //IMPLEMENT FURTHER
+}
+
 
 void UserPort::USER_showPartnerNotAvailable(common::PhoneNumber receiverPhoneNumber)
 {
@@ -76,6 +93,14 @@ void UserPort::USER_showStartMenu()
     menu.clearSelectionList();
     menu.addSelectionListItem("Compose SMS", "");
     menu.addSelectionListItem("View SMS", "");
+    menu.addSelectionListItem("Call someone","");
+    gui.setAcceptCallback([&](){
+        switch (menu.getCurrentItemIndex().second) {
+            case 2:
+                USER_showEnterPhoneNumber();
+                break;
+        }
+    });
 }
 
 void UserPort::USER_showEnterPhoneNumber()
@@ -92,10 +117,11 @@ void UserPort::USER_showEnterPhoneNumber()
 
 void UserPort::USER_showDialing(common::PhoneNumber senderPhoneNumber){
     logger.logDebug("Trying to connect with: ",senderPhoneNumber);
-    auto& dialModeMenu = gui.setAlertMode();
-    dialModeMenu.setText("Trying to connect with... ");
+    IUeGui::ITextMode& dialModeMenu = gui.setAlertMode();
+    dialModeMenu.setText("Trying to\nconnect with:\n"+to_string(senderPhoneNumber));
     gui.setAcceptCallback([&](){});
     gui.setRejectCallback([&](){
+        handler->USER_handleCallDrop(senderPhoneNumber);
         USER_showStartMenu();
     });
 }

@@ -61,6 +61,16 @@ void BtsPort::handleMessage(BinaryMessage msg)
             handler->BTS_handleCallRequest(from);
             break;
         }
+        case common::MessageId::CallAccepted:
+        {
+            handler->BTS_handleCallAccept(from);
+            break;
+        }
+        case common::MessageId::CallDropped:
+        {
+            handler->BTS_handleCallDrop(from);
+            break;
+        }
         case common::MessageId::UnknownRecipient:
         {
             handler->BTS_handleUknownRecipient(from);
@@ -99,7 +109,7 @@ void BtsPort::BTS_sendCallAccept(common::PhoneNumber receiverPhoneNumber)
     transport.sendMessage(msg.getMessage());
 }
 
-void BtsPort::BTS_sendCallDropFromReceiver(common::PhoneNumber receiverPhoneNumber)
+void BtsPort::BTS_sendCallDrop(common::PhoneNumber receiverPhoneNumber)
 {
     logger.logDebug("sendCallDrop: ",receiverPhoneNumber);
     common::OutgoingMessage msg{common::MessageId::CallDropped,
@@ -117,13 +127,5 @@ void BtsPort::BTS_sendCallRequest(common::PhoneNumber receiverPhoneNumber)
     transport.sendMessage(msg.getMessage());
 }
 
-void BtsPort::BTS_sendCallDropFromCaller(common::PhoneNumber receiverPhoneNumber)
-{
-    logger.logDebug("sendCallDropFromCaller: ",receiverPhoneNumber);
-    common::OutgoingMessage msg{common::MessageId::CallDropped,
-                               phoneNumber,
-                               receiverPhoneNumber};
-    transport.sendMessage(msg.getMessage());
-}
 
 }

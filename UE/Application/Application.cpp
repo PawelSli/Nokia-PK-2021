@@ -51,14 +51,9 @@ void Application::BTS_handleCallRequest(common::PhoneNumber phoneNumber)
     context.state->BTS_handleCallRequest(phoneNumber);
 }
 
-void Application::USER_handleCallAccept()
+void Application::USER_handleCallAccept(common::PhoneNumber phoneNumber)
 {
-    context.state->USER_handleCallAccept();
-}
-
-void Application::USER_handleCallDropReceiver()
-{
-    context.state->USER_handleCallDropReceiver();
+    context.state->USER_handleCallAccept(phoneNumber);
 }
 
 void Application::BTS_handleUknownRecipient(common::PhoneNumber recipientPhoneNumber)
@@ -66,14 +61,14 @@ void Application::BTS_handleUknownRecipient(common::PhoneNumber recipientPhoneNu
     context.state->BTS_handleUknownRecipient(recipientPhoneNumber);
 }
 
-void Application::BTS_handleCallAccept()
+void Application::BTS_handleCallAccept(common::PhoneNumber phoneNumber)
 {
-    context.state->BTS_handleCallAccept();
+    context.state->BTS_handleCallAccept(phoneNumber);
 }
 
-void Application::BTS_handleCallDrop()
+void Application::BTS_handleCallDrop(common::PhoneNumber phoneNumber)
 {
-    context.state->BTS_handleCallDrop();
+    context.state->BTS_handleCallDrop(phoneNumber);
 }
 
 void Application::USER_handleStartDial()
@@ -86,9 +81,9 @@ void Application::USER_handleCallRequest(common::PhoneNumber receiverPhoneNumber
     context.state->USER_handleCallRequest(receiverPhoneNumber);
 }
 
-void Application::USER_handleCallDropSender(common::PhoneNumber receiverPhoneNumber)
+void Application::USER_handleCallDrop(common::PhoneNumber receiverPhoneNumber)
 {
-    context.state->USER_handleCallDropSender(receiverPhoneNumber);
+    context.state->USER_handleCallDrop(receiverPhoneNumber);
 }
 
 }

@@ -3,6 +3,7 @@
 #include "ITimerPort.hpp"
 #include "Logger/PrefixedLogger.hpp"
 #include <chrono>
+#include <thread>
 
 namespace ue
 {
@@ -16,10 +17,12 @@ public:
     void stop();
 
     // ITimerPort interface
-    void TIMER_startTimer(Duration duration) override;
+    void TIMER_startTimer(double duration) override;
+    void TIMER_startTimerAndDoSomething(std::function<void()>,double duration) override;
     void TIMER_stopTimer() override;
 
 private:
+    bool active = false;
     common::PrefixedLogger logger;
     ITimerEventsHandler* handler = nullptr;
     std::chrono::steady_clock::time_point beggining;

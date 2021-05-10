@@ -1,6 +1,7 @@
 #pragma once
 
 #include <chrono>
+#include <functional>
 
 namespace ue
 {
@@ -20,8 +21,9 @@ public:
 
     virtual ~ITimerPort() = default;
 
-    virtual void TIMER_startTimer(Duration) = 0;
+    virtual void TIMER_startTimer(double) = 0;
     virtual void TIMER_stopTimer() = 0;
+    virtual void TIMER_startTimerAndDoSomething(std::function<void()>,double duration) = 0;
 
 };
 

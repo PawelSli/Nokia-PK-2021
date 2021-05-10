@@ -11,7 +11,7 @@ ConnectingState::ConnectingState(Context &context, common::BtsId btsId)
     context.user.USER_showConnecting();
     context.bts.BTS_sendAttachRequest(btsId);
     using namespace std::chrono_literals;
-    context.timer.TIMER_startTimer(500ms);
+    context.timer.TIMER_startTimer(0.5);
 }
 
 void ConnectingState::TIMER_handleTimeout()

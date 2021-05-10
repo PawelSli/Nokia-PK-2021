@@ -50,24 +50,19 @@ void BaseState::BTS_handleUknownRecipient(common::PhoneNumber recipientPhoneNumb
     logger.logError("Uexpected: handleUknownRecipient: ",recipientPhoneNumber);
 }
 
-void BaseState::USER_handleCallAccept()
+void BaseState::USER_handleCallAccept(common::PhoneNumber receiverPhoneNumber)
 {
-    logger.logError("Uexpected: handleCallAccepted");
+    logger.logError("Uexpected: handleCallAccepted: ",receiverPhoneNumber);
 }
 
-void BaseState::USER_handleCallDropReceiver()
+void BaseState::BTS_handleCallAccept(common::PhoneNumber receiverPhoneNumber)
 {
-    logger.logError("Uexpected: handleCallRejected");
+    logger.logError("Uexpected: BTS_handleCallAccept: ",receiverPhoneNumber);
 }
 
-void BaseState::BTS_handleCallAccept()
+void BaseState::BTS_handleCallDrop(common::PhoneNumber receiverPhoneNumber)
 {
-    logger.logError("Uexpected: BTS_handleCallAccept");
-}
-
-void BaseState::BTS_handleCallDrop()
-{
-    logger.logError("Uexpected: BTS_handleCallDrop");
+    logger.logError("Uexpected: BTS_handleCallDrop: ",receiverPhoneNumber);
 }
 
 void BaseState::USER_handleStartDial()
@@ -80,7 +75,7 @@ void BaseState::USER_handleCallRequest(common::PhoneNumber receiverPhoneNumber)
     logger.logError("Uexpected: USER_handleCallRequest: ",receiverPhoneNumber);
 }
 
-void BaseState::USER_handleCallDropSender(common::PhoneNumber receiverPhoneNumber)
+void BaseState::USER_handleCallDrop(common::PhoneNumber receiverPhoneNumber)
 {
     logger.logError("Uexpected: USER_handleCallDropSender: ",receiverPhoneNumber);
 }
