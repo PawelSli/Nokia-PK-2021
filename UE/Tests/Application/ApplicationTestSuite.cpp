@@ -1,5 +1,6 @@
 #include <gmock/gmock.h>
 #include <gtest/gtest.h>
+#include <chrono>
 
 #include "Application.hpp"
 #include "Mocks/ILoggerMock.hpp"
@@ -20,6 +21,7 @@ class ApplicationTestSuite : public Test
 protected:
     const common::BtsId BTS_ID{42};
     const common::PhoneNumber PHONE_NUMBER{112};
+    const common::PhoneNumber SENDER_PHONE_NUMBER{113};
     NiceMock<common::ILoggerMock> loggerMock;
     StrictMock<IBtsPortMock> btsPortMock;
     StrictMock<IUserPortMock> userPortMock;
@@ -111,6 +113,47 @@ TEST_F(ApplicationConnectedTestSuite, shallReattach)
     doConnected();
 }
 
+TEST_F(ApplicationConnectedTestSuite,shallHandleCallRequest)
+{
+    EXPECT_CALL(userPortMock,showCallRequest(_));
+    EXPECT_CALL(timerPortMock,startTimer(30*1000ms));
+    objectUnderTest.handleCallRequest(SENDER_PHONE_NUMBER);
+}
 
+TEST_F(ApplicationConnectedTestSuite,shallHandleCallReject)
+{
+    EXPECT_CALL(timerPortMock,stopTimer());
+    EXPECT_CALL(btsPortMock,sendCallDrop(_));
+    EXPECT_CALL(userPortMock,showStartMenu());
+    objectUnderTest.handleCallRejected();
+
+}
+
+struct ApplicationTalkingTestSuite : ApplicationConnectedTestSuite
+{
+    ApplicationTalkingTestSuite();
+    void doTalking();
+};
+
+ApplicationTalkingTestSuite::ApplicationTalkingTestSuite()
+{
+    doTalking();
+}
+
+void ApplicationTalkingTestSuite::doTalking()
+{
+    EXPECT_CALL(timerPortMock,stopTimer());
+    EXPECT_CALL(btsPortMock,sendCallAccept(_));
+    EXPECT_CALL(userPortMock,talk(_));
+    objectUnderTest.handleCallAccepted();
+}
+
+TEST_F(ApplicationTalkingTestSuite,shallHandleUknownRecipient)
+{
+    EXPECT_CALL(userPortMock,showPartnerNotAvailable(_));
+    EXPECT_CALL(userPortMock,showStartMenu());
+    doConnected();
+    objectUnderTest.handleUknownRecipient(SENDER_PHONE_NUMBER);
+}
 
 }
