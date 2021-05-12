@@ -21,14 +21,6 @@ public:
     void handleSib(common::BtsId btsId) override;
     void handleAttachAccept() override;
     void handleAttachReject() override;
-    void handleCallRequest(common::PhoneNumber phoneNumber) override;
-    void handleUknownRecipient(common::PhoneNumber phoneNumber) override;
-
-    //IUserEventsHandler interface:
-    void handleCallAccepted() override;
-    void handleCallRejected() override;
-
-
 
 protected:
     Context& context;
