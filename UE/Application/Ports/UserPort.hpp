@@ -19,6 +19,11 @@ public:
     void showConnecting() override;
     void showConnected() override;
 
+    void showCallRequest(common::PhoneNumber) override;
+    void talk(common::PhoneNumber) override;
+    void showPartnerNotAvailable(common::PhoneNumber) override;
+    void showStartMenu() override;
+
 private:
     common::PrefixedLogger logger;
     IUeGui& gui;
