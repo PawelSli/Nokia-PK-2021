@@ -5,21 +5,18 @@
 
 namespace ue
 {
-    class SmsDb : ISmsDb
+    class SmsDb : public ISmsDb
     {
         std::vector<Sms> messages;
         bool read;
 
     public:
-        // Konstruktory
         SmsDb();
         SmsDb(std::vector<Sms>);
-        // Nadpisuje metody z odziedziczonego Interfejsu
-        Sms* getById(int smsId) override;
         std::vector<Sms> getAll() override;
-        void removeById(int smsId) override;
+        void removeLast() override;
         void removeAll() override;
-        void insert(Sms sms) override;
+        void add(Sms sms) override;
     };
 }
 
