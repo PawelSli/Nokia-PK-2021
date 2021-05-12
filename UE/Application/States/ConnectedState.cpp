@@ -1,5 +1,4 @@
 #include "ConnectedState.hpp"
-#include "TalkingState.hpp"
 #include "NotConnectedState.hpp"
 
 namespace ue
