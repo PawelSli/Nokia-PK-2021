@@ -150,10 +150,6 @@ void ApplicationTalkingTestSuite::doTalking()
 
 TEST_F(ApplicationTalkingTestSuite,shallHandleUknownRecipient)
 {
-    /*
-     *  SECOND THING TO AKS IN THE CLASS : TIMER
-     */
-    //EXPECT_CALL(timerPortMock,stopTimer());
     EXPECT_CALL(userPortMock,showPartnerNotAvailable(_));
     EXPECT_CALL(userPortMock,showStartMenu());
     doConnected();
