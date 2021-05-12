@@ -1,0 +1,21 @@
+#pragma once
+#include <string.h>
+#include "../../COMMON/Messages/PhoneNumber.hpp"
+
+namespace ue
+{
+    // uzywam PhoneNumber z COMMON
+    using common::PhoneNumber;
+
+    class Sms {
+    public:
+        unsigned long smsId;    // Id w bazie
+        PhoneNumber from;       // numer odbiorcy
+        std::string text;       // content wiadomosci
+
+        // Konstruktory
+        Sms();
+        Sms(PhoneNumber from, std::string text);
+    };
+}
+
