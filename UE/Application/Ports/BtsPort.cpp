@@ -56,6 +56,16 @@ void BtsPort::handleMessage(BinaryMessage msg)
                 handler->handleAttachReject();
             break;
         }
+        case common::MessageId::CallRequest:
+        {
+            handler->handleCallRequest(from);
+            break;
+        }
+        case common::MessageId::UnknownRecipient:
+        {
+            handler->handleUknownRecipient(from);
+            break;
+        }
         default:
             logger.logError("unknow message: ", msgId, ", from: ", from);
 
@@ -78,6 +88,23 @@ void BtsPort::sendAttachRequest(common::BtsId btsId)
     transport.sendMessage(msg.getMessage());
 
 
+}
+
+void BtsPort::sendCallAccept(common::PhoneNumber receiverPhoneNumber)
+{
+    logger.logDebug("sendCallAccept: ",receiverPhoneNumber);
+    common::OutgoingMessage msg{common::MessageId::CallAccepted,
+                               phoneNumber,
+                               receiverPhoneNumber};
+    transport.sendMessage(msg.getMessage());
+}
+
+void BtsPort::sendCallDrop(common::PhoneNumber receiverPhoneNumber){
+    logger.logDebug("sendCallDrop: ",receiverPhoneNumber);
+    common::OutgoingMessage msg{common::MessageId::CallDropped,
+                               phoneNumber,
+                               receiverPhoneNumber};
+    transport.sendMessage(msg.getMessage());
 }
 
 }
