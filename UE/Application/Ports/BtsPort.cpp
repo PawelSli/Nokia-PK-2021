@@ -80,21 +80,4 @@ void BtsPort::sendAttachRequest(common::BtsId btsId)
 
 }
 
-void BtsPort::sendCallAccept(common::PhoneNumber receiverPhoneNumber)
-{
-    logger.logDebug("sendCallAccept: ",receiverPhoneNumber);
-    common::OutgoingMessage msg{common::MessageId::CallAccepted,
-                               phoneNumber,
-                               receiverPhoneNumber};
-    transport.sendMessage(msg.getMessage());
-}
-
-void BtsPort::sendCallDrop(common::PhoneNumber receiverPhoneNumber){
-    logger.logDebug("sendCallDrop: ",receiverPhoneNumber);
-    common::OutgoingMessage msg{common::MessageId::CallDropped,
-                               phoneNumber,
-                               receiverPhoneNumber};
-    transport.sendMessage(msg.getMessage());
-}
-
 }
