@@ -7,9 +7,13 @@ namespace ue
 
 class ConnectedState : public BaseState
 {
+
+private:
+    common::PhoneNumber senderPhoneNumber;
+
 public:
     ConnectedState(Context& context);
-    void handleSmsReceived(common::PhoneNumber number, std::string message);
+    void handleReceivedSms(common::PhoneNumber senderPhoneNumber, std::string message);
 
     // IBtsEventsHandler interface
 public:

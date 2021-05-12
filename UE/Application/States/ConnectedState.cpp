@@ -11,12 +11,10 @@ ConnectedState::ConnectedState(Context &context)
     context.user.showConnected();
 }
 
-void ConnectedState::handleSmsReceived(int number, std::string text)
+void ConnectedState::handleReceivedSms(common::PhoneNumber senderPhoneNumber, std::string message)
 {
-    Sms incomingSms(number, text);
-    incomingSms.read = false;
-    incomingSms.sent = false;
-    context.db.insert(incomingSms);
+    Sms incomingSms(senderPhoneNumber, message, false, false);
+    context.smsDb.add(incomingSms);
     context.user.showReceivedSms();
 }
 
