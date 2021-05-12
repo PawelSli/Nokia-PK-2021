@@ -2,6 +2,7 @@
 #include <gtest/gtest.h>
 
 #include "Ports/BtsPort.hpp"
+#include "Messages/MessageHeader.hpp"
 #include "Mocks/ILoggerMock.hpp"
 #include "Mocks/IBtsPortMock.hpp"
 #include "Messages/PhoneNumber.hpp"
@@ -18,6 +19,7 @@ class BtsPortTestSuite : public Test
 protected:
     const common::PhoneNumber PHONE_NUMBER{112};
     const common::BtsId BTS_ID{13121981ll};
+    const common::PhoneNumber SENDER_PHONE_NUMBER{113};
     NiceMock<common::ILoggerMock> loggerMock;
     StrictMock<IBtsEventsHandlerMock> handlerMock;
     StrictMock<common::ITransportMock> transportMock;
@@ -103,4 +105,56 @@ TEST_F(BtsPortTestSuite, shallSendAttachRequest)
     ASSERT_NO_THROW(reader.checkEndOfMessage());
 }
 
+TEST_F(BtsPortTestSuite, shallHandleCallRequest)
+{
+    EXPECT_CALL(handlerMock,handleCallRequest(SENDER_PHONE_NUMBER));
+    common::OutgoingMessage msg{common::MessageId::CallRequest,
+                               SENDER_PHONE_NUMBER,
+                               PHONE_NUMBER};
+    messageCallback(msg.getMessage());
+
+}
+
+TEST_F(BtsPortTestSuite, shallSendCallAccept)
+{
+    common::BinaryMessage msg;
+    EXPECT_CALL(transportMock, sendMessage(_)).WillOnce([&msg](auto param) { msg = std::move(param); return true; });
+    objectUnderTest.sendCallAccept(SENDER_PHONE_NUMBER);
+    common::IncomingMessage reader{msg};
+    ASSERT_NO_THROW(EXPECT_EQ(common::MessageId::CallAccepted,reader.readMessageId()));
+    ASSERT_NO_THROW(EXPECT_EQ(PHONE_NUMBER,reader.readPhoneNumber()));
+    ASSERT_NO_THROW(EXPECT_EQ(SENDER_PHONE_NUMBER,reader.readPhoneNumber()));
+    ASSERT_NO_THROW(reader.checkEndOfMessage());
+}
+
+TEST_F(BtsPortTestSuite, shallSendCallReject)
+{
+    common::BinaryMessage msg;
+    EXPECT_CALL(transportMock, sendMessage(_)).WillOnce([&msg](auto param) { msg = std::move(param); return true; });
+    objectUnderTest.sendCallDrop(SENDER_PHONE_NUMBER);
+    common::IncomingMessage reader {msg};
+    ASSERT_NO_THROW(EXPECT_EQ(common::MessageId::CallDropped,reader.readMessageId()));
+    ASSERT_NO_THROW(EXPECT_EQ(PHONE_NUMBER,reader.readPhoneNumber()));
+    ASSERT_NO_THROW(EXPECT_EQ(SENDER_PHONE_NUMBER,reader.readPhoneNumber()));
+    ASSERT_NO_THROW(reader.checkEndOfMessage());
+}
+
+TEST_F(BtsPortTestSuite,shallHandleUknownRecipientAfterCallAccepted)
+{
+    /*
+        ASK IN THE CLASS:
+
+        Based on documentation UknownRecipientMessage should have two headers, each with three fields => so basically 6 fields
+        First header should be with common::MessageId::UknownRecipient, common::PhoneNumber{}, PHONE_NUMBER
+        Second header should be with common::MessageId::CallAccepted, SENDER_PHONE_NUMBER, PHONE_NUMBER
+        But there is no such class in COMMON which fulfil these requirements !
+
+    */
+    EXPECT_CALL(handlerMock,handleUknownRecipient(SENDER_PHONE_NUMBER));
+    common::OutgoingMessage msg{common::MessageId::UnknownRecipient,
+                               SENDER_PHONE_NUMBER,
+                               PHONE_NUMBER};
+    messageCallback(msg.getMessage());
+
+}
 }
