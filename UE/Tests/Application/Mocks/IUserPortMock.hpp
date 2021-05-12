@@ -12,7 +12,6 @@ public:
     IUserEventsHandlerMock();
     ~IUserEventsHandlerMock() override;
 
-
 };
 
 class IUserPortMock : public IUserPort
