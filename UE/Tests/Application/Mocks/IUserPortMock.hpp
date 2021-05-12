@@ -12,8 +12,6 @@ public:
     IUserEventsHandlerMock();
     ~IUserEventsHandlerMock() override;
 
-    MOCK_METHOD(void, handleCallAccepted, (), (final));
-    MOCK_METHOD(void, handleCallRejected, (), (final));
 
 };
 
