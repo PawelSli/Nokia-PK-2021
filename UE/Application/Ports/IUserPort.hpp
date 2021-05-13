@@ -15,7 +15,7 @@ public:
     virtual void USER_handleCallRequest(common::PhoneNumber)=0;
     virtual void USER_handleCallDrop(common::PhoneNumber) =0;
 
-
+virtual void handleSendTalkMessage(const std::string)=0;
 
 
 };
@@ -35,6 +35,7 @@ public:
     virtual void USER_showStartMenu()=0;
     virtual void USER_showEnterPhoneNumber()=0;
     virtual void USER_showDialing(common::PhoneNumber)=0;
+    virtual void showCallView(const std::string)=0;
 };
 
 }

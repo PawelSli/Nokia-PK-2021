@@ -26,6 +26,7 @@ public:
     void USER_showStartMenu() override;
     void USER_showEnterPhoneNumber() override;
     void USER_showDialing(common::PhoneNumber) override;
+    void showCallView(const std::string inTxt) override;
 
 private:
     common::PrefixedLogger logger;

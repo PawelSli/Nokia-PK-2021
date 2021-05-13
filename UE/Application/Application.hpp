@@ -39,7 +39,8 @@ public:
     void USER_handleStartDial() override;
     void USER_handleCallRequest(common::PhoneNumber) override;
     void USER_handleCallDrop(common::PhoneNumber) override;
-
+    void handleSendTalkMessage(const std::string txt) override;
+    void handleTalkMessage(const std::string) override;
 
 private:
     Context context;

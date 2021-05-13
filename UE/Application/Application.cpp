@@ -86,4 +86,13 @@ void Application::USER_handleCallDrop(common::PhoneNumber receiverPhoneNumber)
     context.state->USER_handleCallDrop(receiverPhoneNumber);
 }
 
+void Application::handleSendTalkMessage(const std::string txt)
+{
+    context.state->handleSendTalkMessage(txt);
+}
+
+void Application::handleTalkMessage(const std::string txt)
+{
+    context.state->handleTalkMessage(txt);
+}
 }

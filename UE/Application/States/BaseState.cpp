@@ -79,5 +79,13 @@ void BaseState::USER_handleCallDrop(common::PhoneNumber receiverPhoneNumber)
 {
     logger.logError("Uexpected: USER_handleCallDropSender: ",receiverPhoneNumber);
 }
+void BaseState::handleSendTalkMessage(const std::string msg)
+{
+    logger.logError("Unexpected h send talk msg",msg);
+}
+void BaseState::handleTalkMessage(const std::string msg)
+{
+    logger.logError("Unexpected handl;e talk ",msg);
+}
 
 }

@@ -76,9 +76,13 @@ void UserPort::USER_callAchieved(common::PhoneNumber senderPhoneNumber)
 
 void UserPort::USER_startTalking(common::PhoneNumber)
 {
-    auto& view=gui.setCallMode();
-    view.appendIncomingText("");
-    //IMPLEMENT FURTHER
+    IUeGui::ICallMode& callView = gui.setCallMode();
+    callView.appendIncomingText("");
+    gui.setAcceptCallback([&](){handler ->
+                handleSendTalkMessage(callView.getOutgoingText());
+                callView.clearOutgoingText();
+    });
+    gui.setRejectCallback(nullptr);
 }
 
 
@@ -124,6 +128,18 @@ void UserPort::USER_showDialing(common::PhoneNumber senderPhoneNumber){
         handler->USER_handleCallDrop(senderPhoneNumber);
         USER_showStartMenu();
     });
+}
+
+void UserPort::showCallView(const std::string inTxt)
+{
+    IUeGui::ICallMode& callView = gui.setCallMode();
+    callView.appendIncomingText(inTxt);
+    gui.setAcceptCallback([&](){handler ->
+                handleSendTalkMessage(callView.getOutgoingText());
+                callView.clearOutgoingText();
+    });
+    gui.setRejectCallback(nullptr);
+
 }
 
 }

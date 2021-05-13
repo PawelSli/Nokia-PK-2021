@@ -19,6 +19,7 @@ public:
     void BTS_sendCallAccept(common::PhoneNumber) override;
     void BTS_sendCallDrop(common::PhoneNumber) override;
     void BTS_sendCallRequest(common::PhoneNumber) override;
+    void sendTalkMessage(const std::string, common::PhoneNumber) override;
 
 private:
     void handleDisconnected();

@@ -12,8 +12,9 @@ public:
     TalkingState(Context& context, common::PhoneNumber caller);
 // IBtsEventsHandler interface
     void BTS_handleUknownRecipient(common::PhoneNumber) override;
+    void handleTalkMessage(const std::string) final;
 
-
+    void handleSendTalkMessage(const std::string) final;
 };
 
 }

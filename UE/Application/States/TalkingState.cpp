@@ -20,5 +20,18 @@ void TalkingState::BTS_handleUknownRecipient(common::PhoneNumber recipientPhoneN
 
 }
 
+void TalkingState::handleSendTalkMessage(const std::string msg)
+{
+    context.timer.TIMER_stopTimer();
+    context.timer.TIMER_startTimerAndDoSomething([&](){this->context.user.showCallView(msg);},120);
+    context.bts.sendTalkMessage(msg,caller );
+}
+
+void TalkingState::handleTalkMessage(const std::string msg)
+{
+    context.timer.TIMER_stopTimer();
+    context.timer.TIMER_startTimerAndDoSomething([&](){this->context.user.showCallView(msg);},120);
+    context.user.showCallView(msg);
+}
 }
 

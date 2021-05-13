@@ -16,6 +16,7 @@ public:
     MOCK_METHOD(void, USER_handleStartDial, (), (final));
     MOCK_METHOD(void, USER_handleCallRequest, (common::PhoneNumber phoneNumber), (final));
     MOCK_METHOD(void, USER_handleCallDrop, (common::PhoneNumber), (final));
+    MOCK_METHOD(void, handleSendTalkMessage, (const std::string), (final));
 
 };
 
@@ -35,6 +36,7 @@ public:
     MOCK_METHOD(void, USER_showStartMenu,(), (final));
     MOCK_METHOD(void, USER_showEnterPhoneNumber, (), (final));
     MOCK_METHOD(void, USER_showDialing, (common::PhoneNumber phoneNumber), (final));
+    MOCK_METHOD(void, showCallView, (const std::string), (final));
 };
 
 }
