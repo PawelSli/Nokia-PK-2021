@@ -12,7 +12,7 @@ TalkingState::TalkingState(Context &context,common::PhoneNumber phoneNumber)
     {
         this->context.timer.TIMER_stopTimer(3);
         this->context.setState<ConnectedState>();
-    },180,3);
+    },120,3);
     context.user.USER_startTalking(phoneNumber);
 }
 
@@ -30,15 +30,23 @@ void TalkingState::BTS_handleUknownRecipient(common::PhoneNumber recipientPhoneN
 
 void TalkingState::handleSendTalkMessage(const std::string msg)
 {
-    context.timer.TIMER_stopTimer();
-    context.timer.TIMER_startTimerAndDoSomething([&](){this->context.user.showCallView(msg);},120);
+    context.timer.TIMER_stopTimer(3);
+    context.timer.TIMER_startTimerAndDoSomething([&]()
+    {
+        this->context.timer.TIMER_stopTimer(3);
+        this->context.setState<ConnectedState>();// context.user.showCallView(msg);
+    },120,3);
     context.bts.sendTalkMessage(msg,caller );
 }
 
 void TalkingState::handleTalkMessage(const std::string msg)
 {
-    context.timer.TIMER_stopTimer();
-    context.timer.TIMER_startTimerAndDoSomething([&](){this->context.user.showCallView(msg);},120);
+    context.timer.TIMER_stopTimer(3);
+    context.timer.TIMER_startTimerAndDoSomething([&]()
+    {
+        this->context.timer.TIMER_stopTimer(3);
+        this->context.setState<ConnectedState>();// context.user.showCallView(msg);
+    },120,3);
     context.user.showCallView(msg);
 }
 }

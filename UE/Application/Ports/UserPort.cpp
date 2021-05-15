@@ -83,6 +83,8 @@ void UserPort::USER_startTalking(common::PhoneNumber)
                 callView.clearOutgoingText();
     });
     gui.setRejectCallback(nullptr);
+    //auto& callv = gui.setCallMode();
+    //callv.appendIncomingText("");
 }
 
 
