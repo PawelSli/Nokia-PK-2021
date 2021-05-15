@@ -141,15 +141,6 @@ TEST_F(BtsPortTestSuite, shallSendCallReject)
 
 TEST_F(BtsPortTestSuite,shallHandleUknownRecipientAfterCallAccepted)
 {
-    /*
-        ASK IN THE CLASS:
-
-        Based on documentation UknownRecipientMessage should have two headers, each with three fields => so basically 6 fields
-        First header should be with common::MessageId::UknownRecipient, common::PhoneNumber{}, PHONE_NUMBER
-        Second header should be with common::MessageId::CallAccepted, SENDER_PHONE_NUMBER, PHONE_NUMBER
-        But there is no such class in COMMON which fulfil these requirements !
-
-    */
     EXPECT_CALL(handlerMock,BTS_handleUknownRecipient(SENDER_PHONE_NUMBER));
     common::OutgoingMessage msg{common::MessageId::UnknownRecipient,
                                SENDER_PHONE_NUMBER,

@@ -78,7 +78,6 @@ void UserPort::USER_startTalking(common::PhoneNumber)
 {
     auto& view=gui.setCallMode();
     view.appendIncomingText("");
-    //IMPLEMENT FURTHER
 }
 
 
