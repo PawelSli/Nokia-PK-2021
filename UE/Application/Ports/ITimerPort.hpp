@@ -21,9 +21,9 @@ public:
 
     virtual ~ITimerPort() = default;
 
-    virtual void TIMER_startTimer(double) = 0;
-    virtual void TIMER_stopTimer() = 0;
-    virtual void TIMER_startTimerAndDoSomething(std::function<void()>,double duration) = 0;
+    virtual void TIMER_startTimer(double,int) = 0;
+    virtual void TIMER_stopTimer(int) = 0;
+    virtual void TIMER_startTimerAndDoSomething(std::function<void()>,double duration,int) = 0;
 
 };
 

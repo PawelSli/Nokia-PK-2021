@@ -58,13 +58,15 @@ TEST_F(UserPortTestSuite, shallShowMenuOnConnected)
 {
     EXPECT_CALL(guiMock, setListViewMode()).WillOnce(ReturnRef(listViewModeMock));
     EXPECT_CALL(listViewModeMock, clearSelectionList());
-    EXPECT_CALL(listViewModeMock, addSelectionListItem(_, _)).Times(AtLeast(1));
+    EXPECT_CALL(listViewModeMock, addSelectionListItem(_, _)).Times(3);
+    EXPECT_CALL(guiMock,setAcceptCallback(_));
     objectUnderTest.USER_showConnected();
 }
 
 TEST_F(UserPortTestSuite,shallShowCallRequest)
 {
-    EXPECT_CALL(guiMock,setDialMode()).WillOnce(ReturnRef(dialModeMock));
+    EXPECT_CALL(guiMock, setAlertMode()).WillOnce(ReturnRef(textModeMock));
+    EXPECT_CALL(textModeMock,setText(_));
     EXPECT_CALL(guiMock,setAcceptCallback(_));
     EXPECT_CALL(guiMock,setRejectCallback(_));
     objectUnderTest.USER_showCallRequest(PHONE_NUMBER);
@@ -73,7 +75,8 @@ TEST_F(UserPortTestSuite,shallShowCallRequest)
 TEST_F(UserPortTestSuite,shallTalk)
 {
     EXPECT_CALL(guiMock,setCallMode()).WillOnce(ReturnRef(callModeMock));
-    objectUnderTest.USER_callAchieved(PHONE_NUMBER);
+    EXPECT_CALL(callModeMock,appendIncomingText("Call from: "+to_string(SENDER_PHONE_NUMBER)));
+    objectUnderTest.USER_callAchieved(SENDER_PHONE_NUMBER);
 }
 
 TEST_F(UserPortTestSuite,shallShowPartnerNotAvailable)
@@ -86,7 +89,8 @@ TEST_F(UserPortTestSuite,shallShowMenuAfterCall)
 {
     EXPECT_CALL(guiMock, setListViewMode()).WillOnce(ReturnRef(listViewModeMock));
     EXPECT_CALL(listViewModeMock, clearSelectionList());
-    EXPECT_CALL(listViewModeMock, addSelectionListItem(_, _)).Times(AtLeast(1));
+    EXPECT_CALL(listViewModeMock, addSelectionListItem(_, _)).Times(3);
+    EXPECT_CALL(guiMock,setAcceptCallback(_));
     objectUnderTest.USER_showStartMenu();
 }
 
@@ -101,9 +105,10 @@ TEST_F(UserPortTestSuite,shallShowEnterPhoneNumber)
 TEST_F(UserPortTestSuite,shallShowDialing)
 {
     EXPECT_CALL(guiMock, setAlertMode()).WillOnce(ReturnRef(textModeMock));
+    EXPECT_CALL(textModeMock,setText(_));
     EXPECT_CALL(guiMock,setAcceptCallback(_));
     EXPECT_CALL(guiMock,setRejectCallback(_));
-    objectUnderTest.USER_showEnterPhoneNumber();
+    objectUnderTest.USER_showDialing(SENDER_PHONE_NUMBER);
 }
 
 }
