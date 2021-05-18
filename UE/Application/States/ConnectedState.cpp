@@ -59,7 +59,6 @@ void ConnectedState::BTS_handleCallAccept(common::PhoneNumber phoneNumber)
 void ConnectedState::BTS_handleCallDrop(common::PhoneNumber phoneNumber)
 {
     context.timer.TIMER_stopTimer(2);
-    std::printf("Accept call from:");
     context.user.USER_showPartnerNotAvailable(phoneNumber);
     context.timer.TIMER_startTimerAndDoSomething([&]()
     {
