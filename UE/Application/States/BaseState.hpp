@@ -41,19 +41,3 @@ protected:
 
 }
 
-/*
-
-    virtual void USER_handleCallAccept()=0;
-    virtual void USER_handleStartDial()=0;
-    virtual void USER_handleCallRequest(common::PhoneNumber)=0;
-    virtual void USER_handleCallDrop(common::PhoneNumber) =0;
-
-    virtual void BST_handleDisconnected() = 0;
-    virtual void BTS_handleSib(common::BtsId) = 0;
-    virtual void BTS_handleAttachAccept() = 0;
-    virtual void BTS_handleAttachReject() = 0;
-    virtual void BTS_handleCallRequest(common::PhoneNumber phoneNumber)=0;
-    virtual void BTS_handleUknownRecipient(common::PhoneNumber phoneNumber)=0;
-    virtual void BTS_handleCallAccept(common::PhoneNumber receiverPhoneNumber)=0;
-    virtual void BTS_handleCallDrop(common::PhoneNumber receiverPhoneNumber)=0;
-*/
