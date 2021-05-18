@@ -15,49 +15,69 @@ BaseState::~BaseState()
     logger.logDebug("exit");
 }
 
-void BaseState::handleTimeout()
+void BaseState::TIMER_handleTimeout()
 {
     logger.logError("Uexpected: handleTimeout");
 }
 
-void BaseState::handleDisconnected()
+void BaseState::BST_handleDisconnected()
 {
     logger.logError("Uexpected: handleDisconnected");
 }
 
-void BaseState::handleSib(common::BtsId btsId)
+void BaseState::BTS_handleSib(common::BtsId btsId)
 {
     logger.logError("Uexpected: handleSib: ", btsId);
 }
 
-void BaseState::handleAttachAccept()
+void BaseState::BTS_handleAttachAccept()
 {
     logger.logError("Uexpected: handleAttachAccept");
 }
 
-void BaseState::handleAttachReject()
+void BaseState::BTS_handleAttachReject()
 {
     logger.logError("Uexpected: handleAttachReject");
 }
 
-void BaseState::handleCallRequest(common::PhoneNumber phoneNumber)
+void BaseState::BTS_handleCallRequest(common::PhoneNumber phoneNumber)
 {
     logger.logError("Uexpected: handleCallRequest: ",phoneNumber);
 }
 
-void BaseState::handleUknownRecipient(common::PhoneNumber recipientPhoneNumber)
+void BaseState::BTS_handleUknownRecipient(common::PhoneNumber recipientPhoneNumber)
 {
     logger.logError("Uexpected: handleUknownRecipient: ",recipientPhoneNumber);
 }
 
-void BaseState::handleCallAccepted()
+void BaseState::USER_handleCallAccept(common::PhoneNumber receiverPhoneNumber)
 {
-    logger.logError("Uexpected: handleCallAccepted");
+    logger.logError("Uexpected: handleCallAccepted: ",receiverPhoneNumber);
 }
 
-void BaseState::handleCallRejected()
+void BaseState::BTS_handleCallAccept(common::PhoneNumber receiverPhoneNumber)
 {
-    logger.logError("Uexpected: handleCallRejected");
+    logger.logError("Uexpected: BTS_handleCallAccept: ",receiverPhoneNumber);
+}
+
+void BaseState::BTS_handleCallDrop(common::PhoneNumber receiverPhoneNumber)
+{
+    logger.logError("Uexpected: BTS_handleCallDrop: ",receiverPhoneNumber);
+}
+
+void BaseState::USER_handleStartDial()
+{
+    logger.logError("Uexpected: USER_handleStartDial");
+}
+
+void BaseState::USER_handleCallRequest(common::PhoneNumber receiverPhoneNumber)
+{
+    logger.logError("Uexpected: USER_handleCallRequest: ",receiverPhoneNumber);
+}
+
+void BaseState::USER_handleCallDrop(common::PhoneNumber receiverPhoneNumber)
+{
+    logger.logError("Uexpected: USER_handleCallDropSender: ",receiverPhoneNumber);
 }
 
 }
