@@ -27,7 +27,7 @@ protected:
     StrictMock<IUserPortMock> userPortMock;
     StrictMock<ITimerPortMock> timerPortMock;
 
-    Expectation expectShowNotConnected = EXPECT_CALL(userPortMock, showNotConnected());
+    Expectation expectShowNotConnected = EXPECT_CALL(userPortMock, USER_showNotConnected());
     Application objectUnderTest{PHONE_NUMBER,
                                 loggerMock,
                                 btsPortMock,
@@ -51,10 +51,10 @@ ApplicationConnectingTestSuite::ApplicationConnectingTestSuite()
 
 void ApplicationConnectingTestSuite::doConnecting()
 {
-    EXPECT_CALL(userPortMock, showConnecting());
-    EXPECT_CALL(btsPortMock, sendAttachRequest(BTS_ID));
-    EXPECT_CALL(timerPortMock, startTimer(500ms));
-    objectUnderTest.handleSib(BTS_ID);
+    EXPECT_CALL(userPortMock, USER_showConnecting());
+    EXPECT_CALL(btsPortMock, BTS_sendAttachRequest(BTS_ID));
+    EXPECT_CALL(timerPortMock, TIMER_startTimer(0.5,1));
+    objectUnderTest.BTS_handleSib(BTS_ID);
 }
 
 TEST_F(ApplicationNotConnectedTestSuite, shallSendAttachRequestOnSib)
@@ -64,15 +64,15 @@ TEST_F(ApplicationNotConnectedTestSuite, shallSendAttachRequestOnSib)
 
 TEST_F(ApplicationConnectingTestSuite, shallShowNotConnectedOnAttachReject)
 {
-    EXPECT_CALL(userPortMock, showNotConnected());
-    EXPECT_CALL(timerPortMock, stopTimer());
-    objectUnderTest.handleAttachReject();
+    EXPECT_CALL(userPortMock, USER_showNotConnected());
+    EXPECT_CALL(timerPortMock, TIMER_stopTimer(1));
+    objectUnderTest.BTS_handleAttachReject();
 }
 
 TEST_F(ApplicationConnectingTestSuite, shallShowNotConnectedOnAttachTimeout)
 {
-    EXPECT_CALL(userPortMock, showNotConnected());
-    objectUnderTest.handleTimeout();
+    EXPECT_CALL(userPortMock, USER_showNotConnected());
+    objectUnderTest.TIMER_handleTimeout();
 }
 
 struct ApplicationConnectedTestSuite : ApplicationConnectingTestSuite
@@ -88,9 +88,10 @@ ApplicationConnectedTestSuite::ApplicationConnectedTestSuite()
 
 void ApplicationConnectedTestSuite::doConnected()
 {
-    EXPECT_CALL(userPortMock, showConnected());
-    EXPECT_CALL(timerPortMock, stopTimer());
-    objectUnderTest.handleAttachAccept();
+
+    EXPECT_CALL(timerPortMock, TIMER_stopTimer(1));
+    EXPECT_CALL(userPortMock, USER_showConnected());
+    objectUnderTest.BTS_handleAttachAccept();
 }
 
 TEST_F(ApplicationConnectedTestSuite, shallShowConnectedOnAttachAccept)
@@ -100,33 +101,63 @@ TEST_F(ApplicationConnectedTestSuite, shallShowConnectedOnAttachAccept)
 
 TEST_F(ApplicationConnectedTestSuite, shallShowNotConnectedOnDisconnectFromBts)
 {
-    EXPECT_CALL(userPortMock, showNotConnected());
-    objectUnderTest.handleDisconnected();
+    EXPECT_CALL(userPortMock, USER_showNotConnected());
+    objectUnderTest.BST_handleDisconnected();
 }
 
 TEST_F(ApplicationConnectedTestSuite, shallReattach)
 {
-    EXPECT_CALL(userPortMock, showNotConnected());
-    objectUnderTest.handleDisconnected();
+    EXPECT_CALL(userPortMock, USER_showNotConnected());
+    objectUnderTest.BST_handleDisconnected();
 
     doConnecting();
     doConnected();
 }
 
-TEST_F(ApplicationConnectedTestSuite,shallHandleCallRequest)
+TEST_F(ApplicationConnectedTestSuite,shallHandleCalllRequest)
 {
-    EXPECT_CALL(userPortMock,showCallRequest(_));
-    EXPECT_CALL(timerPortMock,startTimer(30*1000ms));
-    objectUnderTest.handleCallRequest(SENDER_PHONE_NUMBER);
+    EXPECT_CALL(userPortMock,USER_showCallRequest(_));
+    EXPECT_CALL(timerPortMock,TIMER_startTimerAndDoSomething(_,30,2));
+    objectUnderTest.BTS_handleCallRequest(SENDER_PHONE_NUMBER);
 }
 
-TEST_F(ApplicationConnectedTestSuite,shallHandleCallReject)
+TEST_F(ApplicationConnectedTestSuite,shallHandleCallRejectFromReceiver)
 {
-    EXPECT_CALL(timerPortMock,stopTimer());
-    EXPECT_CALL(btsPortMock,sendCallDrop(_));
-    EXPECT_CALL(userPortMock,showStartMenu());
-    objectUnderTest.handleCallRejected();
+    EXPECT_CALL(timerPortMock,TIMER_stopTimer(2));
+    EXPECT_CALL(btsPortMock,BTS_sendCallDrop(SENDER_PHONE_NUMBER));
+    EXPECT_CALL(userPortMock,USER_showConnected());
+    objectUnderTest.USER_handleCallDrop(SENDER_PHONE_NUMBER);
 
+}
+
+TEST_F(ApplicationConnectedTestSuite,shallHandleCallDropFromSender)
+{
+    EXPECT_CALL(timerPortMock,TIMER_stopTimer(2));
+    EXPECT_CALL(userPortMock,USER_showPartnerNotAvailable(_));
+    EXPECT_CALL(timerPortMock,TIMER_startTimerAndDoSomething(_,2,2));
+    objectUnderTest.BTS_handleCallDrop(SENDER_PHONE_NUMBER);
+}
+
+TEST_F(ApplicationConnectedTestSuite,shallHandleUknownRecipient)
+{
+    EXPECT_CALL(timerPortMock,TIMER_stopTimer(2));
+    EXPECT_CALL(userPortMock,USER_showPartnerNotAvailable(_));
+    EXPECT_CALL(timerPortMock,TIMER_startTimerAndDoSomething(_,2,2));
+    objectUnderTest.BTS_handleUknownRecipient(SENDER_PHONE_NUMBER);
+}
+
+TEST_F(ApplicationConnectedTestSuite,shallHandleStartDial)
+{
+    EXPECT_CALL(userPortMock,USER_showEnterPhoneNumber());
+    objectUnderTest.USER_handleStartDial();
+}
+
+TEST_F(ApplicationConnectedTestSuite,shallHandleSendCallRequest)
+{
+    EXPECT_CALL(btsPortMock,BTS_sendCallRequest(SENDER_PHONE_NUMBER));
+    EXPECT_CALL(timerPortMock,TIMER_startTimerAndDoSomething(_,60,2));
+    EXPECT_CALL(userPortMock,USER_showDialing(SENDER_PHONE_NUMBER));
+    objectUnderTest.USER_handleCallRequest(SENDER_PHONE_NUMBER);
 }
 
 struct ApplicationTalkingTestSuite : ApplicationConnectedTestSuite
@@ -142,22 +173,29 @@ ApplicationTalkingTestSuite::ApplicationTalkingTestSuite()
 
 void ApplicationTalkingTestSuite::doTalking()
 {
-    EXPECT_CALL(timerPortMock,stopTimer());
-    EXPECT_CALL(btsPortMock,sendCallAccept(_));
-    EXPECT_CALL(userPortMock,talk(_));
-    objectUnderTest.handleCallAccepted();
+    EXPECT_CALL(timerPortMock,TIMER_stopTimer(2));
+    EXPECT_CALL(btsPortMock,BTS_sendCallAccept(_));
+    EXPECT_CALL(userPortMock,USER_callAchieved(_));
+    EXPECT_CALL(timerPortMock,TIMER_startTimerAndDoSomething(_,180,3));
+    EXPECT_CALL(userPortMock,USER_startTalking(SENDER_PHONE_NUMBER));
+    objectUnderTest.USER_handleCallAccept(SENDER_PHONE_NUMBER);
 }
+
+
 
 TEST_F(ApplicationTalkingTestSuite,shallHandleUknownRecipient)
 {
-    /*
-     *  SECOND THING TO AKS IN THE CLASS : TIMER
-     */
-    //EXPECT_CALL(timerPortMock,stopTimer());
-    EXPECT_CALL(userPortMock,showPartnerNotAvailable(_));
-    EXPECT_CALL(userPortMock,showStartMenu());
-    doConnected();
-    objectUnderTest.handleUknownRecipient(SENDER_PHONE_NUMBER);
+    EXPECT_CALL(timerPortMock,TIMER_stopTimer(3));
+    EXPECT_CALL(userPortMock,USER_showPartnerNotAvailable(_));
+    EXPECT_CALL(timerPortMock,TIMER_startTimerAndDoSomething(_,2,3));
+    objectUnderTest.BTS_handleUknownRecipient(SENDER_PHONE_NUMBER);
 }
 
 }
+
+
+
+
+
+
+
