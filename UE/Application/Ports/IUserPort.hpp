@@ -10,8 +10,12 @@ class IUserEventsHandler
 public:
     virtual ~IUserEventsHandler() = default;
 
-    virtual void handleCallAccepted()=0;
-    virtual void handleCallRejected()=0;
+    virtual void USER_handleCallAccept(common::PhoneNumber)=0;
+    virtual void USER_handleStartDial()=0;
+    virtual void USER_handleCallRequest(common::PhoneNumber)=0;
+    virtual void USER_handleCallDrop(common::PhoneNumber) =0;
+
+
 
 
 };
@@ -21,13 +25,16 @@ class IUserPort
 public:
     virtual ~IUserPort() = default;
 
-    virtual void showNotConnected() = 0;
-    virtual void showConnecting() = 0;
-    virtual void showConnected() = 0;
-    virtual void showCallRequest(common::PhoneNumber)=0;
-    virtual void talk(common::PhoneNumber)=0;
-    virtual void showPartnerNotAvailable(common::PhoneNumber)=0;
-    virtual void showStartMenu()=0;
+    virtual void USER_showNotConnected() = 0;
+    virtual void USER_showConnecting() = 0;
+    virtual void USER_showConnected() = 0;
+    virtual void USER_showCallRequest(common::PhoneNumber)=0;
+    virtual void USER_callAchieved(common::PhoneNumber)=0;
+    virtual void USER_startTalking(common::PhoneNumber)=0;
+    virtual void USER_showPartnerNotAvailable(common::PhoneNumber)=0;
+    virtual void USER_showStartMenu()=0;
+    virtual void USER_showEnterPhoneNumber()=0;
+    virtual void USER_showDialing(common::PhoneNumber)=0;
 };
 
 }

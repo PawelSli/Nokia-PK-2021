@@ -15,14 +15,17 @@ public:
     void start(IUserEventsHandler& handler);
     void stop();
 
-    void showNotConnected() override;
-    void showConnecting() override;
-    void showConnected() override;
+    void USER_showNotConnected() override;
+    void USER_showConnecting() override;
+    void USER_showConnected() override;
 
-    void showCallRequest(common::PhoneNumber) override;
-    void talk(common::PhoneNumber) override;
-    void showPartnerNotAvailable(common::PhoneNumber) override;
-    void showStartMenu() override;
+    void USER_showCallRequest(common::PhoneNumber) override;
+    void USER_callAchieved(common::PhoneNumber) override;
+    void USER_startTalking(common::PhoneNumber) override;
+    void USER_showPartnerNotAvailable(common::PhoneNumber) override;
+    void USER_showStartMenu() override;
+    void USER_showEnterPhoneNumber() override;
+    void USER_showDialing(common::PhoneNumber) override;
 
 private:
     common::PrefixedLogger logger;
