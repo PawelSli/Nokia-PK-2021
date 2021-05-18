@@ -8,18 +8,24 @@ namespace ue {
 TalkingState::TalkingState(Context &context,common::PhoneNumber phoneNumber)
     : BaseState(context, "TalkingState"), caller{phoneNumber}
 {
-    context.user.talk(phoneNumber);
+    context.timer.TIMER_startTimerAndDoSomething([&]()
+    {
+        this->context.timer.TIMER_stopTimer(3);
+        this->context.setState<ConnectedState>();
+    },180,3);
+    context.user.USER_startTalking(phoneNumber);
 }
 
-void TalkingState::handleUknownRecipient(common::PhoneNumber recipientPhoneNumber)
+void TalkingState::BTS_handleUknownRecipient(common::PhoneNumber recipientPhoneNumber)
 {
-    context.timer.stopTimer();
-    context.user.showPartnerNotAvailable(recipientPhoneNumber);
-    using namespace std::chrono_literals;
-    std::this_thread::sleep_for(1000ms);
-    context.user.showStartMenu();
-    context.setState<ConnectedState>();
-}
+    context.timer.TIMER_stopTimer(3);
+    context.user.USER_showPartnerNotAvailable(recipientPhoneNumber);
+    context.timer.TIMER_startTimerAndDoSomething([&]()
+    {
+        this->context.timer.TIMER_stopTimer(3);
+        this->context.setState<ConnectedState>();
+    },2,3);
 
 }
 
+}

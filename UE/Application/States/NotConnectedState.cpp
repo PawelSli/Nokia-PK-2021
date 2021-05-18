@@ -7,14 +7,13 @@ namespace ue
 NotConnectedState::NotConnectedState(Context &context)
     : BaseState(context, "NotConnectedState")
 {
-    context.user.showNotConnected();
+    context.user.USER_showNotConnected();
 }
 
-void NotConnectedState::handleSib(common::BtsId btsId)
+void NotConnectedState::BTS_handleSib(common::BtsId btsId)
 {
     context.setState<ConnectingState>(btsId);
 }
 
 }
-
 
