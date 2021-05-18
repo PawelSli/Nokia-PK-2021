@@ -21,48 +21,69 @@ Application::~Application()
     logger.logInfo("Stopped");
 }
 
-void Application::handleTimeout()
+void Application::TIMER_handleTimeout()
 {
-    context.state->handleTimeout();
+    context.state->TIMER_handleTimeout();
 }
 
-void Application::handleDisconnected()
+void Application::BST_handleDisconnected()
 {
-    context.state->handleDisconnected();
+    context.state->BST_handleDisconnected();
 }
 
-void Application::handleSib(common::BtsId btsId)
+void Application::BTS_handleSib(common::BtsId btsId)
 {
-    context.state->handleSib(btsId);
+    context.state->BTS_handleSib(btsId);
 }
 
-void Application::handleAttachAccept()
+void Application::BTS_handleAttachAccept()
 {
-    context.state->handleAttachAccept();
+    context.state->BTS_handleAttachAccept();
 }
 
-void Application::handleAttachReject()
+void Application::BTS_handleAttachReject()
 {
-    context.state->handleAttachReject();
+    context.state->BTS_handleAttachReject();
 }
 
-void Application::handleCallRequest(common::PhoneNumber phoneNumber)
+void Application::BTS_handleCallRequest(common::PhoneNumber phoneNumber)
 {
-    context.state->handleCallRequest(phoneNumber);
+    context.state->BTS_handleCallRequest(phoneNumber);
 }
 
-void Application::handleCallAccepted()
+void Application::USER_handleCallAccept(common::PhoneNumber phoneNumber)
 {
-    context.state->handleCallAccepted();
+    context.state->USER_handleCallAccept(phoneNumber);
 }
 
-void Application::handleCallRejected()
+void Application::BTS_handleUknownRecipient(common::PhoneNumber recipientPhoneNumber)
 {
-    context.state->handleCallRejected();
+    context.state->BTS_handleUknownRecipient(recipientPhoneNumber);
 }
 
-void Application::handleUknownRecipient(common::PhoneNumber recipientPhoneNumber)
+void Application::BTS_handleCallAccept(common::PhoneNumber phoneNumber)
 {
-    context.state->handleUknownRecipient(recipientPhoneNumber);
+    context.state->BTS_handleCallAccept(phoneNumber);
 }
+
+void Application::BTS_handleCallDrop(common::PhoneNumber phoneNumber)
+{
+    context.state->BTS_handleCallDrop(phoneNumber);
+}
+
+void Application::USER_handleStartDial()
+{
+    context.state->USER_handleStartDial();
+}
+
+void Application::USER_handleCallRequest(common::PhoneNumber receiverPhoneNumber)
+{
+    context.state->USER_handleCallRequest(receiverPhoneNumber);
+}
+
+void Application::USER_handleCallDrop(common::PhoneNumber receiverPhoneNumber)
+{
+    context.state->USER_handleCallDrop(receiverPhoneNumber);
+}
+
 }
