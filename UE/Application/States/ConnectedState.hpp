@@ -1,6 +1,7 @@
 #pragma once
 
 #include "BaseState.hpp"
+#include <functional>
 
 namespace ue
 {
@@ -16,13 +17,19 @@ public:
 
     // IBtsEventsHandler interface
 public:
-    void handleDisconnected() final;
-    void handleCallRequest(common::PhoneNumber) final;
+    void BST_handleDisconnected() final;
+    void BTS_handleCallRequest(common::PhoneNumber) final;
+    void BTS_handleCallAccept(common::PhoneNumber phoneNumber) final;
+    void BTS_handleCallDrop(common::PhoneNumber phoneNumber) final;
+    void BTS_handleUknownRecipient(common::PhoneNumber phoneNumber) final;
 
      // IUserEventsHandler interface
 public:
-    void handleCallAccepted() final;
-    void handleCallRejected() final;
+    void USER_handleCallAccept(common::PhoneNumber) final;
+    void USER_handleStartDial() final;
+    void USER_handleCallRequest(common::PhoneNumber) final;
+    void USER_handleCallDrop(common::PhoneNumber) final;
 };
 
 }
+
