@@ -40,4 +40,9 @@ void BaseState::handleAttachReject()
     logger.logError("Uexpected: handleAttachReject");
 }
 
+void BaseState::handleReceivedMessage(Sms sms)
+{
+   logger.logError("Unexpected: handleReceivedMessage");
+}
+
 }

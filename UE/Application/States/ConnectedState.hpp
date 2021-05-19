@@ -13,7 +13,7 @@ private:
 
 public:
     ConnectedState(Context& context);
-    void handleReceivedSms(common::PhoneNumber senderPhoneNumber, std::string message);
+    void handleReceivedMessage(Sms incomingSms);
 
     // IBtsEventsHandler interface
 public:

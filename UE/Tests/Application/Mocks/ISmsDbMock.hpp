@@ -1,20 +1,24 @@
 #pragma once
+
 #include <gmock/gmock.h>
-#include "Ports/ITimerPort.hpp"
-#include "Ports/ISmsDb.hpp"
-#include <Models/Sms.hpp>
+#include "ISmsDb.hpp"
+#include "Sms.hpp"
 
 namespace ue
 {
-    class ISmsDbMock : public ISmsDb {
-    public:
-        ISmsDbMock();
-        ~ISmsDbMock() override;
 
-        MOCK_METHOD(std::shared_ptr<Sms>, getById, (int), (final));
-        MOCK_METHOD(std::vector<Sms>, getAll, (), (final));
-        MOCK_METHOD(void, removeById, (int), (final));
-        MOCK_METHOD(void, removeAll, (), (final));
-        MOCK_METHOD(void, insert, (Sms), (final));
-    };
+class Sms;
+
+class ISmsDbMock : public ISmsDb
+{
+
+public:
+    ISmsDbMock();
+    ~ISmsDbMock() override;
+    MOCK_METHOD(void, addMessage, (Sms sms), (final));
+    MOCK_METHOD(std::vector<Sms>, getAllMessages, (), (final));
+    MOCK_METHOD(Sms, getMessage, (int index), (final));
+};
+
+
 }

@@ -47,4 +47,10 @@ void Application::handleAttachReject()
     context.state->handleAttachReject();
 }
 
+void Application::handleReceivedMessage(Sms sms)
+{
+    context.state->handleReceivedMessage(sms);
+}
+
+
 }

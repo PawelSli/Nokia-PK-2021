@@ -18,7 +18,7 @@ public:
     virtual void showNotConnected() = 0;
     virtual void showConnecting() = 0;
     virtual void showConnected() = 0;
-    virtual void showReceivedSms() = 0;
+    virtual void showSmsReceivedNotification() = 0;
 };
 
 }

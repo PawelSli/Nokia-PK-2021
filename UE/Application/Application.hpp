@@ -4,7 +4,7 @@
 #include "Messages/PhoneNumber.hpp"
 #include "IEventsHandler.hpp"
 #include "Context.hpp"
-#include "Ports/ISmsDbPort.hpp"
+#include "ISmsDb.hpp"
 
 namespace ue
 {
@@ -31,6 +31,7 @@ public:
     void handleSib(common::BtsId btsId) override;
     void handleAttachAccept() override;
     void handleAttachReject() override;
+    void handleReceivedMessage(Sms sms) override;
 
 private:
     Context context;
