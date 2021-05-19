@@ -50,4 +50,9 @@ void BaseState::handleSendMessage(Sms& sms)
     logger.logError("Unexpected: handleSendMessage");
 }
 
+void BaseState::handleShowAllMessages()
+{
+    logger.logError("Unexpected: handleShowAllMessages");
+}
+
 }

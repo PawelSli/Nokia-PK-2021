@@ -21,7 +21,7 @@ public:
 
 
     void handleSendMessage(Sms& sms) final;
-
+    void handleShowAllMessages() final;
 };
 
 }
