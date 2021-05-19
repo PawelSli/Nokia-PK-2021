@@ -20,6 +20,7 @@ public:
     void showConnecting() override;
     void showConnected() override;
     void showSmsReceivedNotification() override;
+    void showSmsToCreate() override;
 
 private:
     common::PrefixedLogger logger;

@@ -58,7 +58,7 @@ void BtsPort::handleMessage(BinaryMessage msg)
         }
         case common::MessageId::Sms:
         {
-            Sms sms(from, to, reader.readRemainingText(), false, false, false);
+            Sms sms(from, to, reader.readRemainingText(), false, false, false);          
             handler->handleReceivedMessage(sms);
             break;
         }
@@ -83,7 +83,13 @@ void BtsPort::sendAttachRequest(common::BtsId btsId)
     msg.writeBtsId(btsId);
     transport.sendMessage(msg.getMessage());
 
+}
 
+void BtsPort::sendMessage(Sms& sms)
+{
+    common::OutgoingMessage message(common::MessageId::Sms, sms.senderPhoneNumber, sms.receiverPhoneNumber);
+    message.writeText(sms.message);
+    transport.sendMessage(message.getMessage());
 }
 
 }

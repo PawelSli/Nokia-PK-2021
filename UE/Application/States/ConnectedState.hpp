@@ -13,11 +13,15 @@ private:
 
 public:
     ConnectedState(Context& context);
-    void handleReceivedMessage(Sms incomingSms);
+    void handleReceivedMessage(Sms& incomingSms);
 
     // IBtsEventsHandler interface
 public:
     void handleDisconnected() final;
+
+
+    void handleSendMessage(Sms& sms) final;
+
 };
 
 }
