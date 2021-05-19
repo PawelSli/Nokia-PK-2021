@@ -6,9 +6,12 @@
 #include "Mocks/IBtsPortMock.hpp"
 #include "Mocks/IUserPortMock.hpp"
 #include "Mocks/ITimerPortMock.hpp"
+#include "Mocks/ISmsDbMock.hpp"
 #include "Messages/PhoneNumber.hpp"
 #include "Messages/BtsId.hpp"
+#include "Sms.hpp"
 #include <memory>
+#include "SmsDb.hpp"
 
 namespace ue
 {
@@ -24,13 +27,16 @@ protected:
     StrictMock<IBtsPortMock> btsPortMock;
     StrictMock<IUserPortMock> userPortMock;
     StrictMock<ITimerPortMock> timerPortMock;
+    StrictMock<ISmsDbMock> smsDbMock;
 
     Expectation expectShowNotConnected = EXPECT_CALL(userPortMock, showNotConnected());
     Application objectUnderTest{PHONE_NUMBER,
                                 loggerMock,
                                 btsPortMock,
                                 userPortMock,
-                                timerPortMock};
+                                timerPortMock,
+                                smsDbMock};
+    SmsDb smsDbUnderTest;
 };
 
 struct ApplicationNotConnectedTestSuite : ApplicationTestSuite
@@ -109,6 +115,22 @@ TEST_F(ApplicationConnectedTestSuite, shallReattach)
 
     doConnecting();
     doConnected();
+}
+
+TEST_F(ApplicationConnectedTestSuite, shallHandleReceivedMessage)
+{
+    Sms receivedMessage{PHONE_NUMBER, PHONE_NUMBER, "message", false, false, false};
+    EXPECT_CALL(smsDbMock, addMessage(receivedMessage));
+    EXPECT_CALL(userPortMock, showSmsReceivedNotification());
+    objectUnderTest.handleReceivedMessage(receivedMessage);
+}
+
+TEST_F(ApplicationConnectedTestSuite, shallAddReceivedMessage)
+{
+    Sms receivedMessage{PHONE_NUMBER, PHONE_NUMBER, "rec message", false, false, false};
+    smsDbUnderTest.addMessage(receivedMessage);
+    Sms smsToAssert = smsDbUnderTest.getMessage(0);
+    ASSERT_EQ(receivedMessage, smsToAssert);
 }
 
 
