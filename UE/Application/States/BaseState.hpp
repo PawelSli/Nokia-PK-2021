@@ -22,7 +22,9 @@ public:
     void handleSib(common::BtsId btsId) override;
     void handleAttachAccept() override;
     void handleAttachReject() override;
-    void handleReceivedMessage(Sms sms) override;
+    void handleReceivedMessage(Sms& sms) override;
+
+    void handleSendMessage(Sms& sms) override;
 
 protected:
     Context& context;

@@ -11,7 +11,7 @@ ConnectedState::ConnectedState(Context &context)
     context.user.showConnected();
 }
 
-void ConnectedState::handleReceivedMessage(Sms incomingSms)
+void ConnectedState::handleReceivedMessage(Sms& incomingSms)
 {
     context.smsDb.addMessage(incomingSms);
     context.user.showSmsReceivedNotification();
@@ -20,6 +20,12 @@ void ConnectedState::handleReceivedMessage(Sms incomingSms)
 void ConnectedState::handleDisconnected()
 {
     context.setState<NotConnectedState>();
+}
+
+void ConnectedState::handleSendMessage(Sms& sms)
+{
+    context.smsDb.addMessage(sms);
+    context.bts.sendMessage(sms);
 }
 
 }
