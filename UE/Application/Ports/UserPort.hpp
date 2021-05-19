@@ -21,6 +21,8 @@ public:
     void showConnected() override;
     void showSmsReceivedNotification() override;
     void showSmsToCreate() override;
+    void showAllMessages(const std::vector<Sms>& messages) override;
+
 
 private:
     common::PrefixedLogger logger;

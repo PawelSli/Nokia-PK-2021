@@ -57,4 +57,9 @@ void Application::handleSendMessage(Sms& sms)
     context.state->handleSendMessage(sms);
 }
 
+void Application::handleShowAllMessages()
+{
+    context.state->handleShowAllMessages();
+}
+
 }

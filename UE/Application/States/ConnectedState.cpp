@@ -28,4 +28,10 @@ void ConnectedState::handleSendMessage(Sms& sms)
     context.bts.sendMessage(sms);
 }
 
+void ConnectedState::handleShowAllMessages()
+{
+    std::vector<Sms> messages = context.smsDb.getAllMessages();
+    context.user.showAllMessages(messages);
+}
+
 }
