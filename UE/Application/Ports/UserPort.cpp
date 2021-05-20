@@ -51,7 +51,6 @@ void UserPort::showConnected()
             break;
         }
     });
-
 }
 
 void UserPort::showSmsReceivedNotification()
