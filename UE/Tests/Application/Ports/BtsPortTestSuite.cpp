@@ -105,15 +105,21 @@ TEST_F(BtsPortTestSuite, shallSendAttachRequest)
 
 TEST_F(BtsPortTestSuite, shallSendSms)
 {
-//    common::BinaryMessage msg;
-//    EXPECT_CALL(transportMock, sendMessage(_)).WillOnce([&msg](auto param) { msg = std::move(param); return true; });
-//    objectUnderTest.sendMessage(_);
-//    common::IncomingMessage reader(msg);
-//    ASSERT_NO_THROW(EXPECT_EQ(common::MessageId::Sms, reader.readMessageId()));
-//    ASSERT_NO_THROW(EXPECT_EQ(PHONE_NUMBER, reader.readPhoneNumber()));
-//    ASSERT_NO_THROW(EXPECT_EQ(common::PhoneNumber{}, reader.readPhoneNumber()));
-//    ASSERT_NO_THROW(EXPECT_EQ(std::string, reader.readText(_)));
-//    ASSERT_NO_THROW(reader.checkEndOfMessage());
+    common::BinaryMessage msg;
+    const auto senderPhone = common::PhoneNumber{1};
+    const auto receiverPhone = common::PhoneNumber{2};
+    std::string tekst = "tekst";
+    bool nottrue = false;
+    Sms sms = Sms(senderPhone,receiverPhone,tekst, nottrue, nottrue, nottrue);
+    EXPECT_CALL(transportMock, sendMessage(_)).WillOnce([&msg](auto param) {msg = std::move(param); return true;});
+    objectUnderTest.sendMessage(sms);
+    common::IncomingMessage reader(msg);
+    ASSERT_NO_THROW(EXPECT_EQ(common::MessageId::Sms, reader.readMessageId()));
+    ASSERT_NO_THROW(EXPECT_EQ(senderPhone, reader.readPhoneNumber()));
+    ASSERT_NO_THROW(EXPECT_EQ(receiverPhone, reader.readPhoneNumber()));
+    ASSERT_NO_THROW(EXPECT_EQ("tekst", reader.readRemainingText()));
+    ASSERT_NO_THROW(reader.checkEndOfMessage());
+
 }
 
 }
