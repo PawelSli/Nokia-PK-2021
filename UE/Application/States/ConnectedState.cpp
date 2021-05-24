@@ -39,4 +39,10 @@ void ConnectedState::handleSmsCreate()
     context.user.showSmsToCreate();
 }
 
+void ConnectedState::handleSmsToUnknownRecipient()
+{
+    Sms* message = context.smsDb.getLastMessage();
+    message->failed = true;
+}
+
 }

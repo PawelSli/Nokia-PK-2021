@@ -6,8 +6,8 @@ namespace ue
 {
         SmsDb::SmsDb(){}
 
-        Sms SmsDb::getMessage(int index){
-           return this->receivedMessages.at(index);
+        Sms* SmsDb::getMessage(int index){
+           return &this->receivedMessages.at(index);
         }
 
         std::vector<Sms> SmsDb::getAllMessages()
@@ -22,8 +22,7 @@ namespace ue
 
         Sms* SmsDb::getLastMessage()
         {
-            std::vector<Sms> messages = this->getAllMessages();
-            int index = messages.size() - 1;
-            return &messages.at(index);
+            int index = this->receivedMessages.size() - 1;
+            return getMessage(index);
         }
 }

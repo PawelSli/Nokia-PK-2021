@@ -16,8 +16,8 @@ public:
     void handleReceivedMessage(Sms& incomingSms);
 
     // IBtsEventsHandler interface
-public:
     void handleDisconnected() final;
+    void handleSmsToUnknownRecipient() final;
 
     // IUserEventsHandler interface
     void handleSendMessage(Sms& sms) final;
