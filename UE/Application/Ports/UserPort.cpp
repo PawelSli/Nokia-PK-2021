@@ -87,7 +87,7 @@ void UserPort::showAllMessages(const std::vector<Sms>& messages)
         if(message.senderPhoneNumber == phoneNumber)
         {
             if(message.failed){
-                listViewMode.addSelectionListItem("TO " + to_string(message.receiverPhoneNumber) + " X", "");
+                listViewMode.addSelectionListItem("TO " + to_string(message.receiverPhoneNumber) + " (FAILED)", "");
             } else{
                 listViewMode.addSelectionListItem("TO " + to_string(message.receiverPhoneNumber), "");
             }

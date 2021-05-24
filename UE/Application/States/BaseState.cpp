@@ -60,15 +60,15 @@ void BaseState::handleSmsCreate()
     logger.logError("Unexpected: handleSmsCreate");
 }
 
-<<<<<<< HEAD
+
 void BaseState::handleShowMessage(int index)
 {
     logger.logError("Unexpected: handleShowMessage");
-=======
+}
+
 void BaseState::handleSmsToUnknownRecipient()
 {
     logger.logError("Unexpected: handleSmsToUnknownRecipient");
->>>>>>> 389db2ff21770a3cf47ddc6c816eeae2026030fc
 }
 
 }
