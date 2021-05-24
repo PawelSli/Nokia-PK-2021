@@ -44,7 +44,7 @@ void UserPort::showConnected()
     gui.setAcceptCallback([&](){
         switch(menu.getCurrentItemIndex().second){
 
-            case 0: showSmsToCreate();
+            case 0: handler->handleSmsCreate();
             break;
 
             case 1: handler->handleShowAllMessages();

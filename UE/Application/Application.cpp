@@ -62,4 +62,9 @@ void Application::handleShowAllMessages()
     context.state->handleShowAllMessages();
 }
 
+void Application::handleSmsCreate()
+{
+    context.state->handleSmsCreate();
+}
+
 }
