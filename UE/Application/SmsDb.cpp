@@ -20,4 +20,9 @@ namespace ue
             this->receivedMessages.push_back(sms);
         }
 
+        Sms* SmsDb::getLastMessage()
+        {
+            int index = this->receivedMessages.size() - 1;
+            return getMessage(index);
+        }
 }

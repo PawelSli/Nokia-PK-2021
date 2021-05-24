@@ -20,6 +20,7 @@ public:
     MOCK_METHOD(void, handleAttachAccept, (), (final));
     MOCK_METHOD(void, handleAttachReject, (), (final));
     MOCK_METHOD(void, handleReceivedMessage, (Sms& sms), (final));
+    MOCK_METHOD(void, handleSmsToUnknownRecipient, (), (final));
 };
 
 class IBtsPortMock : public IBtsPort

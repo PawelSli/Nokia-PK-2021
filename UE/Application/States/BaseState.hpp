@@ -22,8 +22,13 @@ public:
     void handleSib(common::BtsId btsId) override;
     void handleAttachAccept() override;
     void handleAttachReject() override;
+    void handleSmsToUnknownRecipient() override;
 
+<<<<<<< HEAD
     // IUserEventsHandler
+=======
+    // IUserEventsHandler interface
+>>>>>>> 389db2ff21770a3cf47ddc6c816eeae2026030fc
     void handleReceivedMessage(Sms& sms) override;
     void handleShowAllMessages() override;
     void handleSendMessage(Sms& sms) override;

@@ -52,7 +52,6 @@ void UserPort::showConnected()
             break;
         }
     });
-
 }
 
 void UserPort::showSmsReceivedNotification()
@@ -83,7 +82,6 @@ void UserPort::showAllMessages(const std::vector<Sms>& messages)
     auto& listViewMode = gui.setListViewMode();
     listViewMode.clearSelectionList();
 
-
     for(auto& message : messages)
     {
         if(message.senderPhoneNumber == phoneNumber)
@@ -104,6 +102,7 @@ void UserPort::showAllMessages(const std::vector<Sms>& messages)
                 listViewMode.addSelectionListItem("FROM " + to_string(message.senderPhoneNumber), "");
             }
         }
+
     }
 
     gui.setRejectCallback([this]{

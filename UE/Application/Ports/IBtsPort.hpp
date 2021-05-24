@@ -16,6 +16,7 @@ public:
     virtual void handleAttachAccept() = 0;
     virtual void handleAttachReject() = 0;
     virtual void handleReceivedMessage(Sms& sms) = 0;
+    virtual void handleSmsToUnknownRecipient() = 0;
 };
 
 class IBtsPort

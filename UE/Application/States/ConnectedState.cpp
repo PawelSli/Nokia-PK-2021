@@ -39,6 +39,7 @@ void ConnectedState::handleSmsCreate()
     context.user.showSmsToCreate();
 }
 
+<<<<<<< HEAD
 void ConnectedState::handleShowMessage(int index)
 {
     Sms* message = context.smsDb.getMessage(index);
@@ -55,6 +56,12 @@ void ConnectedState::handleShowMessage(int index)
     }
 
     context.user.showMessage(*message, areAllMessagesRead);
+=======
+void ConnectedState::handleSmsToUnknownRecipient()
+{
+    Sms* message = context.smsDb.getLastMessage();
+    message->failed = true;
+>>>>>>> 389db2ff21770a3cf47ddc6c816eeae2026030fc
 }
 
 }
