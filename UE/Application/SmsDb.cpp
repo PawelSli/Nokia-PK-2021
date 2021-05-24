@@ -6,8 +6,8 @@ namespace ue
 {
         SmsDb::SmsDb(){}
 
-        Sms SmsDb::getMessage(int index){
-           return this->receivedMessages.at(index);
+        Sms* SmsDb::getMessage(int index){
+           return &this->receivedMessages.at(index);
         }
 
         std::vector<Sms> SmsDb::getAllMessages()

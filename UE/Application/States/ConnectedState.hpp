@@ -20,9 +20,11 @@ public:
     void handleDisconnected() final;
 
 
+    //IUserEventsHandler
     void handleSendMessage(Sms& sms) final;
     void handleShowAllMessages() final;
     void handleSmsCreate() final;
+    void handleShowMessage(int index) final;
 };
 
 }

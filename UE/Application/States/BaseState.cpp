@@ -60,4 +60,9 @@ void BaseState::handleSmsCreate()
     logger.logError("Unexpected: handleSmsCreate");
 }
 
+void BaseState::handleShowMessage(int index)
+{
+    logger.logError("Unexpected: handleShowMessage");
+}
+
 }

@@ -23,11 +23,12 @@ public:
     void handleAttachAccept() override;
     void handleAttachReject() override;
 
-
+    // IUserEventsHandler
     void handleReceivedMessage(Sms& sms) override;
     void handleShowAllMessages() override;
     void handleSendMessage(Sms& sms) override;
     void handleSmsCreate() override;
+    void handleShowMessage(int index) override;
 
 protected:
     Context& context;

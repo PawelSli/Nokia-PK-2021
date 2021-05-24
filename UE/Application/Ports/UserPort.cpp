@@ -4,6 +4,7 @@
 #include "Sms.hpp"
 #include <string>
 #include <vector>
+#include "UeGui/ITextMode.hpp"
 
 namespace ue
 {
@@ -87,19 +88,46 @@ void UserPort::showAllMessages(const std::vector<Sms>& messages)
     {
         if(message.senderPhoneNumber == phoneNumber)
         {
-            listViewMode.addSelectionListItem("[TO] " + to_string(message.receiverPhoneNumber), message.message);
+            if(message.failed){
+                listViewMode.addSelectionListItem("TO " + to_string(message.receiverPhoneNumber) + " X", "");
+            } else{
+                listViewMode.addSelectionListItem("TO " + to_string(message.receiverPhoneNumber), "");
+            }
+
         } else
         {
             if(!message.read)
             {
-                listViewMode.addSelectionListItem("[FROM] " + to_string(message.senderPhoneNumber), message.message + "NOT READ!");
+                listViewMode.addSelectionListItem("FROM " + to_string(message.senderPhoneNumber) + " (*)", "");
             } else
             {
-                listViewMode.addSelectionListItem("[FROM] " + to_string(message.senderPhoneNumber), message.message);
+                listViewMode.addSelectionListItem("FROM " + to_string(message.senderPhoneNumber), "");
             }
         }
-
     }
+
+    gui.setRejectCallback([this]{
+        showConnected();
+    });
+
+    gui.setAcceptCallback([this, &listViewMode](){
+        handler->handleShowMessage(listViewMode.getCurrentItemIndex().second);
+    });
+}
+
+void UserPort::showMessage(Sms message, bool areAllMessagesRead)
+{
+    if(areAllMessagesRead)
+    {
+        // disable new message notification
+    }
+
+    auto& textViewMode = gui.setViewTextMode();
+    textViewMode.setText(message.message);
+
+    gui.setRejectCallback([this](){
+        handler->handleShowAllMessages();
+    });
 }
 
 

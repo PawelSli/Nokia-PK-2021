@@ -11,7 +11,7 @@ namespace ue
 
     public:
         SmsDb();
-        Sms getMessage(int index) override;
+        Sms* getMessage(int index) override;
         std::vector<Sms> getAllMessages() override;
         void addMessage(Sms sms) override;
     };

@@ -22,6 +22,7 @@ public:
     void showSmsReceivedNotification() override;
     void showSmsToCreate() override;
     void showAllMessages(const std::vector<Sms>& messages) override;
+    void showMessage(Sms message, bool areAllMessagesRead) override;
 
 
 private:

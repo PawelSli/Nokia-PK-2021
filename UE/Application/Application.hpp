@@ -33,9 +33,11 @@ public:
     void handleAttachReject() override;
     void handleReceivedMessage(Sms& sms) override;
 
+    // IUserEventsHandler
     void handleSendMessage(Sms& sms) override;
     void handleShowAllMessages() override;
     void handleSmsCreate() override;
+    void handleShowMessage(int index) override;
 
 private:
     Context context;

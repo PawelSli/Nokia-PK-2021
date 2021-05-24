@@ -67,4 +67,9 @@ void Application::handleSmsCreate()
     context.state->handleSmsCreate();
 }
 
+void Application::handleShowMessage(int index)
+{
+    context.state->handleShowMessage(index);
+}
+
 }
