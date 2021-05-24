@@ -20,4 +20,10 @@ namespace ue
             this->receivedMessages.push_back(sms);
         }
 
+        Sms* SmsDb::getLastMessage()
+        {
+            std::vector<Sms> messages = this->getAllMessages();
+            int index = messages.size() - 1;
+            return &messages.at(index);
+        }
 }

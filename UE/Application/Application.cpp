@@ -67,4 +67,9 @@ void Application::handleSmsCreate()
     context.state->handleSmsCreate();
 }
 
+void Application::handleSmsToUnknownRecipient()
+{
+    context.state->handleSmsToUnknownRecipient();
+}
+
 }

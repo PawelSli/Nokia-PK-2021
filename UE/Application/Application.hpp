@@ -32,7 +32,9 @@ public:
     void handleAttachAccept() override;
     void handleAttachReject() override;
     void handleReceivedMessage(Sms& sms) override;
+    void handleSmsToUnknownRecipient() override;
 
+    // IUserEventsHandler interface
     void handleSendMessage(Sms& sms) override;
     void handleShowAllMessages() override;
     void handleSmsCreate() override;

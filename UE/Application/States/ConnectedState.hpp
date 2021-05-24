@@ -19,7 +19,7 @@ public:
 public:
     void handleDisconnected() final;
 
-
+    // IUserEventsHandler interface
     void handleSendMessage(Sms& sms) final;
     void handleShowAllMessages() final;
     void handleSmsCreate() final;

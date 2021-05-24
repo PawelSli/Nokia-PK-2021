@@ -14,6 +14,7 @@ namespace ue
         Sms getMessage(int index) override;
         std::vector<Sms> getAllMessages() override;
         void addMessage(Sms sms) override;
+        Sms* getLastMessage() override;
     };
 }
 
