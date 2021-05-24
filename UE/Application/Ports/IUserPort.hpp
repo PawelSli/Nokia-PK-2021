@@ -12,6 +12,7 @@ public:
     virtual void handleSendMessage(Sms& sms) = 0;
     virtual void handleShowAllMessages() = 0;
     virtual void handleSmsCreate() = 0;
+    virtual void handleShowMessage(int index) = 0;
 };
 
 class IUserPort
@@ -25,6 +26,7 @@ public:
     virtual void showSmsReceivedNotification() = 0;
     virtual void showSmsToCreate() = 0;
     virtual void showAllMessages(const std::vector<Sms>& messages) = 0;
+    virtual void showMessage(Sms message, bool areAllMessagesRead) = 0;
 };
 
 }

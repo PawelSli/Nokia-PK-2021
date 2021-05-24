@@ -34,10 +34,13 @@ public:
     void handleReceivedMessage(Sms& sms) override;
     void handleSmsToUnknownRecipient() override;
 
+
     // IUserEventsHandler interface
+
     void handleSendMessage(Sms& sms) override;
     void handleShowAllMessages() override;
     void handleSmsCreate() override;
+    void handleShowMessage(int index) override;
 
 private:
     Context context;
