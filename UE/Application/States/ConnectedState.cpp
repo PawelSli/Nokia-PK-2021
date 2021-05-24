@@ -34,4 +34,9 @@ void ConnectedState::handleShowAllMessages()
     context.user.showAllMessages(messages);
 }
 
+void ConnectedState::handleSmsCreate()
+{
+    context.user.showSmsToCreate();
+}
+
 }

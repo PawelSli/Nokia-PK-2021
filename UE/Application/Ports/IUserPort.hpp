@@ -11,6 +11,7 @@ public:
     virtual ~IUserEventsHandler() = default;
     virtual void handleSendMessage(Sms& sms) = 0;
     virtual void handleShowAllMessages() = 0;
+    virtual void handleSmsCreate() = 0;
 };
 
 class IUserPort
