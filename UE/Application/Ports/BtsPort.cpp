@@ -62,6 +62,12 @@ void BtsPort::handleMessage(BinaryMessage msg)
             handler->handleReceivedMessage(sms);
             break;
         }
+        case common::MessageId::UnknownRecipient:
+        {
+            if (reader.readMessageId() == common::MessageId::Sms)
+                handler->handleSmsToUnknownRecipient();
+            break;
+        }
         default:
             logger.logError("unknow message: ", msgId, ", from: ", from);
 

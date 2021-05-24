@@ -129,8 +129,8 @@ TEST_F(ApplicationConnectedTestSuite, shallAddReceivedMessage)
 {
     Sms receivedMessage{PHONE_NUMBER, PHONE_NUMBER, "rec message", false, false, false};
     smsDbUnderTest.addMessage(receivedMessage);
-    Sms smsToAssert = smsDbUnderTest.getMessage(0);
-    ASSERT_EQ(receivedMessage, smsToAssert);
+    Sms* smsToAssert = smsDbUnderTest.getMessage(0);
+    ASSERT_EQ(receivedMessage, *smsToAssert);
 }
 
 
