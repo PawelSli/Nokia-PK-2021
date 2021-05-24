@@ -1,6 +1,9 @@
 #include "UserPort.hpp"
 #include "UeGui/IListViewMode.hpp"
 #include "UeGui/ISmsComposeMode.hpp"
+#include "Sms.hpp"
+#include <string>
+#include <vector>
 
 namespace ue
 {
@@ -40,7 +43,11 @@ void UserPort::showConnected()
     menu.addSelectionListItem("View SMS", "");
     gui.setAcceptCallback([&](){
         switch(menu.getCurrentItemIndex().second){
-            case 0: showSmsToCreate();
+
+            case 0: handler->handleSmsCreate();
+            break;
+
+            case 1: handler->handleShowAllMessages();
             break;
         }
     });
@@ -68,6 +75,31 @@ void UserPort::showSmsToCreate()
 }
 
 
+void UserPort::showAllMessages(const std::vector<Sms>& messages)
+{
+
+    auto& listViewMode = gui.setListViewMode();
+    listViewMode.clearSelectionList();
+
+
+    for(auto& message : messages)
+    {
+        if(message.senderPhoneNumber == phoneNumber)
+        {
+            listViewMode.addSelectionListItem("[TO] " + to_string(message.receiverPhoneNumber), message.message);
+        } else
+        {
+            if(!message.read)
+            {
+                listViewMode.addSelectionListItem("[FROM] " + to_string(message.senderPhoneNumber), message.message + "NOT READ!");
+            } else
+            {
+                listViewMode.addSelectionListItem("[FROM] " + to_string(message.senderPhoneNumber), message.message);
+            }
+        }
+
+    }
+}
 
 
 

@@ -34,6 +34,8 @@ public:
     void handleReceivedMessage(Sms& sms) override;
 
     void handleSendMessage(Sms& sms) override;
+    void handleShowAllMessages() override;
+    void handleSmsCreate() override;
 
 private:
     Context context;
