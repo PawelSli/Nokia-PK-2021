@@ -37,6 +37,7 @@ public:
     MOCK_METHOD(void, USER_showEnterPhoneNumber, (), (final));
     MOCK_METHOD(void, USER_showDialing, (common::PhoneNumber phoneNumber), (final));
     MOCK_METHOD(void, showCallView, (const std::string), (final));
+    MOCK_METHOD(void, showcallDropping, (common::PhoneNumber), (final));
 };
 
 }

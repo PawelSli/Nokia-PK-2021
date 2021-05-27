@@ -95,4 +95,6 @@ void Application::handleTalkMessage(const std::string txt)
 {
     context.state->handleTalkMessage(txt);
 }
+
+
 }

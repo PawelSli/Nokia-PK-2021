@@ -49,5 +49,33 @@ void TalkingState::handleTalkMessage(const std::string msg)
     },120,3);
     context.user.showCallView(msg);
 }
+
+void TalkingState::BTS_handleCallDrop(common::PhoneNumber receiver)
+{
+     std::cout << "[-bts handle call drop tutaj powinno dzialac !!!!!!!!!-]";
+    context.timer.TIMER_stopTimer(3);
+
+    context.user.showcallDropping(receiver);
+            context.timer.TIMER_startTimerAndDoSomething([&]()
+            {
+                this->context.timer.TIMER_stopTimer(3);
+                this->context.setState<ConnectedState>();
+            },2,3);
+
+}
+
+void TalkingState::USER_handleCallDrop(common::PhoneNumber callingPhoneNumber)
+{
+     std::cout << "[-user handle call drop tutaj powinno dzialac !!!!!!!!!-]";
+    context.bts.BTS_sendCallDrop(caller);
+     context.timer.TIMER_stopTimer(3);
+    context.user.showcallDropping(context.bts.getPhoneNumber());
+    context.timer.TIMER_startTimerAndDoSomething([&]()
+    {
+        this->context.timer.TIMER_stopTimer(3);
+        this->context.setState<ConnectedState>();
+    },2,3);
+
+}
 }
 

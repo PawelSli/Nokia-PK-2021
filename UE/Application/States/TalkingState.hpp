@@ -15,6 +15,8 @@ public:
     void handleTalkMessage(const std::string) final;
 
     void handleSendTalkMessage(const std::string) final;
+    void BTS_handleCallDrop(common::PhoneNumber receiver) override;
+    void USER_handleCallDrop(common::PhoneNumber callingPhoneNumber) override;
 };
 
 }

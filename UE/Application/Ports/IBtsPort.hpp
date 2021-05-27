@@ -32,6 +32,7 @@ public:
     virtual void BTS_sendCallDrop(common::PhoneNumber)=0;
     virtual void BTS_sendCallRequest(common::PhoneNumber)=0;
 virtual void sendTalkMessage(const std::string, common::PhoneNumber)=0;
+    virtual common::PhoneNumber getPhoneNumber()=0;
 };
 
 }

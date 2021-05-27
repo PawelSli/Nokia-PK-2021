@@ -34,6 +34,7 @@ public:
     MOCK_METHOD(void, BTS_sendCallDrop, (common::PhoneNumber), (final));
     MOCK_METHOD(void, BTS_sendCallRequest, (common::PhoneNumber), (final));
     MOCK_METHOD(void, sendTalkMessage, (const std::string, common::PhoneNumber), (final));
+    MOCK_METHOD(common::PhoneNumber, getPhoneNumber,(),(final));
 };
 
 }

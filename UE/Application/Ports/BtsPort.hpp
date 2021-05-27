@@ -14,6 +14,7 @@ public:
     BtsPort(common::ILogger& logger, common::ITransport& transport, common::PhoneNumber phoneNumber);
     void start(IBtsEventsHandler& handler);
     void stop();
+    common::PhoneNumber getPhoneNumber() override;
 
     void BTS_sendAttachRequest(common::BtsId) override;
     void BTS_sendCallAccept(common::PhoneNumber) override;

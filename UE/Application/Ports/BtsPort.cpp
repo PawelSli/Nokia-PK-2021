@@ -41,6 +41,11 @@ void BtsPort::handleMessage(BinaryMessage msg)
 
         switch (msgId)
         {
+        case common::MessageId::CallDropped:
+        {
+            handler->BTS_handleCallDrop(from);
+            break;
+        }
         case common::MessageId::Sib:
         {
             auto btsId = reader.readBtsId();
@@ -71,12 +76,7 @@ void BtsPort::handleMessage(BinaryMessage msg)
         {
             handler->BTS_handleCallAccept(from);
             break;
-        }
-        case common::MessageId::CallDropped:
-        {
-            handler->BTS_handleCallDrop(from);
-            break;
-        }
+        }        
         case common::MessageId::UnknownRecipient:
         {
             handler->BTS_handleUknownRecipient(from);
@@ -94,6 +94,11 @@ void BtsPort::handleMessage(BinaryMessage msg)
     }
 }
 
+
+common::PhoneNumber BtsPort::getPhoneNumber()
+{
+    return phoneNumber;
+}
 
 void BtsPort::BTS_sendAttachRequest(common::BtsId btsId)
 {

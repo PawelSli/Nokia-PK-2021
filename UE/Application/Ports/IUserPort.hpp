@@ -36,6 +36,7 @@ public:
     virtual void USER_showEnterPhoneNumber()=0;
     virtual void USER_showDialing(common::PhoneNumber)=0;
     virtual void showCallView(const std::string)=0;
+    virtual void showcallDropping(common::PhoneNumber) = 0;
 };
 
 }

@@ -74,15 +74,24 @@ void UserPort::USER_callAchieved(common::PhoneNumber senderPhoneNumber)
 
 }
 
-void UserPort::USER_startTalking(common::PhoneNumber)
+void UserPort::USER_startTalking(common::PhoneNumber tmp)
 {
     IUeGui::ICallMode& callView = gui.setCallMode();
     callView.appendIncomingText("");
+    anotherPhoneNumber = tmp;
     gui.setAcceptCallback([&](){handler ->
                 handleSendTalkMessage(callView.getOutgoingText());
                 callView.clearOutgoingText();
     });
-    gui.setRejectCallback(nullptr);
+
+    gui.setRejectCallback([&](){
+        handler->USER_handleCallDrop(tmp);
+        //phoneNumber.value = common::PhoneNumber::INVALID_VALUE;
+        //USER_showStartMenu();
+
+        //std::cout<<"    start dropping    " <<phoneNumber << "            " <<tmp;
+        //USER_showStartMenu();
+    });
     //auto& callv = gui.setCallMode();
     //callv.appendIncomingText("");
 }
@@ -140,8 +149,23 @@ void UserPort::showCallView(const std::string inTxt)
                 handleSendTalkMessage(callView.getOutgoingText());
                 callView.clearOutgoingText();
     });
-    gui.setRejectCallback(nullptr);
+    gui.setRejectCallback([&](){
+        handler->USER_handleCallDrop(anotherPhoneNumber);
+        //phoneNumber.value = common::PhoneNumber::INVALID_VALUE;
+        //USER_showStartMenu();
+        //std::cout<<"    start dropping    ";
+        //handler->handleSendingCallDrop(currentReceiver);
 
+        //USER_showStartMenu();
+    });
+
+}
+
+void UserPort::showcallDropping(common::PhoneNumber callingPhoneNumber)
+{
+    //setCurrentView(GUIView::CALLING);
+    auto& callingView = gui.setAlertMode();
+    callingView.setText("Phone " + to_string(callingPhoneNumber) + " dropped call.");
 }
 
 }

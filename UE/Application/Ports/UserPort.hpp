@@ -27,11 +27,14 @@ public:
     void USER_showEnterPhoneNumber() override;
     void USER_showDialing(common::PhoneNumber) override;
     void showCallView(const std::string inTxt) override;
+    void showcallDropping(common::PhoneNumber) override;
+
 
 private:
     common::PrefixedLogger logger;
     IUeGui& gui;
     common::PhoneNumber phoneNumber;
+    common::PhoneNumber anotherPhoneNumber;
     IUserEventsHandler* handler = nullptr;
 };
 
