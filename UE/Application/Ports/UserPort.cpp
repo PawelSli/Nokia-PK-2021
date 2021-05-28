@@ -86,14 +86,7 @@ void UserPort::USER_startTalking(common::PhoneNumber tmp)
 
     gui.setRejectCallback([&](){
         handler->USER_handleCallDrop(tmp);
-        //phoneNumber.value = common::PhoneNumber::INVALID_VALUE;
-        //USER_showStartMenu();
-
-        //std::cout<<"    start dropping    " <<phoneNumber << "            " <<tmp;
-        //USER_showStartMenu();
     });
-    //auto& callv = gui.setCallMode();
-    //callv.appendIncomingText("");
 }
 
 
@@ -151,21 +144,14 @@ void UserPort::showCallView(const std::string inTxt)
     });
     gui.setRejectCallback([&](){
         handler->USER_handleCallDrop(anotherPhoneNumber);
-        //phoneNumber.value = common::PhoneNumber::INVALID_VALUE;
-        //USER_showStartMenu();
-        //std::cout<<"    start dropping    ";
-        //handler->handleSendingCallDrop(currentReceiver);
-
-        //USER_showStartMenu();
     });
 
 }
 
 void UserPort::showcallDropping(common::PhoneNumber callingPhoneNumber)
 {
-    //setCurrentView(GUIView::CALLING);
     auto& callingView = gui.setAlertMode();
-    callingView.setText("Phone " + to_string(callingPhoneNumber) + " dropped call.");
+    callingView.setText("Phone nr: " + to_string(callingPhoneNumber) + "\n dropped the call");
 }
 
 }
