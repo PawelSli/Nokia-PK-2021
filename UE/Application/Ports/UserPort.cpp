@@ -77,32 +77,26 @@ void UserPort::showSmsToCreate()
 
 void UserPort::showAllMessages(const std::vector<Sms>& messages)
 {
-
     auto& listViewMode = gui.setListViewMode();
     listViewMode.clearSelectionList();
 
-    for(auto& message : messages)
+    for (auto& message : messages)
     {
-        if(message.senderPhoneNumber == phoneNumber)
+        if (message.senderPhoneNumber == phoneNumber)
         {
-            if(message.failed){
-                listViewMode.addSelectionListItem("TO " + to_string(message.receiverPhoneNumber) + " X", "");
-            } else{
+            if (message.failed) {
+                listViewMode.addSelectionListItem("TO " + to_string(message.receiverPhoneNumber) + " FAILED", "");
+            } else {
                 listViewMode.addSelectionListItem("TO " + to_string(message.receiverPhoneNumber), "");
             }
-
-        } else
-        {
-            if(!message.read)
-            {
+        } else {
+            if (!message.read) {
                 listViewMode.addSelectionListItem("FROM " + to_string(message.senderPhoneNumber) + " (*)", "");
-            } else
-            {
+            } else {
                 listViewMode.addSelectionListItem("FROM " + to_string(message.senderPhoneNumber), "");
             }
         }
     }
-
 }
 
 

@@ -8,6 +8,8 @@
 #include "Mocks/ITransportMock.hpp"
 #include "Messages/OutgoingMessage.hpp"
 #include "Messages/IncomingMessage.hpp"
+#include "SmsDb.hpp"
+#include "Sms.hpp"
 
 namespace ue
 {
@@ -18,6 +20,7 @@ class BtsPortTestSuite : public Test
 protected:
     const common::PhoneNumber PHONE_NUMBER{112};
     const common::BtsId BTS_ID{13121981ll};
+    SmsDb DATABASE{};
     NiceMock<common::ILoggerMock> loggerMock;
     StrictMock<IBtsEventsHandlerMock> handlerMock;
     StrictMock<common::ITransportMock> transportMock;
@@ -108,18 +111,35 @@ TEST_F(BtsPortTestSuite, shallSendSms)
     common::BinaryMessage msg;
     const auto senderPhone = common::PhoneNumber{1};
     const auto receiverPhone = common::PhoneNumber{2};
-    std::string tekst = "tekst";
-    bool nottrue = false;
-    Sms sms = Sms(senderPhone,receiverPhone,tekst, nottrue, nottrue, nottrue);
+    std::string text = "text";
+    bool readed = false;
+    bool sended = false;
+    bool failed = false;
+    Sms sms = Sms(senderPhone,receiverPhone, text, readed, sended, failed);
     EXPECT_CALL(transportMock, sendMessage(_)).WillOnce([&msg](auto param) {msg = std::move(param); return true;});
     objectUnderTest.sendMessage(sms);
     common::IncomingMessage reader(msg);
     ASSERT_NO_THROW(EXPECT_EQ(common::MessageId::Sms, reader.readMessageId()));
     ASSERT_NO_THROW(EXPECT_EQ(senderPhone, reader.readPhoneNumber()));
     ASSERT_NO_THROW(EXPECT_EQ(receiverPhone, reader.readPhoneNumber()));
-    ASSERT_NO_THROW(EXPECT_EQ("tekst", reader.readRemainingText()));
+    ASSERT_NO_THROW(EXPECT_EQ(text, reader.readRemainingText()));
     ASSERT_NO_THROW(reader.checkEndOfMessage());
-
 }
+
+//TEST_F(BtsPortTestSuite, shallHandleSmsSendToUnknownRecipient)
+//{
+//    common::BinaryMessage msg;
+//    std::string text = "text";
+//    bool readed = false;
+//    bool sended = false;
+//    bool failed = false;
+//    Sms sms = Sms(PHONE_NUMBER, {NULL}, text, readed, sended, failed);
+//    EXPECT_CALL(transportMock, sendMessage(_)).WillOnce([&msg](auto param) {msg = std::move(param); return false;});
+//    objectUnderTest.sendMessage(sms);
+//    DATABASE.addMessage(sms);
+//    Sms *lastSms = DATABASE.getLastMessage();
+//    ASSERT_NO_THROW(EXPECT_EQ(true, lastSms->failed));
+
+//}
 
 }
