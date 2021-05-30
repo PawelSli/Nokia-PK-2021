@@ -17,19 +17,13 @@ namespace ue
 
     std::vector<Sms> SmsDb::getAllMessages()
     {
-        int size = this->receivedMessages.size();
-        if (size > 0){
-            return this->receivedMessages;
-        } else {
-            return NULL;
-        }
+        return this->receivedMessages;
     }
 
     void SmsDb::addMessage(Sms sms)
     {
-        if(sms != NULL){
-            this->receivedMessages.push_back(sms);
-        }
+        this->receivedMessages.push_back(sms);
+
     }
 
     Sms* SmsDb::getLastMessage()

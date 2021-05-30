@@ -99,8 +99,6 @@ void UserPort::showAllMessages(const std::vector<Sms>& messages)
         }
 
     }
-<<<<<<< HEAD
-=======
 
     gui.setRejectCallback([this]{
         showConnected();
@@ -124,7 +122,6 @@ void UserPort::showMessage(Sms message, bool areAllMessagesRead)
     gui.setRejectCallback([this](){
         handler->handleShowAllMessages();
     });
->>>>>>> d255da39af113153bcf499aeaa255ef33455b89e
 }
 
 
