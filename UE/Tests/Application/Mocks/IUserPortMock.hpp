@@ -15,6 +15,7 @@ public:
     MOCK_METHOD(void, handleSendMessage, (Sms& sms), (final));
     MOCK_METHOD(void, handleShowAllMessages, (), (final));
     MOCK_METHOD(void, handleSmsCreate, (), (final));
+    MOCK_METHOD(void, handleShowMessage, (int index), (final));
 };
 
 class IUserPortMock : public IUserPort
@@ -29,7 +30,7 @@ public:
     MOCK_METHOD(void, showSmsReceivedNotification, (), (final));
     MOCK_METHOD(void, showSmsToCreate, (), (final));
     MOCK_METHOD(void, showAllMessages, (const std::vector<Sms>&), (final));
-
+    MOCK_METHOD(void, showMessage, (Sms sms, bool areAllMessagesRead), (final));
 };
 
 }

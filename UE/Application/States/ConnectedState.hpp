@@ -20,9 +20,11 @@ public:
     void handleSmsToUnknownRecipient() final;
 
     // IUserEventsHandler interface
+
     void handleSendMessage(Sms& sms) final;
     void handleShowAllMessages() final;
     void handleSmsCreate() final;
+    void handleShowMessage(int index) final;
 };
 
 }
