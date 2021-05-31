@@ -133,6 +133,4 @@ TEST_F(ApplicationConnectedTestSuite, shallAddReceivedMessage)
     ASSERT_EQ(receivedMessage, *smsToAssert);
 }
 
-
-
 }
