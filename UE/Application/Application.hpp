@@ -4,6 +4,7 @@
 #include "Messages/PhoneNumber.hpp"
 #include "IEventsHandler.hpp"
 #include "Context.hpp"
+#include "ISmsDb.hpp"
 
 namespace ue
 {
@@ -18,16 +19,28 @@ public:
                 ILogger& iLogger,
                 IBtsPort& bts,
                 IUserPort& user,
-                ITimerPort& timer);
+                ITimerPort& timer,
+                ISmsDb& smsDb);
     ~Application();
 
     // ITimerEventsHandler interface
     void handleTimeout() override;
 
     // IBtsEventsHandler interface
+    void handleDisconnected() override;
     void handleSib(common::BtsId btsId) override;
     void handleAttachAccept() override;
     void handleAttachReject() override;
+    void handleReceivedMessage(Sms& sms) override;
+    void handleSmsToUnknownRecipient() override;
+
+
+    // IUserEventsHandler interface
+
+    void handleSendMessage(Sms& sms) override;
+    void handleShowAllMessages() override;
+    void handleSmsCreate() override;
+    void handleShowMessage(int index) override;
 
 private:
     Context context;

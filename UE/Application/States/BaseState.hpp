@@ -1,6 +1,9 @@
+#pragma once
+
 #include "IEventsHandler.hpp"
 #include "Logger/PrefixedLogger.hpp"
 #include "Context.hpp"
+#include "Messages/PhoneNumber.hpp"
 
 namespace ue
 {
@@ -15,11 +18,22 @@ public:
     void handleTimeout() override;
 
     // IBtsEventsHandler interface
+    void handleDisconnected() override;
     void handleSib(common::BtsId btsId) override;
     void handleAttachAccept() override;
     void handleAttachReject() override;
+    void handleSmsToUnknownRecipient() override;
 
-private:
+
+    // IUserEventsHandler interface
+
+    void handleReceivedMessage(Sms& sms) override;
+    void handleShowAllMessages() override;
+    void handleSendMessage(Sms& sms) override;
+    void handleSmsCreate() override;
+    void handleShowMessage(int index) override;
+
+protected:
     Context& context;
     common::PrefixedLogger logger;
 };
