@@ -2,6 +2,9 @@
 
 #include "ITimerPort.hpp"
 #include "Logger/PrefixedLogger.hpp"
+#include <chrono>
+#include<map>
+#include <thread>
 
 namespace ue
 {
@@ -15,12 +18,16 @@ public:
     void stop();
 
     // ITimerPort interface
-    void startTimer(Duration duration) override;
-    void stopTimer() override;
+    void TIMER_startTimer(double duration,int i) override;
+    void TIMER_startTimerAndDoSomething(std::function<void()>,double duration,int i) override;
+    void TIMER_stopTimer(int i) override;
 
 private:
+    std::map<int,bool> timers;
     common::PrefixedLogger logger;
     ITimerEventsHandler* handler = nullptr;
+    std::chrono::steady_clock::time_point beggining;
+    std::chrono::steady_clock::time_point ending;
 };
 
 }

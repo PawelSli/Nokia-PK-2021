@@ -22,12 +22,25 @@ public:
     ~Application();
 
     // ITimerEventsHandler interface
-    void handleTimeout() override;
+    void TIMER_handleTimeout() override;
 
     // IBtsEventsHandler interface
-    void handleSib(common::BtsId btsId) override;
-    void handleAttachAccept() override;
-    void handleAttachReject() override;
+    void BST_handleDisconnected() override;
+    void BTS_handleSib(common::BtsId btsId) override;
+    void BTS_handleAttachAccept() override;
+    void BTS_handleAttachReject() override;
+    void BTS_handleCallRequest(common::PhoneNumber phoneNumber) override;
+    void BTS_handleUknownRecipient(common::PhoneNumber phoneNumber) override;
+    void BTS_handleCallAccept(common::PhoneNumber phoneNumber) override;
+    void BTS_handleCallDrop(common::PhoneNumber phoneNumber) override;
+
+    //IUserEventsHandler interface:
+    void USER_handleCallAccept(common::PhoneNumber phoneNumber) override;
+    void USER_handleStartDial() override;
+    void USER_handleCallRequest(common::PhoneNumber) override;
+    void USER_handleCallDrop(common::PhoneNumber) override;
+    void handleSendTalkMessage(const std::string txt) override;
+    void handleTalkMessage(const std::string) override;
 
 private:
     Context context;
