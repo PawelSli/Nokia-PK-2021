@@ -166,7 +166,7 @@ TEST_F(BtsPortTestSuite, shallSendCallReject)
     ASSERT_NO_THROW(reader.checkEndOfMessage());
 }
 
-TEST_F(BtsPortTestSuite,shallHandleUknownRecipientAfterCallAccepted)
+/*TEST_F(BtsPortTestSuite,shallHandleUknownRecipientAfterCallAccepted)
 {
     EXPECT_CALL(handlerMock,BTS_handleUknownRecipient(SENDER_PHONE_NUMBER));
     common::OutgoingMessage msg{common::MessageId::UnknownRecipient,
@@ -174,7 +174,7 @@ TEST_F(BtsPortTestSuite,shallHandleUknownRecipientAfterCallAccepted)
                                PHONE_NUMBER};
     messageCallback(msg.getMessage());
 
-}
+}*/
 
 TEST_F(BtsPortTestSuite,shallHandleCallAcceptFromReceiver)
 {

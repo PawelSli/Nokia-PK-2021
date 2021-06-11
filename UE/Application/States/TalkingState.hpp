@@ -13,6 +13,7 @@ public:
 // IBtsEventsHandler interface
     void BTS_handleUknownRecipient(common::PhoneNumber) override;
     void handleTalkMessage(const std::string) final;
+    void handleReceivedMessage(Sms& incomingSms);
 
     void handleSendTalkMessage(const std::string) final;
     void BTS_handleCallDrop(common::PhoneNumber receiver) override;

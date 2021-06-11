@@ -62,6 +62,12 @@ void TalkingState::BTS_handleCallDrop(common::PhoneNumber receiver)
 
 }
 
+void TalkingState::handleReceivedMessage(Sms& incomingSms)
+{
+    context.smsDb.addMessage(incomingSms);
+    context.user.showSmsReceivedNotification();
+}
+
 void TalkingState::USER_handleCallDrop(common::PhoneNumber callingPhoneNumber)
 {
     context.bts.BTS_sendCallDrop(caller);

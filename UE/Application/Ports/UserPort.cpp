@@ -74,12 +74,12 @@ void UserPort::showSmsToCreate()
         Sms messageToSend{phoneNumber, createSms.getPhoneNumber(), createSms.getSmsText(), false, true, false};
         handler->handleSendMessage(messageToSend);
         createSms.clearSmsText();
-        showConnected();
+        USER_showConnected();
     });
 
     gui.setRejectCallback([&](){
         createSms.clearSmsText();
-        showConnected();
+        USER_showConnected();
     });
 }
       
@@ -146,7 +146,7 @@ void UserPort::showAllMessages(const std::vector<Sms>& messages)
     }
 
     gui.setRejectCallback([this]{
-        showConnected();
+        USER_showConnected();
     });
 
     gui.setAcceptCallback([this, &listViewMode](){

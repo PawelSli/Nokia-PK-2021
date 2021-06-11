@@ -157,7 +157,6 @@ TEST_F(ApplicationConnectedTestSuite,shallHandleCallRejectFromReceiver)
 
 TEST_F(ApplicationConnectedTestSuite,shallHandleCallDropFromSender)
 {
-    EXPECT_CALL(timerPortMock,TIMER_stopTimer(2));
     EXPECT_CALL(userPortMock,USER_showPartnerNotAvailable(_));
     EXPECT_CALL(timerPortMock,TIMER_startTimerAndDoSomething(_,2,2));
     objectUnderTest.BTS_handleCallDrop(SENDER_PHONE_NUMBER);
@@ -201,7 +200,7 @@ void ApplicationTalkingTestSuite::doTalking()
     EXPECT_CALL(timerPortMock,TIMER_stopTimer(2));
     EXPECT_CALL(btsPortMock,BTS_sendCallAccept(_));
     EXPECT_CALL(userPortMock,USER_callAchieved(_));
-    EXPECT_CALL(timerPortMock,TIMER_startTimerAndDoSomething(_,180,3));
+    EXPECT_CALL(timerPortMock,TIMER_startTimerAndDoSomething(_,120,3));
     EXPECT_CALL(userPortMock,USER_startTalking(SENDER_PHONE_NUMBER));
     objectUnderTest.USER_handleCallAccept(SENDER_PHONE_NUMBER);
 }
