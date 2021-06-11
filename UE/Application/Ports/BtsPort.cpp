@@ -27,7 +27,7 @@ void BtsPort::stop()
 
 void BtsPort::handleDisconnected()
 {
-    handler->handleDisconnected();
+    handler->BST_handleDisconnected();
 }
 
 void BtsPort::handleMessage(BinaryMessage msg)
@@ -41,20 +41,25 @@ void BtsPort::handleMessage(BinaryMessage msg)
 
         switch (msgId)
         {
+        case common::MessageId::CallDropped:
+        {
+            handler->BTS_handleCallDrop(from);
+            break;
+        }
         case common::MessageId::Sib:
         {
             auto btsId = reader.readBtsId();
-            handler->handleSib(btsId);
+            handler->BTS_handleSib(btsId);
             break;
         }
         case common::MessageId::AttachResponse:
         {
             bool accept = reader.readNumber<std::uint8_t>() != 0u;
-            if (accept) {
-                handler->handleAttachAccept();
-            } else {
-                handler->handleAttachReject();
-            }
+
+            if (accept)
+                handler->BTS_handleAttachAccept();
+            else
+                handler->BTS_handleAttachReject();
             break;
         }
         case common::MessageId::Sms:
@@ -67,12 +72,29 @@ void BtsPort::handleMessage(BinaryMessage msg)
         {
             if (reader.readMessageId() == common::MessageId::Sms) {
                 handler->handleSmsToUnknownRecipient();
+            }else{
+                handler->BTS_handleUknownRecipient(from);
             }
             break;
         }
+        case common::MessageId::CallRequest:
+        {
+            handler->BTS_handleCallRequest(from);
+            break;
+        }
+        case common::MessageId::CallTalk:
+        {
+            logger.logDebug("bts call talk ", from);
+            handler->handleTalkMessage(reader.readRemainingText() );
+            break;
+        }
+        case common::MessageId::CallAccepted:
+        {
+            handler->BTS_handleCallAccept(from);
+            break;
+        }        
         default:
             logger.logError("unknow message: ", msgId, ", from: ", from);
-
         }
     }
     catch (std::exception const& ex)
@@ -82,7 +104,12 @@ void BtsPort::handleMessage(BinaryMessage msg)
 }
 
 
-void BtsPort::sendAttachRequest(common::BtsId btsId)
+common::PhoneNumber BtsPort::getPhoneNumber()
+{
+    return phoneNumber;
+}
+
+void BtsPort::BTS_sendAttachRequest(common::BtsId btsId)
 {
     logger.logDebug("sendAttachRequest: ", btsId);
     common::OutgoingMessage msg{common::MessageId::AttachRequest,
@@ -99,5 +126,41 @@ void BtsPort::sendMessage(Sms& sms)
     message.writeText(sms.message);
     transport.sendMessage(message.getMessage());
 }
+
+void BtsPort::BTS_sendCallAccept(common::PhoneNumber receiverPhoneNumber)
+{
+    logger.logDebug("sendCallAccept: ",receiverPhoneNumber);
+    common::OutgoingMessage msg{common::MessageId::CallAccepted,
+                               phoneNumber,
+                               receiverPhoneNumber};
+    transport.sendMessage(msg.getMessage());
+}
+
+void BtsPort::BTS_sendCallDrop(common::PhoneNumber receiverPhoneNumber)
+{
+    logger.logDebug("sendCallDrop: ",receiverPhoneNumber);
+    common::OutgoingMessage msg{common::MessageId::CallDropped,
+                               phoneNumber,
+                               receiverPhoneNumber};
+    transport.sendMessage(msg.getMessage());
+}
+
+void BtsPort::BTS_sendCallRequest(common::PhoneNumber receiverPhoneNumber)
+{
+    logger.logDebug("sendCallDrop: ",receiverPhoneNumber);
+    common::OutgoingMessage msg{common::MessageId::CallRequest,
+                               phoneNumber,
+                               receiverPhoneNumber};
+    transport.sendMessage(msg.getMessage());
+}
+
+void BtsPort::sendTalkMessage(const std::string txt, common::PhoneNumber number)
+{
+    logger.logDebug("sendTalkMessage ",number);
+    common::OutgoingMessage msg {common::MessageId::CallTalk,phoneNumber, number};
+    msg.writeText(txt);
+    transport.sendMessage(msg.getMessage());
+}
+
 
 }

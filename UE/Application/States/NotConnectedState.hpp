@@ -12,7 +12,7 @@ public:
 
     // IBtsEventsHandler interface
 public:
-    void handleSib(common::BtsId) final;
+    void BTS_handleSib(common::BtsId) final;
 };
 
 }
