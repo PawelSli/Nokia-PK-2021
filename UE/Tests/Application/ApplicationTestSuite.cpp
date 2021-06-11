@@ -7,9 +7,12 @@
 #include "Mocks/IBtsPortMock.hpp"
 #include "Mocks/IUserPortMock.hpp"
 #include "Mocks/ITimerPortMock.hpp"
+#include "Mocks/ISmsDbMock.hpp"
 #include "Messages/PhoneNumber.hpp"
 #include "Messages/BtsId.hpp"
+#include "Sms.hpp"
 #include <memory>
+#include "SmsDb.hpp"
 
 namespace ue
 {
@@ -26,13 +29,17 @@ protected:
     StrictMock<IBtsPortMock> btsPortMock;
     StrictMock<IUserPortMock> userPortMock;
     StrictMock<ITimerPortMock> timerPortMock;
+    StrictMock<ISmsDbMock> smsDbMock;
+
 
     Expectation expectShowNotConnected = EXPECT_CALL(userPortMock, USER_showNotConnected());
     Application objectUnderTest{PHONE_NUMBER,
                                 loggerMock,
                                 btsPortMock,
                                 userPortMock,
-                                timerPortMock};
+                                timerPortMock,
+                                smsDbMock};
+    SmsDb smsDbUnderTest;
 };
 
 struct ApplicationNotConnectedTestSuite : ApplicationTestSuite
@@ -107,6 +114,7 @@ TEST_F(ApplicationConnectedTestSuite, shallShowNotConnectedOnDisconnectFromBts)
 
 TEST_F(ApplicationConnectedTestSuite, shallReattach)
 {
+
     EXPECT_CALL(userPortMock, USER_showNotConnected());
     objectUnderTest.BST_handleDisconnected();
 
@@ -114,6 +122,23 @@ TEST_F(ApplicationConnectedTestSuite, shallReattach)
     doConnected();
 }
 
+
+TEST_F(ApplicationConnectedTestSuite, shallHandleReceivedMessage)
+{
+    Sms receivedMessage{PHONE_NUMBER, PHONE_NUMBER, "message", false, false, false};
+    EXPECT_CALL(smsDbMock, addMessage(receivedMessage));
+    EXPECT_CALL(userPortMock, showSmsReceivedNotification());
+    objectUnderTest.handleReceivedMessage(receivedMessage);
+}
+
+TEST_F(ApplicationConnectedTestSuite, shallAddReceivedMessage)
+{
+    Sms receivedMessage{PHONE_NUMBER, PHONE_NUMBER, "rec message", false, false, false};
+    smsDbUnderTest.addMessage(receivedMessage);
+    Sms* smsToAssert = smsDbUnderTest.getMessage(0);
+    ASSERT_EQ(receivedMessage, *smsToAssert);
+}
+  
 TEST_F(ApplicationConnectedTestSuite,shallHandleCalllRequest)
 {
     EXPECT_CALL(userPortMock,USER_showCallRequest(_));
@@ -181,8 +206,6 @@ void ApplicationTalkingTestSuite::doTalking()
     objectUnderTest.USER_handleCallAccept(SENDER_PHONE_NUMBER);
 }
 
-
-
 TEST_F(ApplicationTalkingTestSuite,shallHandleUknownRecipient)
 {
     EXPECT_CALL(timerPortMock,TIMER_stopTimer(3));
@@ -193,17 +216,6 @@ TEST_F(ApplicationTalkingTestSuite,shallHandleUknownRecipient)
 
 }
 
-/*
-{
-    context.timer.TIMER_startTimerAndDoSomething([&]()
-    {
-        this->context.timer.TIMER_stopTimer(3);
-        this->context.setState<ConnectedState>();
-    },180,3);
-    context.user.USER_startTalking(phoneNumber);
-}
-
-*/
 
 
 

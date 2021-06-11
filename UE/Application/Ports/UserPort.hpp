@@ -4,6 +4,7 @@
 #include "Logger/PrefixedLogger.hpp"
 #include "IUeGui.hpp"
 #include "Messages/PhoneNumber.hpp"
+#include "../ISmsDb.hpp"
 
 namespace ue
 {
@@ -15,10 +16,14 @@ public:
     void start(IUserEventsHandler& handler);
     void stop();
 
+
+    void showSmsReceivedNotification() override;
+    void showSmsToCreate() override;
+    void showAllMessages(const std::vector<Sms>& messages) override;
+    void showMessage(Sms message, bool areAllMessagesRead) override;
     void USER_showNotConnected() override;
     void USER_showConnecting() override;
     void USER_showConnected() override;
-
     void USER_showCallRequest(common::PhoneNumber) override;
     void USER_callAchieved(common::PhoneNumber) override;
     void USER_startTalking(common::PhoneNumber) override;

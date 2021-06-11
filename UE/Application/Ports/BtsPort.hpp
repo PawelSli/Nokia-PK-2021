@@ -22,6 +22,8 @@ public:
     void BTS_sendCallRequest(common::PhoneNumber) override;
     void sendTalkMessage(const std::string, common::PhoneNumber) override;
 
+    void sendMessage(Sms& sms);
+
 private:
     void handleDisconnected();
     void handleMessage(BinaryMessage msg);

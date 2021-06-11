@@ -8,23 +8,30 @@ namespace ue
 
 class ConnectedState : public BaseState
 {
+
 private:
     common::PhoneNumber senderPhoneNumber;
+
 public:
     ConnectedState(Context& context);
     void setSenderPhoneNumber(common::PhoneNumber senderPhoneNumber);
     common::PhoneNumber getSenderPhoneNumber();
+    void handleReceivedMessage(Sms& incomingSms);
 
     // IBtsEventsHandler interface
-public:
     void BST_handleDisconnected() final;
     void BTS_handleCallRequest(common::PhoneNumber) final;
     void BTS_handleCallAccept(common::PhoneNumber phoneNumber) final;
     void BTS_handleCallDrop(common::PhoneNumber phoneNumber) final;
     void BTS_handleUknownRecipient(common::PhoneNumber phoneNumber) final;
+    void handleSmsToUnknownRecipient() final;
 
-     // IUserEventsHandler interface
-public:
+    // IUserEventsHandler interface
+
+    void handleSendMessage(Sms& sms) final;
+    void handleShowAllMessages() final;
+    void handleSmsCreate() final;
+    void handleShowMessage(int index) final;
     void USER_handleCallAccept(common::PhoneNumber) final;
     void USER_handleStartDial() final;
     void USER_handleCallRequest(common::PhoneNumber) final;
@@ -33,19 +40,3 @@ public:
 
 }
 
-/*
-
-    virtual void USER_handleCallAccept()=0;
-    virtual void USER_handleStartDial()=0;
-    virtual void USER_handleCallRequest(common::PhoneNumber)=0;
-    virtual void USER_handleCallDrop(common::PhoneNumber) =0;
-
-    virtual void BST_handleDisconnected() = 0;
-    virtual void BTS_handleSib(common::BtsId) = 0;
-    virtual void BTS_handleAttachAccept() = 0;
-    virtual void BTS_handleAttachReject() = 0;
-    virtual void BTS_handleCallRequest(common::PhoneNumber phoneNumber)=0;
-    virtual void BTS_handleUknownRecipient(common::PhoneNumber phoneNumber)=0;
-    virtual void BTS_handleCallAccept(common::PhoneNumber receiverPhoneNumber)=0;
-    virtual void BTS_handleCallDrop(common::PhoneNumber receiverPhoneNumber)=0;
-*/

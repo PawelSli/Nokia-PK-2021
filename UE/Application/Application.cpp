@@ -8,8 +8,9 @@ Application::Application(common::PhoneNumber phoneNumber,
                          common::ILogger &iLogger,
                          IBtsPort &bts,
                          IUserPort &user,
-                         ITimerPort &timer)
-    : context{iLogger, bts, user, timer},
+                         ITimerPort &timer,
+                         ISmsDb& smsDb)
+    : context{iLogger, bts, user, timer, smsDb},
       logger(iLogger, "[APP] ")
 {
     logger.logInfo("Started");
@@ -26,6 +27,7 @@ void Application::TIMER_handleTimeout()
     context.state->TIMER_handleTimeout();
 }
 
+
 void Application::BST_handleDisconnected()
 {
     context.state->BST_handleDisconnected();
@@ -39,6 +41,37 @@ void Application::BTS_handleSib(common::BtsId btsId)
 void Application::BTS_handleAttachAccept()
 {
     context.state->BTS_handleAttachAccept();
+}
+
+void Application::handleReceivedMessage(Sms& sms)
+{
+    context.state->handleReceivedMessage(sms);
+}
+
+void Application::handleSendMessage(Sms& sms)
+{
+    context.state->handleSendMessage(sms);
+}
+
+void Application::handleShowAllMessages()
+{
+    context.state->handleShowAllMessages();
+}
+
+void Application::handleSmsCreate()
+{
+    context.state->handleSmsCreate();
+}
+
+void Application::handleShowMessage(int index)
+{
+    context.state->handleShowMessage(index);
+}
+
+void Application::handleSmsToUnknownRecipient()
+{
+    context.state->handleSmsToUnknownRecipient();
+
 }
 
 void Application::BTS_handleAttachReject()
@@ -95,6 +128,5 @@ void Application::handleTalkMessage(const std::string txt)
 {
     context.state->handleTalkMessage(txt);
 }
-
 
 }

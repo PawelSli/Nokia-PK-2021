@@ -55,10 +55,26 @@ void BtsPort::handleMessage(BinaryMessage msg)
         case common::MessageId::AttachResponse:
         {
             bool accept = reader.readNumber<std::uint8_t>() != 0u;
+
             if (accept)
                 handler->BTS_handleAttachAccept();
             else
                 handler->BTS_handleAttachReject();
+            break;
+        }
+        case common::MessageId::Sms:
+        {
+            Sms sms(from, to, reader.readRemainingText(), false, false, false);          
+            handler->handleReceivedMessage(sms);
+            break;
+        }
+        case common::MessageId::UnknownRecipient:
+        {
+            if (reader.readMessageId() == common::MessageId::Sms) {
+                handler->handleSmsToUnknownRecipient();
+            }else{
+                handler->BTS_handleUknownRecipient(from);
+            }
             break;
         }
         case common::MessageId::CallRequest:
@@ -77,15 +93,8 @@ void BtsPort::handleMessage(BinaryMessage msg)
             handler->BTS_handleCallAccept(from);
             break;
         }        
-        case common::MessageId::UnknownRecipient:
-        {
-            handler->BTS_handleUknownRecipient(from);
-            break;
-        }
-
         default:
             logger.logError("unknow message: ", msgId, ", from: ", from);
-
         }
     }
     catch (std::exception const& ex)
@@ -109,7 +118,13 @@ void BtsPort::BTS_sendAttachRequest(common::BtsId btsId)
     msg.writeBtsId(btsId);
     transport.sendMessage(msg.getMessage());
 
+}
 
+void BtsPort::sendMessage(Sms& sms)
+{
+    common::OutgoingMessage message(common::MessageId::Sms, sms.senderPhoneNumber, sms.receiverPhoneNumber);
+    message.writeText(sms.message);
+    transport.sendMessage(message.getMessage());
 }
 
 void BtsPort::BTS_sendCallAccept(common::PhoneNumber receiverPhoneNumber)

@@ -20,10 +20,12 @@ void BaseState::TIMER_handleTimeout()
     logger.logError("Uexpected: handleTimeout");
 }
 
+
 void BaseState::BST_handleDisconnected()
 {
     logger.logError("Uexpected: handleDisconnected");
 }
+
 
 void BaseState::BTS_handleSib(common::BtsId btsId)
 {
@@ -40,6 +42,37 @@ void BaseState::BTS_handleAttachReject()
     logger.logError("Uexpected: handleAttachReject");
 }
 
+void BaseState::handleReceivedMessage(Sms& sms)
+{
+   logger.logError("Unexpected: handleReceivedMessage");
+}
+
+void BaseState::handleSendMessage(Sms& sms)
+{
+    logger.logError("Unexpected: handleSendMessage");
+}
+
+void BaseState::handleShowAllMessages()
+{
+    logger.logError("Unexpected: handleShowAllMessages");
+}
+
+void BaseState::handleSmsCreate()
+{
+    logger.logError("Unexpected: handleSmsCreate");
+}
+
+
+void BaseState::handleShowMessage(int index)
+{
+    logger.logError("Unexpected: handleShowMessage");
+}
+
+void BaseState::handleSmsToUnknownRecipient()
+{
+    logger.logError("Unexpected: handleSmsToUnknownRecipient");
+}
+  
 void BaseState::BTS_handleCallRequest(common::PhoneNumber phoneNumber)
 {
     logger.logError("Uexpected: handleCallRequest: ",phoneNumber);

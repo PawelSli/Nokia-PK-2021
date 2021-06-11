@@ -8,6 +8,7 @@ namespace ue
 ConnectingState::ConnectingState(Context &context, common::BtsId btsId)
     : BaseState(context, "ConnectingState")
 {
+
     context.user.USER_showConnecting();
     context.bts.BTS_sendAttachRequest(btsId);
     using namespace std::chrono_literals;
