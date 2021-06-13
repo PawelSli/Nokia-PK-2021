@@ -8,7 +8,6 @@ namespace ue
 ConnectingState::ConnectingState(Context &context, common::BtsId btsId)
     : BaseState(context, "ConnectingState")
 {
-
     context.user.USER_showConnecting();
     context.bts.BTS_sendAttachRequest(btsId);
     using namespace std::chrono_literals;
@@ -31,6 +30,24 @@ void ConnectingState::BTS_handleAttachReject()
     context.timer.TIMER_stopTimer(1);
     context.setState<NotConnectedState>();
 }
+
+void ConnectingState::handleTimeout()
+{
+    context.setState<NotConnectedState>();
+}
+
+void ConnectingState::handleAttachAccept()
+{
+    context.timer.stopTimer();
+    context.setState<ConnectedState>();
+}
+
+void ConnectingState::handleAttachReject()
+{
+    context.timer.stopTimer();
+    context.setState<NotConnectedState>();
+}
+
 
 }
 

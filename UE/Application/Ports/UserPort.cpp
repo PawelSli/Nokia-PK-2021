@@ -8,7 +8,6 @@
 #include "UeGui/IDialMode.hpp"
 #include "UeGui/ICallMode.hpp"
 
-
 namespace ue
 {
 
@@ -46,7 +45,7 @@ void UserPort::USER_showConnected()
     menu.addSelectionListItem("Compose SMS", "");
     menu.addSelectionListItem("View SMS", "");
     menu.addSelectionListItem("Call someone","");
-  
+
     gui.setAcceptCallback([&](){
         switch(menu.getCurrentItemIndex().second){
 
@@ -232,7 +231,5 @@ void UserPort::showcallDropping(common::PhoneNumber callingPhoneNumber)
     auto& callingView = gui.setAlertMode();
     callingView.setText("Phone nr: " + to_string(callingPhoneNumber) + "\n dropped the call");
 }
-
-
 
 }

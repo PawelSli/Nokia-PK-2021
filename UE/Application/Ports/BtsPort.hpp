@@ -24,6 +24,8 @@ public:
 
     void sendMessage(Sms& sms);
 
+    void sendMessage(Sms& sms);
+
 private:
     void handleDisconnected();
     void handleMessage(BinaryMessage msg);

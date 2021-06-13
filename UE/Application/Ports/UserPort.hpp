@@ -16,7 +16,6 @@ public:
     void start(IUserEventsHandler& handler);
     void stop();
 
-
     void showSmsReceivedNotification() override;
     void showSmsToCreate() override;
     void showAllMessages(const std::vector<Sms>& messages) override;
@@ -33,6 +32,7 @@ public:
     void USER_showDialing(common::PhoneNumber) override;
     void showCallView(const std::string inTxt) override;
     void showcallDropping(common::PhoneNumber) override;
+
 
 
 private:

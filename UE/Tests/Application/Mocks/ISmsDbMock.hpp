@@ -19,7 +19,6 @@ public:
     MOCK_METHOD(std::vector<Sms>, getAllMessages, (), (final));
     MOCK_METHOD(Sms*, getMessage, (int index), (final));
     MOCK_METHOD(Sms*, getLastMessage, (), (final));
-
 };
 
 

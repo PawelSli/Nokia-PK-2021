@@ -15,7 +15,6 @@ public:
     IBtsEventsHandlerMock();
     ~IBtsEventsHandlerMock() override;
 
-
     MOCK_METHOD(void, handleReceivedMessage, (Sms& sms), (final));
     MOCK_METHOD(void, handleSmsToUnknownRecipient, (), (final));
     MOCK_METHOD(void, BST_handleDisconnected, (), (final));
@@ -27,7 +26,6 @@ public:
     MOCK_METHOD(void, BTS_handleCallAccept, (common::PhoneNumber), (final));
     MOCK_METHOD(void, BTS_handleCallDrop, (common::PhoneNumber), (final));
     MOCK_METHOD(void, handleTalkMessage, (const std::string), (final));
-    
 };
 
 class IBtsPortMock : public IBtsPort

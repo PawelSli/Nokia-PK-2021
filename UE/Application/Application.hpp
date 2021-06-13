@@ -36,7 +36,7 @@ public:
     void BTS_handleUknownRecipient(common::PhoneNumber phoneNumber) override;
     void BTS_handleCallAccept(common::PhoneNumber phoneNumber) override;
     void BTS_handleCallDrop(common::PhoneNumber phoneNumber) override;
-
+    
     //IUserEventsHandler interface:
     void USER_handleCallAccept(common::PhoneNumber phoneNumber) override;
     void USER_handleStartDial() override;

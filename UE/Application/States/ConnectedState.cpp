@@ -20,6 +20,7 @@ void ConnectedState::handleReceivedMessage(Sms& incomingSms)
     context.user.showSmsReceivedNotification();
 }
 
+
 void ConnectedState::setSenderPhoneNumber(common::PhoneNumber senderPhoneNumber){
     this->senderPhoneNumber=senderPhoneNumber;
 }

@@ -55,7 +55,6 @@ void BtsPort::handleMessage(BinaryMessage msg)
         case common::MessageId::AttachResponse:
         {
             bool accept = reader.readNumber<std::uint8_t>() != 0u;
-
             if (accept)
                 handler->BTS_handleAttachAccept();
             else

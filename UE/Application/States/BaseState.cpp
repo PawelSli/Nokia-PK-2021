@@ -20,14 +20,13 @@ void BaseState::TIMER_handleTimeout()
     logger.logError("Uexpected: handleTimeout");
 }
 
-
 void BaseState::BST_handleDisconnected()
 {
     logger.logError("Uexpected: handleDisconnected");
 }
 
-
 void BaseState::BTS_handleSib(common::BtsId btsId)
+
 {
     logger.logError("Uexpected: handleSib: ", btsId);
 }

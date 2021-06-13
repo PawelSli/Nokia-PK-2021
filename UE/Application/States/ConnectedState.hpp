@@ -14,6 +14,7 @@ private:
 
 public:
     ConnectedState(Context& context);
+
     void setSenderPhoneNumber(common::PhoneNumber senderPhoneNumber);
     common::PhoneNumber getSenderPhoneNumber();
     void handleReceivedMessage(Sms& incomingSms);
@@ -24,6 +25,7 @@ public:
     void BTS_handleCallAccept(common::PhoneNumber phoneNumber) final;
     void BTS_handleCallDrop(common::PhoneNumber phoneNumber) final;
     void BTS_handleUknownRecipient(common::PhoneNumber phoneNumber) final;
+
     void handleSmsToUnknownRecipient() final;
 
     // IUserEventsHandler interface

@@ -62,8 +62,8 @@ TEST_F(BtsPortTestSuite, shallIgnoreWrongMessage)
 
 TEST_F(BtsPortTestSuite, shallHandleDisconnected)
 {
-
     EXPECT_CALL(handlerMock, BST_handleDisconnected());
+
     disconnectCallback();
 }
 
@@ -110,7 +110,6 @@ TEST_F(BtsPortTestSuite, shallSendAttachRequest)
     ASSERT_NO_THROW(reader.checkEndOfMessage());
 }
 
-
 TEST_F(BtsPortTestSuite, shallSendSms)
 {
     common::BinaryMessage msg;
@@ -130,7 +129,6 @@ TEST_F(BtsPortTestSuite, shallSendSms)
     ASSERT_NO_THROW(EXPECT_EQ(text, reader.readRemainingText()));
     ASSERT_NO_THROW(reader.checkEndOfMessage());
 }
-
 
 TEST_F(BtsPortTestSuite, shallHandleCallRequest)
 {

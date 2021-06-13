@@ -31,7 +31,6 @@ protected:
     StrictMock<ITimerPortMock> timerPortMock;
     StrictMock<ISmsDbMock> smsDbMock;
 
-
     Expectation expectShowNotConnected = EXPECT_CALL(userPortMock, USER_showNotConnected());
     Application objectUnderTest{PHONE_NUMBER,
                                 loggerMock,
@@ -110,6 +109,7 @@ TEST_F(ApplicationConnectedTestSuite, shallShowNotConnectedOnDisconnectFromBts)
 {
     EXPECT_CALL(userPortMock, USER_showNotConnected());
     objectUnderTest.BST_handleDisconnected();
+
 }
 
 TEST_F(ApplicationConnectedTestSuite, shallReattach)

@@ -41,7 +41,6 @@ public:
     void handleSmsCreate() override;
     void handleShowMessage(int index) override;
 
-
 protected:
     Context& context;
     common::PrefixedLogger logger;
