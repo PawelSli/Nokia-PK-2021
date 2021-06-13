@@ -1,4 +1,4 @@
-# NOKIA-PK
+# NOKIA-PK [![C/C++ CI](https://github.com/PawelSli/Nokia-PK-2021/actions/workflows/ccpp.yml/badge.svg?branch=main)](https://github.com/PawelSli/Nokia-PK-2021/actions/workflows/ccpp.yml)
 
 ## Nie pushujemy/zmieniamy mastera w tym repozytorium
 
