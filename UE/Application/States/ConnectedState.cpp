@@ -106,12 +106,6 @@ void ConnectedState::BTS_handleCallAccept(common::PhoneNumber phoneNumber)
 
 void ConnectedState::BTS_handleCallDrop(common::PhoneNumber phoneNumber)
 {
-
-    //context.timer.TIMER_stopTimer(2);
-    //context.setState<ConnectedState>();
-    //context.user.showcallDropping(phoneNumber);
-    //context.user.USER_showStartMenu();
-
     context.user.USER_showPartnerNotAvailable(phoneNumber);
     context.timer.TIMER_startTimerAndDoSomething([&]()
     {
