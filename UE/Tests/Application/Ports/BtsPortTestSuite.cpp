@@ -166,16 +166,6 @@ TEST_F(BtsPortTestSuite, shallSendCallReject)
     ASSERT_NO_THROW(reader.checkEndOfMessage());
 }
 
-/*TEST_F(BtsPortTestSuite,shallHandleUknownRecipientAfterCallAccepted)
-{
-    EXPECT_CALL(handlerMock,BTS_handleUknownRecipient(SENDER_PHONE_NUMBER));
-    common::OutgoingMessage msg{common::MessageId::UnknownRecipient,
-                               SENDER_PHONE_NUMBER,
-                               PHONE_NUMBER};
-    messageCallback(msg.getMessage());
-
-}*/
-
 TEST_F(BtsPortTestSuite,shallHandleCallAcceptFromReceiver)
 {
     EXPECT_CALL(handlerMock,BTS_handleCallAccept(SENDER_PHONE_NUMBER));
@@ -208,6 +198,11 @@ TEST_F(BtsPortTestSuite,shallSendCallRequest)
     ASSERT_NO_THROW(reader.checkEndOfMessage());
 }
 
+TEST_F(BtsPortTestSuite, shallSendTalkMessage)
+{
+    const std::string text = "text";
+    EXPECT_CALL(transportMock, sendMessage(_));
+    objectUnderTest.sendTalkMessage(text, PHONE_NUMBER);
 }
 
-
+}

@@ -186,6 +186,51 @@ TEST_F(UserPortTestSuite,shallShowDialing)
     objectUnderTest.USER_showDialing(SENDER_PHONE_NUMBER);
 }
 
+TEST_F(UserPortTestSuite, shallStartTalking)
+{
+    EXPECT_CALL(guiMock, setCallMode()).WillOnce(ReturnRef(callModeMock));
+    EXPECT_CALL(callModeMock, appendIncomingText(_));
+    EXPECT_CALL(guiMock, setAcceptCallback(_));
+    EXPECT_CALL(guiMock, setRejectCallback(_));
+    objectUnderTest.USER_startTalking(PHONE_NUMBER);
+}
+
+TEST_F(UserPortTestSuite, shallShowAllMessages)
+{
+    std::vector<Sms> messages;
+    EXPECT_CALL(guiMock, setListViewMode()).WillOnce(ReturnRef(listViewModeMock));
+    EXPECT_CALL(listViewModeMock, clearSelectionList());
+    EXPECT_CALL(guiMock, setAcceptCallback(_));
+    EXPECT_CALL(guiMock, setRejectCallback(_));
+    objectUnderTest.showAllMessages(messages);
+}
+
+TEST_F(UserPortTestSuite, shallShowMessage)
+{
+    Sms sms = Sms(PHONE_NUMBER, common::PhoneNumber{12}, "text", false, false, false);
+    EXPECT_CALL(guiMock, setViewTextMode()).WillOnce(ReturnRef(textModeMock));
+    EXPECT_CALL(textModeMock, setText(_));
+    EXPECT_CALL(guiMock, setRejectCallback(_));
+    objectUnderTest.showMessage(sms, false);
+}
+
+TEST_F(UserPortTestSuite, shallShowCallView)
+{
+    const std::string text = "text";
+    EXPECT_CALL(guiMock, setCallMode()).WillOnce(ReturnRef(callModeMock));
+    EXPECT_CALL(callModeMock, appendIncomingText(_));
+    EXPECT_CALL(guiMock, setAcceptCallback(_));
+    EXPECT_CALL(guiMock, setRejectCallback(_));
+    objectUnderTest.showCallView(text);
+}
+
+TEST_F(UserPortTestSuite, shallShowCallDropping)
+{
+    EXPECT_CALL(guiMock, setAlertMode()).WillOnce(ReturnRef(textModeMock));
+    EXPECT_CALL(textModeMock, setText(_));
+    objectUnderTest.showcallDropping(PHONE_NUMBER);
+}
+
 }
 
 
