@@ -8,7 +8,7 @@ namespace ue
 
     Sms* SmsDb::getMessage(int index){
         int size = this->receivedMessages.size();
-        if(size > 0 && size - 1 <= index){
+        if(size > 0 && index >= 0 && index < size){
             return &this->receivedMessages.at(index);
         } else {
             return NULL;
@@ -20,7 +20,7 @@ namespace ue
         return this->receivedMessages;
     }
 
-    void SmsDb::addMessage(Sms sms)
+    void SmsDb::addMessage(Sms& sms)
     {
         this->receivedMessages.push_back(sms);
 

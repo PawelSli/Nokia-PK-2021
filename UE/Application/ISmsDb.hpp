@@ -10,7 +10,7 @@ namespace ue
         virtual ~ISmsDb() = default;
         virtual Sms* getMessage(int index) = 0;
         virtual std::vector<Sms> getAllMessages() = 0;
-        virtual void addMessage(Sms sms) = 0;
+        virtual void addMessage(Sms& sms) = 0;
         virtual Sms* getLastMessage() = 0;
     };
 }
