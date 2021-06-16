@@ -128,6 +128,7 @@ void UserPort::showAllMessages(const std::vector<Sms>& messages)
 
     for (auto& message : messages)
     {
+
         if (message.senderPhoneNumber == phoneNumber)
         {
             if(message.failed){
@@ -158,7 +159,7 @@ void UserPort::showMessage(Sms message, bool areAllMessagesRead)
 {
     if(areAllMessagesRead)
     {
-        // disable new message notification
+        gui.showNotNewSms();
     }
 
     auto& textViewMode = gui.setViewTextMode();
