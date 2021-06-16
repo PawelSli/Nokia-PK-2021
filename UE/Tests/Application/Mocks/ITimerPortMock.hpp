@@ -12,7 +12,7 @@ public:
     ITimerEventsHandlerMock();
     ~ITimerEventsHandlerMock() override;
 
-    MOCK_METHOD(void, handleTimeout, (), (final));
+    MOCK_METHOD(void, TIMER_handleTimeout, (), (final));
 
 };
 
@@ -22,8 +22,11 @@ public:
     ITimerPortMock();
     ~ITimerPortMock() override;
 
-    MOCK_METHOD(void, startTimer, (ITimerPort::Duration), (final));
-    MOCK_METHOD(void, stopTimer, (), (final));
+    MOCK_METHOD(void, TIMER_startTimer, (double duration,int i), (final));
+    MOCK_METHOD(void, TIMER_startTimerAndDoSomething, (std::function<void()>,double duration,int i), (final));
+    MOCK_METHOD(void, TIMER_stopTimer, (int i), (final));
 };
 
 }
+
+

@@ -2,9 +2,12 @@
 
 #include <gmock/gmock.h>
 #include "Ports/IBtsPort.hpp"
+#include "Sms.hpp"
 
 namespace ue
 {
+
+class Sms;
 
 class IBtsEventsHandlerMock : public IBtsEventsHandler
 {
@@ -12,9 +15,19 @@ public:
     IBtsEventsHandlerMock();
     ~IBtsEventsHandlerMock() override;
 
-    MOCK_METHOD(void, handleSib, (common::BtsId), (final));
-    MOCK_METHOD(void, handleAttachAccept, (), (final));
-    MOCK_METHOD(void, handleAttachReject, (), (final));
+
+    MOCK_METHOD(void, handleReceivedMessage, (Sms& sms), (final));
+    MOCK_METHOD(void, handleSmsToUnknownRecipient, (), (final));
+    MOCK_METHOD(void, BST_handleDisconnected, (), (final));
+    MOCK_METHOD(void, BTS_handleSib, (common::BtsId), (final));
+    MOCK_METHOD(void, BTS_handleAttachAccept, (), (final));
+    MOCK_METHOD(void, BTS_handleAttachReject, (), (final));
+    MOCK_METHOD(void, BTS_handleCallRequest, (common::PhoneNumber), (final));
+    MOCK_METHOD(void, BTS_handleUknownRecipient, (common::PhoneNumber), (final));
+    MOCK_METHOD(void, BTS_handleCallAccept, (common::PhoneNumber), (final));
+    MOCK_METHOD(void, BTS_handleCallDrop, (common::PhoneNumber), (final));
+    MOCK_METHOD(void, handleTalkMessage, (const std::string), (final));
+    
 };
 
 class IBtsPortMock : public IBtsPort
@@ -23,7 +36,13 @@ public:
     IBtsPortMock();
     ~IBtsPortMock() override;
 
-    MOCK_METHOD(void, sendAttachRequest, (common::BtsId), (final));
+    MOCK_METHOD(void, sendMessage, (Sms& sms), (final));
+    MOCK_METHOD(void, BTS_sendAttachRequest, (common::BtsId), (final));
+    MOCK_METHOD(void, BTS_sendCallAccept, (common::PhoneNumber), (final));
+    MOCK_METHOD(void, BTS_sendCallDrop, (common::PhoneNumber), (final));
+    MOCK_METHOD(void, BTS_sendCallRequest, (common::PhoneNumber), (final));
+    MOCK_METHOD(void, sendTalkMessage, (const std::string, common::PhoneNumber), (final));
+    MOCK_METHOD(common::PhoneNumber, getPhoneNumber,(),(final));
 };
 
 }
