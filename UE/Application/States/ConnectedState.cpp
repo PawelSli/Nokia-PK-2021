@@ -55,7 +55,6 @@ void ConnectedState::handleShowMessage(int index)
 {
     Sms* message = context.smsDb.getMessage(index);
     message->read = true;
-
     std::vector<Sms> messages = context.smsDb.getAllMessages();
     bool areAllMessagesRead = true;
     for(Sms message : messages)
