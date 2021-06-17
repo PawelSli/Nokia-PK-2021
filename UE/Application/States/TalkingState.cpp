@@ -68,7 +68,7 @@ void TalkingState::handleReceivedMessage(Sms& incomingSms)
     context.user.showSmsReceivedNotification();
 }
 
-void TalkingState::USER_handleCallDrop(common::PhoneNumber callingPhoneNumber)
+void TalkingState::USER_handleCallDrop()
 {
     context.bts.BTS_sendCallDrop(caller);
     context.timer.TIMER_stopTimer(3);

@@ -81,7 +81,7 @@ void ConnectedState::BTS_handleCallRequest(common::PhoneNumber senderPhoneNumber
     {
         context.timer.TIMER_stopTimer(2);
         context.setState<ConnectedState>();
-    },30,2);
+    },60,2);
     context.user.USER_showCallRequest(senderPhoneNumber);
 
 }
@@ -89,7 +89,6 @@ void ConnectedState::BTS_handleCallRequest(common::PhoneNumber senderPhoneNumber
 void ConnectedState::USER_handleCallAccept(common::PhoneNumber phoneNumber)
 {
     context.timer.TIMER_stopTimer(2);
-    std::cout<<"Accept call from:";
     context.bts.BTS_sendCallAccept(phoneNumber);
     context.user.USER_callAchieved(phoneNumber);
     context.setState<TalkingState>(phoneNumber);
@@ -98,26 +97,30 @@ void ConnectedState::USER_handleCallAccept(common::PhoneNumber phoneNumber)
 
 void ConnectedState::BTS_handleCallAccept(common::PhoneNumber phoneNumber)
 {
-    context.timer.TIMER_stopTimer(2);
-    context.user.USER_callAchieved(phoneNumber);
-    context.setState<TalkingState>(phoneNumber);
+    if(context.timer.TIMER_checkTimer(2)){
+        context.timer.TIMER_stopTimer(2);
+        context.user.USER_callAchieved(phoneNumber);
+        context.setState<TalkingState>(phoneNumber);
+    }
 }
 
 void ConnectedState::BTS_handleCallDrop(common::PhoneNumber phoneNumber)
 {
-    context.user.USER_showPartnerNotAvailable(phoneNumber);
-    context.timer.TIMER_startTimerAndDoSomething([&]()
-    {
-        context.timer.TIMER_stopTimer(2);
-        context.setState<ConnectedState>();
+    if(context.timer.TIMER_checkTimer(2)){
+        context.user.USER_showPartnerNotAvailable(phoneNumber);
+        context.timer.TIMER_startTimerAndDoSomething([&]()
+        {
+            context.timer.TIMER_stopTimer(2);
+            context.setState<ConnectedState>();
 
-    },2,2);
+        },2,2);
+    }
 }
 
 void ConnectedState::BTS_handleUknownRecipient(common::PhoneNumber receiverPhoneNumber)
 {
     context.timer.TIMER_stopTimer(2);
-    context.user.USER_showPartnerNotAvailable(receiverPhoneNumber);
+    context.user.USER_showPartnerDoesNotExist(senderPhoneNumber);
     context.timer.TIMER_startTimerAndDoSomething([&]()
     {
         context.timer.TIMER_stopTimer(2);
@@ -132,6 +135,7 @@ void ConnectedState::USER_handleStartDial()
 
 void ConnectedState::USER_handleCallRequest(common::PhoneNumber receiverPhoneNumber)
 {
+    setSenderPhoneNumber(receiverPhoneNumber);
     context.bts.BTS_sendCallRequest(receiverPhoneNumber);
     context.timer.TIMER_startTimerAndDoSomething([&]()
     {
@@ -141,10 +145,10 @@ void ConnectedState::USER_handleCallRequest(common::PhoneNumber receiverPhoneNum
     context.user.USER_showDialing(receiverPhoneNumber);
 }
 
-void ConnectedState::USER_handleCallDrop(common::PhoneNumber receiverPhoneNumber)
+void ConnectedState::USER_handleCallDrop()
 {
     context.timer.TIMER_stopTimer(2);
-    context.bts.BTS_sendCallDrop(receiverPhoneNumber);
+    context.bts.BTS_sendCallDrop(senderPhoneNumber);
     context.setState<ConnectedState>();
 }
 

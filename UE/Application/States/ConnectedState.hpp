@@ -35,7 +35,7 @@ public:
     void USER_handleCallAccept(common::PhoneNumber) final;
     void USER_handleStartDial() final;
     void USER_handleCallRequest(common::PhoneNumber) final;
-    void USER_handleCallDrop(common::PhoneNumber) final;
+    void USER_handleCallDrop() final;
 };
 
 }
