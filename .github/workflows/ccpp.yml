@@ -32,6 +32,6 @@ jobs:
     - name: UT for UeApplication
       run: make UeApplicationUT
 
-    - name: run EU ut
+    - name: run UE ut
       run: ./UE/Tests/Application/UeApplicationUT
 
