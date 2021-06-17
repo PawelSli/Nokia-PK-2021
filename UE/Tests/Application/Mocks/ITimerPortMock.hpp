@@ -25,6 +25,7 @@ public:
     MOCK_METHOD(void, TIMER_startTimer, (double duration,int i), (final));
     MOCK_METHOD(void, TIMER_startTimerAndDoSomething, (std::function<void()>,double duration,int i), (final));
     MOCK_METHOD(void, TIMER_stopTimer, (int i), (final));
+    MOCK_METHOD(bool, TIMER_checkTimer, (int i), (final));
 };
 
 }

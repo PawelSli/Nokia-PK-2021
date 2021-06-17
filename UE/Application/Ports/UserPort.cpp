@@ -91,7 +91,7 @@ void UserPort::USER_showCallRequest(common::PhoneNumber senderPhoneNumber)
         handler->USER_handleCallAccept(senderPhoneNumber);
     };
     auto reject=[&,senderPhoneNumber](){
-        handler->USER_handleCallDrop(senderPhoneNumber);
+        handler->USER_handleCallDrop();
     };
     gui.setAcceptCallback(accept);
     gui.setRejectCallback(reject);
@@ -117,7 +117,7 @@ void UserPort::USER_startTalking(common::PhoneNumber tmp)
     });
 
     gui.setRejectCallback([&](){
-        handler->USER_handleCallDrop(tmp);
+        handler->USER_handleCallDrop();
     });
 }
 
@@ -209,7 +209,7 @@ void UserPort::USER_showDialing(common::PhoneNumber senderPhoneNumber){
     dialModeMenu.setText("Trying to\nconnect with:\n"+to_string(senderPhoneNumber));
     gui.setAcceptCallback([&](){});
     gui.setRejectCallback([&](){
-        handler->USER_handleCallDrop(senderPhoneNumber);
+        handler->USER_handleCallDrop();
         USER_showStartMenu();
     });
 }
@@ -223,7 +223,7 @@ void UserPort::showCallView(const std::string inTxt)
                 callView.clearOutgoingText();
     });
     gui.setRejectCallback([&](){
-        handler->USER_handleCallDrop(anotherPhoneNumber);
+        handler->USER_handleCallDrop();
     });
 
 }
@@ -234,6 +234,11 @@ void UserPort::showcallDropping(common::PhoneNumber callingPhoneNumber)
     callingView.setText("Phone nr: " + to_string(callingPhoneNumber) + "\n dropped the call");
 }
 
+void UserPort::USER_showPartnerDoesNotExist(common::PhoneNumber callingPhoneNumber)
+{
+    auto& callingView = gui.setAlertMode();
+    callingView.setText("Phone nr: " + to_string(callingPhoneNumber) + "\n does not exist!");
+}
 
 
 }

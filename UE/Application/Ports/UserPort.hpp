@@ -28,6 +28,7 @@ public:
     void USER_callAchieved(common::PhoneNumber) override;
     void USER_startTalking(common::PhoneNumber) override;
     void USER_showPartnerNotAvailable(common::PhoneNumber) override;
+    void USER_showPartnerDoesNotExist(common::PhoneNumber) override;
     void USER_showStartMenu() override;
     void USER_showEnterPhoneNumber() override;
     void USER_showDialing(common::PhoneNumber) override;

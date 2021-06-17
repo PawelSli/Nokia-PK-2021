@@ -141,23 +141,22 @@ TEST_F(ApplicationConnectedTestSuite, shallAddReceivedMessage)
 TEST_F(ApplicationConnectedTestSuite,shallHandleCallRequest)
 {
     EXPECT_CALL(userPortMock,USER_showCallRequest(_));
-    EXPECT_CALL(timerPortMock,TIMER_startTimerAndDoSomething(_,30,2));
+    EXPECT_CALL(timerPortMock,TIMER_startTimerAndDoSomething(_,60,2));
     objectUnderTest.BTS_handleCallRequest(SENDER_PHONE_NUMBER);
 }
 
 TEST_F(ApplicationConnectedTestSuite,shallHandleCallRejectFromReceiver)
 {
     EXPECT_CALL(timerPortMock,TIMER_stopTimer(2));
-    EXPECT_CALL(btsPortMock,BTS_sendCallDrop(SENDER_PHONE_NUMBER));
+    EXPECT_CALL(btsPortMock,BTS_sendCallDrop(_));
     EXPECT_CALL(userPortMock,USER_showConnected());
-    objectUnderTest.USER_handleCallDrop(SENDER_PHONE_NUMBER);
+    objectUnderTest.USER_handleCallDrop();
 
 }
 
 TEST_F(ApplicationConnectedTestSuite,shallHandleCallDropFromSender)
 {
-    EXPECT_CALL(userPortMock,USER_showPartnerNotAvailable(_));
-    EXPECT_CALL(timerPortMock,TIMER_startTimerAndDoSomething(_,2,2));
+    EXPECT_CALL(timerPortMock,TIMER_checkTimer(2));
     objectUnderTest.BTS_handleCallDrop(SENDER_PHONE_NUMBER);
 }
 
@@ -173,6 +172,41 @@ TEST_F(ApplicationConnectedTestSuite,shallHandleSendCallRequest)
     EXPECT_CALL(timerPortMock,TIMER_startTimerAndDoSomething(_,60,2));
     EXPECT_CALL(userPortMock,USER_showDialing(SENDER_PHONE_NUMBER));
     objectUnderTest.USER_handleCallRequest(SENDER_PHONE_NUMBER);
+}
+
+TEST_F(ApplicationConnectedTestSuite,shallHandleUnknownRecipient)
+{
+    EXPECT_CALL(timerPortMock,TIMER_stopTimer(2));
+    EXPECT_CALL(userPortMock,USER_showPartnerDoesNotExist(_));
+    EXPECT_CALL(timerPortMock,TIMER_startTimerAndDoSomething(_,2,2));
+    objectUnderTest.BTS_handleUknownRecipient(SENDER_PHONE_NUMBER);
+}
+
+TEST_F(ApplicationConnectedTestSuite, shallHandleCallAccept)
+{
+    EXPECT_CALL(timerPortMock,TIMER_checkTimer(2));
+    objectUnderTest.BTS_handleCallAccept(SENDER_PHONE_NUMBER);
+}
+
+TEST_F(ApplicationConnectedTestSuite, shallHandleSendMessage)
+{
+    Sms sms{PHONE_NUMBER, SENDER_PHONE_NUMBER, "text", false, false, false};
+    EXPECT_CALL(smsDbMock, addMessage(sms));
+    EXPECT_CALL(btsPortMock, sendMessage(sms));
+    objectUnderTest.handleSendMessage(sms);
+}
+
+TEST_F(ApplicationConnectedTestSuite, shallHandleShowAllMessages)
+{
+    EXPECT_CALL(smsDbMock, getAllMessages());
+    EXPECT_CALL(userPortMock, showAllMessages(_));
+    objectUnderTest.handleShowAllMessages();
+}
+
+TEST_F(ApplicationConnectedTestSuite, shallHandleSmsCreate)
+{
+    EXPECT_CALL(userPortMock, showSmsToCreate());
+    objectUnderTest.handleSmsCreate();
 }
 
 struct ApplicationTalkingTestSuite : ApplicationConnectedTestSuite
@@ -204,43 +238,7 @@ TEST_F(ApplicationTalkingTestSuite,shallHandleUknownRecipient)
     objectUnderTest.BTS_handleUknownRecipient(SENDER_PHONE_NUMBER);
 }
 
-TEST_F(ApplicationConnectedTestSuite,shallHandleUnknownRecipient)
-{
-    EXPECT_CALL(timerPortMock,TIMER_stopTimer(2));
-    EXPECT_CALL(userPortMock,USER_showPartnerNotAvailable(_));
-    EXPECT_CALL(timerPortMock,TIMER_startTimerAndDoSomething(_,2,2));
-    objectUnderTest.BTS_handleUknownRecipient(SENDER_PHONE_NUMBER);
-}
 
-TEST_F(ApplicationConnectedTestSuite, shallHandleCallAccept)
-{
-    EXPECT_CALL(timerPortMock, TIMER_stopTimer(2));
-    EXPECT_CALL(userPortMock,USER_callAchieved(_));
-    EXPECT_CALL(timerPortMock,TIMER_startTimerAndDoSomething(_,120,3));
-    EXPECT_CALL(userPortMock,USER_startTalking(SENDER_PHONE_NUMBER));
-    objectUnderTest.BTS_handleCallAccept(SENDER_PHONE_NUMBER);
-}
-
-TEST_F(ApplicationConnectedTestSuite, shallHandleSendMessage)
-{
-    Sms sms{PHONE_NUMBER, SENDER_PHONE_NUMBER, "text", false, false, false};
-    EXPECT_CALL(smsDbMock, addMessage(sms));
-    EXPECT_CALL(btsPortMock, sendMessage(sms));
-    objectUnderTest.handleSendMessage(sms);
-}
-
-TEST_F(ApplicationConnectedTestSuite, shallHandleShowAllMessages)
-{
-    EXPECT_CALL(smsDbMock, getAllMessages());
-    EXPECT_CALL(userPortMock, showAllMessages(_));
-    objectUnderTest.handleShowAllMessages();
-}
-
-TEST_F(ApplicationConnectedTestSuite, shallHandleSmsCreate)
-{
-    EXPECT_CALL(userPortMock, showSmsToCreate());
-    objectUnderTest.handleSmsCreate();
-}
 
 
 

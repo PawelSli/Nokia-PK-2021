@@ -114,9 +114,9 @@ void Application::USER_handleCallRequest(common::PhoneNumber receiverPhoneNumber
     context.state->USER_handleCallRequest(receiverPhoneNumber);
 }
 
-void Application::USER_handleCallDrop(common::PhoneNumber receiverPhoneNumber)
+void Application::USER_handleCallDrop()
 {
-    context.state->USER_handleCallDrop(receiverPhoneNumber);
+    context.state->USER_handleCallDrop();
 }
 
 void Application::handleSendTalkMessage(const std::string txt)

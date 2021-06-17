@@ -58,4 +58,9 @@ void TimerPort::TIMER_stopTimer(int i)
     timers[i]=true;
 }
 
+bool TimerPort::TIMER_checkTimer(int i)
+{
+    return !timers[i];
+}
+
 }

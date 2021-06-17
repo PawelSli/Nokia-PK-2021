@@ -24,6 +24,7 @@ public:
     virtual void TIMER_startTimer(double,int) = 0;
     virtual void TIMER_stopTimer(int) = 0;
     virtual void TIMER_startTimerAndDoSomething(std::function<void()>,double duration,int) = 0;
+    virtual bool TIMER_checkTimer(int) =0;
 
 };
 

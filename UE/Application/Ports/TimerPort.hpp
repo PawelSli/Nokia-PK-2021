@@ -21,6 +21,7 @@ public:
     void TIMER_startTimer(double duration,int i) override;
     void TIMER_startTimerAndDoSomething(std::function<void()>,double duration,int i) override;
     void TIMER_stopTimer(int i) override;
+    bool TIMER_checkTimer(int i) override;
 
 private:
     std::map<int,bool> timers;
